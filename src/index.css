@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -30,8 +31,23 @@ html {
   scroll-behavior: smooth;
 }
 
+.transitioning{
+  transition: var(--transition);
+}
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+@font-face {
+  font-family: 'Outfit', sans-serif;
+  src: url(../src/fonts/Outfit-Bold.ttf);
+}
+.Outfit{
+  font-family: 'Outfit', sans-serif;
+}
+.inter{
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -39,18 +55,52 @@ body {
   /* background: var(--color-bg); */
   /* color: var(--color-white); */
   line-height: 1.7;
-  /* background-image: url(../src/assets/bg-texture.jpg); */
+}
+
+.image1 {
+  background-image: url(./pages/landing-page/assets/image1.png);
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: cover; */
+  background-size: cover;
 }
+.image2 {
+  background-image: url(./pages/landing-page/assets/image2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.image3 {
+  background-image: url(./pages/landing-page/assets/image3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border: 4px solid gray; /* Default border for inactive dots */
+  background-color: transparent; /* Default background color for inactive dots */
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.dot.active {
+  border-color: #E9682B; /* Border color for active dot */
+  background-color: #E9682B; /* Background color for active dot */
+}
+
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container-style {
+  height: 100%;
 }
 
 /* MEDIA QUERIES FOR MEDIUM DEVICES */

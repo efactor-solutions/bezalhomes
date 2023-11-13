@@ -1,9 +1,11 @@
-import ComingSoon from "./ComingSoon";
+
+import LandingPage from "./pages/landing-page"
 
 function App() {
   return (
     <div className="App w-full">
-    <ComingSoon />
+     <LandingPage />
+
     </div>
   );
 }
