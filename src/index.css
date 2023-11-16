@@ -23,8 +23,8 @@
   --color-light: rgba(255, 255, 255, 0.6); */
   --transition: all 400ms ease;
 
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
+  --container-width-lg: 94%;
+  --container-width-md: 92%;
   --container-width-sm: 90%;
 }
 html {
@@ -56,8 +56,28 @@ body {
   /* color: var(--color-white); */
   line-height: 1.7;
 }
+.container-style {
+  position: relative;
+}
 
-.image1 {
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+/* .imacge1 {
   background-image: url(./pages/landing-page/assets/image1.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -74,7 +94,153 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+} */
+
+.class1 {
+  background-image: url(./pages/landing-page/assets/image1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
 }
+.class2 {
+  background-image: url(./pages/landing-page/assets/image2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.class3 {
+  background-image: url(./pages/landing-page/assets/image3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.class4 {
+  background-image: url(./pages/landing-page/assets/image4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.class5 {
+  background-image: url(./pages/landing-page/assets/image5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.class6 {
+  background-image: url(./pages/landing-page/assets/image6.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.class7 {
+  background-image: url(./pages/landing-page/assets/image5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
+}
+.drawer-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px; /* Adjust the fixed width as needed */
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+
+
+
+/* chisco court */
+
+.chisco1 {
+  background-image: url(./pages/landing-page/assets/chisco1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.chisco2 {
+  background-image: url(./pages/landing-page/assets/chisco2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.chisco3 {
+  background-image: url(./pages/landing-page/assets/chisco3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.chisco4 {
+  background-image: url(./pages/landing-page/assets/chisco4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.chisco5 {
+  background-image: url(./pages/landing-page/assets/chisco5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Rehoboth */
+
+.reho3 {
+  background-image: url(./pages/landing-page/assets/reho1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reho2 {
+  background-image: url(./pages/landing-page/assets/reho2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reho1 {
+  background-image: url(./pages/landing-page/assets/reho3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reho4 {
+  background-image: url(./pages/landing-page/assets/reho4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reho5 {
+  background-image: url(./pages/landing-page/assets/reho5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+
 
 .dot {
   width: 5px;
@@ -103,6 +269,16 @@ code {
   height: 100%;
 }
 
+.line-input {
+  border: none;
+  background: transparent;
+  border-bottom: 0.8px solid white; 
+  outline: none;
+  padding: 0px; 
+  margin: 0px; 
+  width: 372px; 
+}
+
 /* MEDIA QUERIES FOR MEDIUM DEVICES */
 
 @media screen and (max-width: 1024px) {
@@ -113,8 +289,22 @@ code {
   section {
     margin-top: 6rem;
   }
+  .line-input {
+    border: none;
+    background: transparent;
+    border-bottom: 0.8px solid white; 
+    outline: none;
+    padding: 0px; 
+    margin: 0px; 
+    width: 250px; 
+  }
 }
-
+@media (max-width: 768px) {
+  .content {
+    width: 100%; /* Adjust the width as needed for smaller screens */
+  }
+ 
+}
 /* MEDIA QUERIES FOR small DEVICES */
 
 @media screen and (max-width: 600px) {
@@ -124,5 +314,14 @@ code {
 
   section > h2 {
     margin-bottom: 2rem;
+  }
+  .line-input {
+    border: none;
+    background: transparent;
+    border-bottom: 0.8px solid white; 
+    outline: none;
+    padding: 0px; 
+    margin: 0px; 
+    width: 200px; 
   }
 }
