@@ -113,33 +113,33 @@ const MasterPieces = () => {
               with practicality, creating a living environment that's second to
               none
             </p>
-            <ul className="mt-8 flex flex-col md:ml-4 gap-5">
-              <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4">
-                  <img src={Residential} alt="Icon" />
+            <ul className="mt-8 flex px-2 flex-col md:ml-4 gap-5">
+              <li className="flex items-center text-[#333333]  uppercase inter font-semibold text-sm md:text-base leading-7">
+                <span className="mr-4 w-12">
+                  <img src={Residential} alt="Icon" className="w-full"/>
                 </span>
                 RESIDENTIAL
               </li>
               <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4">
+                  <span className="mr-4 w-12">
                   <img src={Q2} alt="Icon" />
                 </span>
                 Q2 - 2020
               </li>
               <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4">
+                  <span className="mr-4 w-12">
                   <img src={Detached} alt="Icon" />
                 </span>
                 2, 4 & 5 Bedrooms units of Detached Duplexes
               </li>
               <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4">
+                  <span className="mr-4 w-12">
                   <img src={NotAvail} alt="Icon" />
                 </span>
                 Not available
               </li>
               <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4  bg-white w-[55.67px] h-[55.67px] rounded-full flex items-center justify-center">
+                <span className="mr-4  bg-white  md:w-[48px] h-[48px] rounded-full flex items-center justify-center">
                   <img src={SoldOut} alt="Icon" />
                 </span>
                 Sold Out

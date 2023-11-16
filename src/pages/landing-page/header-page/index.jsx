@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="container-style py-10 md:py-0">
       <div className="video-container">
-        <video autoPlay loop muted className="video">
+        <video autoPlay loop muted controls={false} className="video">
           {/* Include different video formats for better browser compatibility */}
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
