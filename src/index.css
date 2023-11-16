@@ -279,6 +279,36 @@ code {
   width: 372px; 
 }
 
+/* Header.css */
+
+/* Apply a gray background to the container for small screens */
+@media (max-width: 767px) {
+  .video-container {
+    background-color: #E0E0E0; /* Adjust the color as needed */
+  }
+
+  /* Hide the video element on small screens */
+  .video {
+    display: none;
+  }
+
+  /* Style the background div for small screens */
+  .background-div {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/* Apply styles for larger screens */
+@media (min-width: 768px) {
+  .background-div {
+    display: none; /* Hide the background div on larger screens */
+  }
+
+
+}
+
+
 /* MEDIA QUERIES FOR MEDIUM DEVICES */
 
 @media screen and (max-width: 1024px) {
