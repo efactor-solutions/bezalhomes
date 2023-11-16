@@ -139,7 +139,7 @@ const MasterPieces = () => {
                 Not available
               </li>
               <li className="flex items-center text-[#333333] uppercase inter font-semibold text-sm md:text-base leading-7">
-                <span className="mr-4  bg-white  md:w-[48px] h-[48px] rounded-full flex items-center justify-center">
+                <span className="mr-4  bg-white  w-[48px] h-[48px] rounded-full flex items-center justify-center">
                   <img src={SoldOut} alt="Icon" />
                 </span>
                 Sold Out
