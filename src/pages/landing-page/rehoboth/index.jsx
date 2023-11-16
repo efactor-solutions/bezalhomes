@@ -34,7 +34,7 @@ const Rehoboth = () => {
       className={`chisco h-screen flex flex-col justify-center relative items-center ${classnames[currentImage]}`}
     >
       <div className="flex items-center justify-center flex-col gap-4"></div>
-      <div className="w-34 mt-12 cursor-pointer hover:animate-pulse">
+      <div className="w-24 md:w-34 mt-12 cursor-pointer hover:animate-pulse">
         <img src={SeeDetails} alt="button" className="w-full h-full object-cover"/>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-60  w-full max-w-5xl absolute bottom-3 px-2 md:px-0 md:bottom-[2%]">

@@ -56,7 +56,7 @@ const ChiscoCourt = () => {
     return (
       <div className={`chisco h-screen flex flex-col justify-center relative items-center ${classnames[currentImage]}`}>
       <div className="flex items-center justify-center flex-col gap-4">
-        <h1 className="uppercase inter mt-10 md:mt-20 font-[400] text-[40px] md:text-[90px] leading-[50.4px] tracking-[1px] text-white">
+        <h1 className="uppercase inter mt-20 font-[400] text-[40px] md:text-[90px] leading-[50.4px] tracking-[1px] text-white">
           Chisco Court
         </h1>
         <div className="bg-white  h-[1.5px] w-[25%] md:w-[210px]"></div>

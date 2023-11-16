@@ -90,7 +90,7 @@ const Blog = () => {
 
   return (
     <div className="text-center py-10 px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
-      <h1 className="text-3xl font-bold">Our Blog</h1>
+      <h1 className="text-[30px] leading-[45px] text-[#333333] md:text-[64px] inter font-[400]">Our Blog</h1>
       <div className="flex justify-around py-20 gap-4 md:gap-8 flex-col md:flex-row w-full">
         {cardData.map((card, index) => (
           <BlogCard
