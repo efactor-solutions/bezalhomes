@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Arrow from "../assets/Vector.svg";
-import seeDetails1 from "../assets/seeDetails2.svg";
+
+import SeeDetails from "../assets/SeeDetails.svg";
 
 const ProgressBar = ({ totalImages, currentImage }) => {
   return (
@@ -105,22 +105,8 @@ const LegacyPalace = () => {
       <div className="flex  justify-center gap-[20%] md:gap-60  w-full  absolute bottom-[3%] lg:bottom-[7%] px-12">
         <div className="w-full flex flex-col lg:flex-row space-y-9 lg:space-x-20">
           <div className="lg:absolute lg:bottom-[25%]  cursor-pointer">
-          <span className="relative">
-                <img
-                  src={seeDetails1}
-                  alt=""
-                  className="spinner w-[80.81px] h-[80.78px] lg:w-[200.26px] lg:h-[180.13px]"
-                />
-              </span>
-            <div className="  w-8 h-8 absolute bottom-[59%] left-[21%] lg:bottom-[33%] lg:left-[30%] md:w-[55.16px] md:h-[55.16px] rounded-full flex justify-center items-center bg-[#E9682B] ">
-              <span className="">
-                <img
-                  src={Arrow}
-                  alt=""
-                  className="hover:animate-spin w-[9.81px] h-[8.78px] lg:w-[20.26px] lg:h-[18.13px]"
-                />
-              </span>
-            </div>
+         
+            <img src={SeeDetails} alt="Button"  className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]"/>
           </div>
           <div className="w-full flex justify-between lg:justify-around lg:max-w-">
             <ProgressBar

@@ -111,7 +111,7 @@ const About = () => {
             </div>
           </div>
           <div className="py-10">
-            <button className="py-2 text-[#E9682B] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc">
+            <button className="py-2 text-[#E9682B] text-[8px] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc">
               DISCOVER OUR STORY
               <span>
                 <img
@@ -127,12 +127,12 @@ const About = () => {
           <img
             src={BezalSpinner}
             alt=""
-            className="spinner hidden lg:block absolute left-[42%] top-[58%]"
+            className="spinner animate-spin hidden lg:block absolute left-[42%] top-[58%]"
           />
           <img
             src={BezalSmall}
             alt=""
-            className="block lg:hidden spinner absolute left-[42%] top-[64%]"
+            className="block animate-spin lg:hidden spinner absolute left-[35%] top-[62%]"
           />
         </div>
 

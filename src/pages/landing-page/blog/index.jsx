@@ -85,7 +85,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="text-center  py-10 lg:py-[200px] px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
+    <div className="text-center  py-10 lg:py-[180px] lg:px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
       <h1 className="text-[30px] leading-[45px] text-[#333333] md:text-[64px] inter font-[400]">Our Blog</h1>
       <div className="justify-around py-20 lg:mt-8 grid gap-4  lg:grid-cols-4 w-full">
         {cardData.map((card, index) => (
