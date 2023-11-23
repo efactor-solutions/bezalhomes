@@ -7,8 +7,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
@@ -55,26 +53,7 @@ body {
   /* background: var(--color-bg); */
   /* color: var(--color-white); */
   line-height: 1.7;
-}
-.container-style {
-  position: relative;
-}
 
-.video-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.video {
-  width: 100%;
-  height: auto;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  transform: translate(-50%, -50%);
 }
 
 /* .imacge1 {
@@ -95,6 +74,53 @@ body {
   background-position: center;
   background-size: cover;
 } */
+/* Legacy place */
+.legacy1 {
+  background-image: url(./pages/landing-page/assets/legacyImage1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  
+
+  
+  
+}
+.legacy2{
+  background-image: url(./pages/landing-page/assets/legacyImage2.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.legacy3 {
+  background-image: url(./pages/landing-page/assets/legacyImage3.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.legacy4 {
+  background-image: url(./pages/landing-page/assets/legacyImage4.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.legacy5 {
+  background-image: url(./pages/landing-page/assets/legacyImage5.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+
 
 .class1 {
   background-image: url(./pages/landing-page/assets/image1.png);
@@ -237,6 +263,14 @@ body {
   background-size: cover;
 }
 
+.giphy {
+  background-image: url(./pages/landing-page/assets/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+}
+
 
 
 
@@ -265,14 +299,10 @@ code {
     monospace;
 }
 
-.container-style {
-  height: 100%;
-}
-
 .line-input {
   border: none;
-  background: transparent;
-  border-bottom: 0.8px solid white; 
+background: transparent;
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.5) ; 
   outline: none;
   padding: 0px; 
   margin: 0px; 
@@ -281,32 +311,85 @@ code {
 
 /* Header.css */
 
-/* Apply a gray background to the container for small screens */
-@media (max-width: 767px) {
-  .video-container {
-    background-color: #E0E0E0; /* Adjust the color as needed */
-  }
+video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.content{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 
-  /* Hide the video element on small screens */
-  .video {
-    display: none;
-  }
 
-  /* Style the background div for small screens */
-  .background-div {
-    width: 100%;
-    height: 100vh;
+.overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.overlay2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+ 
+}
+.overlay-rehoboth {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+ 
+}
+
+.chisco-heading-bg{
+  background: rgba(224, 224, 224, 1);
+}
+
+
+.footer-heading{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-text{
+  color: rgba(255, 255, 255, 1);
+}
+
+.about-line{
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.about-new-text{
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-/* Apply styles for larger screens */
-@media (min-width: 768px) {
-  .background-div {
-    display: none; /* Hide the background div on larger screens */
-  }
-
-
-}
 
 
 /* MEDIA QUERIES FOR MEDIUM DEVICES */
@@ -329,12 +412,6 @@ code {
     width: 250px; 
   }
 }
-@media (max-width: 768px) {
-  .content {
-    width: 100%; /* Adjust the width as needed for smaller screens */
-  }
- 
-}
 /* MEDIA QUERIES FOR small DEVICES */
 
 @media screen and (max-width: 600px) {
@@ -354,4 +431,21 @@ code {
     margin: 0px; 
     width: 200px; 
   }
+  
+  /* .content{
+    position: absolute;
+    top:-35%;
+    display: flex;
+  
+   } */
 }
+@media only screen and (max-width: 315px)  { 
+  .Smart-watch-heading{
+    font-size: 10px;
+  }
+  .Smart-watch-text{
+    font-size: 8px;
+  }
+  
+
+ }
