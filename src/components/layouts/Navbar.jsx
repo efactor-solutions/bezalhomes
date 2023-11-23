@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/BezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
 
 const Navbar = () => {
@@ -34,14 +34,14 @@ const Navbar = () => {
     <div className="bg-black bg-opacity-80 fixed w-full z-10">
       {drawerVisible && <div className={`class1 ${selectedClass}`}></div>}
 
-      <div className="flex items-center justify-between md:px-12 p-4">
+      <div className="flex items-center md:px-12 p-2 md:p-4">
         <div
           onClick={showDrawer}
-          className="logo cursor-pointer text-white w-[20px] md:w-[38px] flex justify-center items-center"
+          className="logo cursor-pointer text-white w-[20px] md:w-[38px] absolute right-[3%]"
         >
-          <img src={DropDown} alt="logo" className="w-full object-cover" />
+          <img src={DropDown} alt="button" className="w-full object-cover" />
         </div>
-        <div className="logo text-white w-[100px] md:w-[398px] flex justify-center items-center">
+        <div className="logo text-white w-[100px] md:w-[398px] flex  m-auto ">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
         <div></div>
@@ -56,61 +56,65 @@ const Navbar = () => {
           >
             ✕
           </button>
-          <div className="md:py-8 flex flex-col space-y-9 text-xl md:text-3xl md:px-12 mt-20 p-4">
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+          <div className="md:py-8 flex flex-col  text-xl md:text-3xl md:px-12 mt-[10%] md:mt-20 p-8">
+            <ul className="flex flex-col space-y-[5%] md:space-y-7 px-8">
+
+            
+            <li
+              className=" inter cursor-pointer text-white text-[15.52px] md:text-[30px] font-[700]"
               onMouseEnter={() => handleButtonHover("class1")}
               onMouseLeave={() => handleButtonHover("")}
             >
               HOME
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class2")}
               onMouseLeave={() => handleButtonHover("")}
             >
               MASTERPIECES
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class3")}
               onMouseLeave={() => handleButtonHover("")}
             >
               BOARD OF DIRECTORS
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class4")}
               onMouseLeave={() => handleButtonHover("")}
             >
               MANAGEMENT TEAM
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class5")}
               onMouseLeave={() => handleButtonHover("")}
             >
-              ABOUT US
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+              OUR STORY
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class6")}
               onMouseLeave={() => handleButtonHover("")}
             >
             BLOG
-            </p>
-            <p
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]"
+            </li>
+            <li
+              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
               onMouseEnter={() => handleButtonHover("class7")}
               onMouseLeave={() => handleButtonHover("")}
             >
              SEARCH
-            </p>
+            </li>
+            </ul>
           </div>
-          <div className="py-8 flex flex-col fixed bottom-2 text-xl  md:text-3xl md:px-12 md:mt-10 p-4">
-            <p className=" inter cursor-pointer text-[#B3B3B3CC] text-[30px] md:text-30px] font-[400]  hover:text-white hover:font-[700]">
+          <div className="mt-[15%] px-12 md:fixed md:bottom-[7%] ml-[5%] md:ml-7">
+            <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[25px] font-[400]  hover:text-white md:hover:text-[25px] hover:font-[700]">
               Sign In
-            </p>
+            </span>
           </div>
         </div>
       )}

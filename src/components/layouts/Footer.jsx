@@ -8,18 +8,20 @@ import SendButton from "../../assets/Group 20.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#1D1D1D]">
-      <div className="container flex flex-col justify-center items-center py-10">
+    <div className="bg-[#1D1D1D] hidden lg:block">
+      <div className="w-[97%] m-auto flex flex-col justify-center items-center  py-10">
         <div className="logo text-white w-[180px] md:w-[398px] flex justify-center py-10 items-center">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
-        <div className="5-divs-container flex flex-col md:flex-row space-x-14 justify-between w-full">
-          <div className="div-1">
-            <h1 className="inter font-[400] text-[20px] leading-[15.12px] text-white ">
-              Address
+        <div className="5-divs-container  flex flex-col md:flex-row space-x-12 justify-between w-full">
+          <div className="div-1 w-full">
+            <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+             OUR STORY
             </h1>
-            <div className="inter font-[400] text-[12.6px] mt-8 leading-[15.12px] text-left max-w-[200px] text-white ">
-              39, Alfred Rewane Road, Ikoyi Lagos, Nigeria.
+            <div className="inter font-[400] text-[12.6px] mt-8 leading-20px] text-left max-w-[250px] text-white ">
+              Our primary focus lies in the residential sector, where we
+              passionately dedicate ourselves to the creation and investment in
+              top-tier properties located in prime areas across Nigeria.
             </div>
             <div className="icons w-[28.8px] space-x-6 mt-4 md:mt-20 flex">
               <img src={Facebook} alt="logo" className="w-full object-cover" />
@@ -28,91 +30,92 @@ const Footer = () => {
               <img src={Youtube} alt="logo" className="w-full object-cover" />
             </div>
           </div>
-          <div className="div2 mt-6 md:mt-0">
-            <h1 className="inter font-[400] text-[20px] leading-[15.12px] text-white ">
-              Real Estate
+          <div className="div2 mt-6 md:mt-0 w-full">
+          <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+          MASTERPIECES
             </h1>
             <div className="inter font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
-              Banana island estate
+            Legacy Place
             </div>
             <div className="inter font-[400] mt-2 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
-              Bourdillion estate
+            Rehoboth Apartment
             </div>
             <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Nikon town estate
+            Chisco Court
             </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Living gold estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Lekki Gardens Estate
-            </div>
-          </div>
-          <div className="div3 mt-8 md:mt-0">
-            <h1 className="inter font-[400] text-[20px] leading-[15.12px] text-white ">
-              Mortgage
-            </h1>
-            <div className="inter font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
-              Parkview estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Pinnock view estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Chevy View estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Oral Estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              Lekki Gardens Estate
-            </div>
-          </div>
-          <div className="div4 mt-8 md:mt-0">
-            <h1 className="inter font-[400] text-[20px] leading-[15.12px] text-white ">
-              BLOG
-            </h1>
-            <div className="inter font-[400] text-[12.4px] mt-8 leading-[15.12px] text-left max-w-[250px] text-white ">
-              Why you should invest in real estate
-            </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-              The way to Investement
-            </div>
-          </div>
-          <div className="div5 mt-8 md:mt-0">
-            <h1 className="inter uppercase font-[400] text-[20px] leading-[15.12px] text-white ">
-              Stay in the know
-            </h1>
-            <form className="mt-4 flex flex-col">
-              <label className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">Email Address</label>
-              <input type="email" className="line-input text-white w-full" placeholder="" />
-            </form>
-            <div className="inter font-[400] text-[10.63px] mt-8 leading-[15.12px] text-left w-full text-white ">
-            By signing up I want to hear about new updates and masterpieces and
-            </div>
-            <div className="inter font-[400] text-[10.8px] mt-2 leading-[16.2px] text-left max-w-[200px] text-white ">
-            agree with the data protection policy
-            </div>
-            <div className="logo text-white w-[123px] h-[35px] flex justify-center py-10 items-center">
-          <img src={SendButton} alt="logo" className="w-full object-cover" />
-        </div>
-          </div>
-        </div>
-        <div className="2-divs-container relative flex w-full items-center ">
-          <div className="inter font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] text-white ">
+           
+            <div className="inter uppercase font-[400] text-[12.11px] mt-4 md:mt-[150px] leading-[15.12px] text-white ">
             Bezal Homes © 2023
           </div>
-          <div className="flex space-x-10 w-full absolute mt-16 md:mt-0 md:left-[30%]">
-            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] text-white ">
+
+          </div>
+          <div className="div3 mt-8 md:mt-0 w-full">
+          <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+          CONTACT US
+            </h1>
+            <div className="inter font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] footer-text ">
+            info@bezalhomes.ng
+            </div>
+            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] footer-text ">
+            +234 (0) 817 8206002
+            </div>
+            <div className="flex gap-2 w-full mt-4 md:mt-[90px] md:left-[0%]">
+            <span className="inter underline font-[400] text-[11.11px] mt-4 md:mt-20 leading-[15.12px]  footer-text ">
               Terms of Use
             </span>
-            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] text-white ">
+            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
               Privacy
             </span>
-            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] text-white ">
+            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
               Cookie Policy
             </span>
           </div>
+
+          </div>
+          <div className="div4 mt-8 md:mt-0 w-full">
+          <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+          OUR PEOPLE
+            </h1>
+            <div className="inter font-[400] text-[12.4px] mt-8 leading-[15.12px] text-left max-w-[250px] text-white ">
+            Board of Directors 
+            </div>
+            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+            Management Team
+            </div>
+          </div>
+          <div className="div5 mt-8 md:mt-0">
+            <h1 className="inter uppercase font-[400] text-[20px] leading-[15.12px] footer-heading ">
+              Stay in the know
+            </h1>
+            <form className="mt-4 flex flex-col">
+              <label className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+                Email Address
+              </label>
+              <input
+                type="email"
+                className="line-input text-white  w-full"
+                placeholder=""
+              />
+            </form>
+            <div className="inter font-[400] text-[10.63px] mt-8 leading-[15.12px] text-left w-full text-white ">
+              By signing up I want to hear about new updates and masterpieces
+              and
+            </div>
+            <div className="inter font-[400] text-[10.8px] mt-2 leading-[16.2px] text-left max-w-[200px] text-white ">
+              agree with the data protection policy
+            </div>
+            <div className="logo text-white w-[123px] h-[35px] flex justify-center py-10 items-center">
+              <img
+                src={SendButton}
+                alt="logo"
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="2-divs-container  flex w-full items-center ">
+        
+        
         </div>
       </div>
     </div>

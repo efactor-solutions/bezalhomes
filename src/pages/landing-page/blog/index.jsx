@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { cardData } from "../constant";
 import Image1 from "../assets/Rectangle.png";
 import Image2 from "../assets/Rectangle (1).png";
 import Image3 from "../assets/Rectangle (2).png";
-import Image4 from "../assets/Rectangle (1).png";
-import { cardData } from "../constant";
+
+import { useState } from "react";
 
 // ProgressBar component
 const ProgressBar = ({ totalImages, currentImage }) => {
@@ -13,7 +13,7 @@ const ProgressBar = ({ totalImages, currentImage }) => {
         <div
           key={index}
           className={`h-[7px]  flex-shrink-0 ${
-            index + 1 === currentImage ? "bg-gray-600" : "bg-white"
+            index  === currentImage ? "bg-gray-600" : "bg-white"
           }`}
           style={{
             width: `${100 / totalImages}%`,
@@ -43,33 +43,28 @@ const ScrollBar = ({ onPrev, onNext }) => {
     </div>
   );
 };
-
-const BlogCard = ({ title, date, content, cardNumber }) => {
-  const [hovered, setHovered] = useState(false);
-
-  // Define the corresponding images for each card
-  const images = [Image1, Image2, Image3, Image4];
+const BlogCard = ({ title, date, content, cardNumber, currentCard }) => {
+  const images = [Image1, Image2, Image3];
+  const isActive = cardNumber === currentCard;
 
   return (
     <div
-      className={`relative w-full transition-all duration-300  ${
-        hovered ? "bg-white" : "bg-gray-300"
+      className={`relative w-full transition-all duration-300 lg:flex ${
+        isActive ? "lg:col-span-2" : "bg-gray-300"
       } rounded-md`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       <img
-        src={hovered ? images[cardNumber - 1] : images[cardNumber - 1]}
+        src={isActive ? images[cardNumber] : images[cardNumber]}
         alt="Blog"
-        className="w-full object-cover rounded-md"
+        className=" object-cover rounded-md shrink-0"
       />
-      {hovered && (
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-white px-8 flex flex-col  p-4 text-left rounded-md">
+      {isActive && (
+        <div className=" bg-white px-8 flex flex-col  p-4 text-left rounded-md">
           <h3 className="text-2xl text-[#333333] uppercase font-[400] inter mt-7 mb-2">{title}</h3>
           <p className="text-sm uppercase text-gray-500 mb-2">{date}</p>
           <p className="text-[#333333] inter font-[300] text-[14px] mt-4 leading-[16.94px]">{content}</p>
           <button className="mt-8 uppercase tracking-[2px] leading-[20px] text-[14px] font-[400] flex justify-start text-[#333333] underline">
-            Read 
+            Read
           </button>
         </div>
       )}
@@ -77,39 +72,42 @@ const BlogCard = ({ title, date, content, cardNumber }) => {
   );
 };
 
+// Updated Blog component
 const Blog = () => {
-  const [currentCard, setCurrentCard] = useState(1);
+  const [currentCard, setCurrentCard] = useState(0);
 
   const handleNext = () => {
-    setCurrentCard((prevCard) => (prevCard + 1) % 5);
+    setCurrentCard((prevCard) => (prevCard + 1) % 3);
   };
 
   const handlePrev = () => {
-    setCurrentCard((prevCard) => (prevCard - 1 + 4) % 5);
+    setCurrentCard((prevCard) => (prevCard - 1 + 3) % 3);
   };
 
   return (
-    <div className="text-center py-10 px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
+    <div className="text-center  py-10 lg:py-[180px] lg:px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
       <h1 className="text-[30px] leading-[45px] text-[#333333] md:text-[64px] inter font-[400]">Our Blog</h1>
-      <div className="flex justify-around py-20 gap-4 md:gap-8 flex-col md:flex-row w-full">
+      <div className="justify-around py-20 lg:mt-8 grid gap-4  lg:grid-cols-4 w-full">
         {cardData.map((card, index) => (
           <BlogCard
             key={index + 1}
             title={card.title}
             date={card.date}
             content={card.content}
-            cardNumber={index + 1}
+            cardNumber={index}
+            currentCard={currentCard}
           />
         ))}
       </div>
-      <button className="uppercase underline absolute bottom-[3.5%] md:right-[3%] md:bottom-[15%]">
+      <button className="uppercase underline absolute bottom-[9%] md:right-[3%] md:bottom-[25%]">
         View all
       </button>
       {/* Progress Bar and Scroll Bar */}
-      <div className="flex flex-col md:flex-row justify-center items-center mt-12 md:space-x-[360px] w-full bottom-[0.4%] md:right-[-15%] absolute md:bottom-[5%]">
-        <ProgressBar totalImages={4} currentImage={currentCard} />
+      <div className="flex flex-col gap-5  md:flex-row justify-center items-center mt-12 md:space-x-[360px] w-full">
+        <ProgressBar totalImages={3} currentImage={currentCard} />
         <ScrollBar onPrev={handlePrev} onNext={handleNext} />
       </div>
+   
     </div>
   );
 };

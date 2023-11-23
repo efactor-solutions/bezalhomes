@@ -1,10 +1,34 @@
-import React, { useState } from "react";
-import SeeDetails from "../assets/see-details.png";
+import React, { useState } from "react"
 
+import SeeDetails from "../assets/SeeDetails.svg"; 
+
+const ProgressBar = ({ totalImages, currentImage }) => {
+  return (
+    <div className="flex items-center z-10 lg:z-0 w-full max-w-[40%] lg:max-w-[50%]">
+      {Array.from({ length: totalImages }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-[7px]  flex-shrink-0 ${
+            index === currentImage ? "bg-white" : "bg-gray-300"
+          }`}
+          style={{
+            width: `${100 / totalImages}%`,
+            borderRadius:
+              index === 0
+                ? "5px 0 0 5px" // rounded on the left side
+                : index === totalImages - 1
+                ? "0 5px 5px 0" // rounded on the right side
+                : "none", // no rounding for other divs
+          }}
+        ></div>
+      ))}
+    </div>
+  );
+};
 
 const ScrollBar = ({ totalImages, onPrev, onNext }) => {
   return (
-    <div className=" flex items-center space-x-6">
+    <div className=" flex items-center space-x-8 lg:ml-32">
       <button onClick={onPrev}>
         <span className="text-2xl  md:text-4xl text-white">&#8592;</span>
       </button>
@@ -31,31 +55,37 @@ const Rehoboth = () => {
 
   return (
     <div
-      className={`chisco h-screen flex flex-col justify-center relative items-center ${classnames[currentImage]}`}
+      className={`chisco h-screen flex flex-col relative  ${classnames[currentImage]}`}
     >
-      <div className="flex items-center justify-center flex-col gap-4"></div>
-      <div className="w-24 md:w-34 mt-12 cursor-pointer hover:animate-pulse">
-        <img src={SeeDetails} alt="button" className="w-full h-full object-cover"/>
+      <div className="overlay"></div>
+      <div className="flex  absolute flex-col lg:mt-8">
+        <h2 className="uppercase text-[22px] md:text-[45px]  lg:text-[60px] px-4 ml-4 mt-7  inter text-white lg:font-[400] leading-[54.46px]">
+          Rehoboth Apartments
+        </h2>
+        <h2 className="uppercase text-[11px] font-[400] md:text-[20px] lg:text-[20px] px-4 ml-5  inter text-white">
+          BY BEZAL HOMES
+        </h2>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-60  w-full max-w-5xl absolute bottom-3 px-2 md:px-0 md:bottom-[2%]">
-        <div>
-          <h1 className="uppercase mr-8 justify-center flex inter font-[600] text-[22px] max-w-[12px] md:text-[40px] md:leading-[50.4px] tracking-[1px] text-white">
-            Rehoboth Apartments
-          </h1>
-        </div>
-        <div className="flex justify-center items-center space-x-20 w-full">
-          <div className="h-[112px] w-[2px] bg-white"></div>
-          <div className="text-white inter flex flex-col">
-            <span className="font-[600] text-[20px] leading-[28px]">Elevate Your Living Experience</span>
-            <span className="text-[18px] font-normal leading-[28px]">Shonibare, Ikeja, Lagos.</span>
+      <div className="flex  justify-center gap-[20%] md:gap-60  w-full  absolute bottom-[3%] lg:bottom-[7%] px-12">
+        <div className="w-full flex flex-col lg:flex-row space-y-9 lg:space-x-20">
+       
+          <div className="lg:absolute lg:bottom-[25%]  cursor-pointer">
+         
+            
+          <img src={SeeDetails} alt="Button"  className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]"/>
+          </div>
+          <div className="w-full flex justify-between lg:gap-[40px] lg:justify-around lg:max-w-">
+            <ProgressBar
+              totalImages={classnames.length}
+              currentImage={currentImage}
+            />
+            <ScrollBar
+              totalImages={classnames.length}
+              onPrev={handlePrev}
+              onNext={handleNext}
+            />
           </div>
         </div>
-
-        <ScrollBar
-          totalImages={classnames.length}
-          onPrev={handlePrev}
-          onNext={handleNext}
-        />
       </div>
     </div>
   );

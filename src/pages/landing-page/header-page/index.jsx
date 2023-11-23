@@ -1,28 +1,50 @@
-import React from 'react';
-import Video from '../assets/Video.mp4'
+import React, { useEffect, useState } from "react";
+import Video from "../assets/Video.mp4";
+import Logo from '../../../assets/BezalLogo.png';
 const Header = () => {
+
+
+  const [showAnimation, setShowAnimation] = useState(true)
+
+
+  useEffect(() => {
+    // Hide the animation after 2 seconds
+    const animationTimeout = setTimeout(() => {
+      setShowAnimation(false);
+    }, 5000);
+
+  
+
+    return () => {
+      clearTimeout(animationTimeout);
+    };
+  }, [])
   return (
-    <div className="container-style py-10 md:py-0">
-      <div className="video-container h-[40vh] md:h-screen">
+    <div className="">
+        {showAnimation && (
+        <div className="w-full flex-wrap animation h-[100vh] absolute z-10 flex justify-center items-center bezalGiphy">
+          <div className='overlay-gif w-full'></div>
+          <img src={Logo} alt='logo' className="w-[50%] animate-pulse " />
+        </div>
+      )}
+      <div className="overlay"></div>
+      <div className="video-container">
         <video autoPlay loop muted controls={false} className="video">
           {/* Include different video formats for better browser compatibility */}
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Ensure the content is centered within the video container */}
-        <div className="content flex justify-center items-center">
-          <div className="flex flex-col gap-4 text-center w-full max-w-7xl">
-            <h1 className="text-white uppercase Outfit font-[600] text-xl md:text-6xl">
-              Welcome to Bezal Homes
+        <div className="content">
+          <div className="flex flex-col text-center w-full ">
+            <h1 className="text-white  flex flex-col px-12  Smart-watch-heading header-text uppercase Outfit  font-[400] text-[30px] md:text-4xl lg:text-[70px]">
+              <span className="text-[12px] md:text-[20px] Inter mb-1 md:mb-3 tracking-widest">Welcome to </span>Bezal Homes
             </h1>
-            <h1 className="text-[#E9682B] uppercase Outfit font-bold text-base md:text-4xl">
-              Where Your Dream Home Awaits You!
-            </h1>
-            <p className="text-white inter max-w-xl px-2 md:mt-4 text-center self-center font-normal text-xs md:text-xl">
-              At Bezal Homes, we transcend the realm of real estate. We are the
-              promise of an enriched life. We do not merely construct houses; we
-              meticulously shape homes that narrate your unique story. Embark on
-              your path to a brighter tomorrow with us.
+            <span className="bg-white w-[52px] md:w-[100px] flex self-center h-[2px]  my-2 md:my-7"></span>
+            <p className="text-white leading-[18.97px] md:leading-[35px] mt-2 Smart-watch-text header-text inter max-w-5xl px-10 md:mt-4 text-center self-center font-normal text-[15px] md:text-[30px]">
+              We do not merely construct houses; we meticulously shape homes
+              that narrate your unique story. Embark on your path to a brighter
+              tomorrow with us.
             </p>
           </div>
         </div>
