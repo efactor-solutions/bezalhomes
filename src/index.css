@@ -281,6 +281,7 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  background-color: aquamarine;
   
 }
 
@@ -357,6 +358,7 @@ video{
   left: 0;
   width: 100%;
   height: 100vh;
+  object-fit: cover;
   background-color: rgba(0, 0, 0, 0.5);
  
 }
