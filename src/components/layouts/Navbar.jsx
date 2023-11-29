@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/BezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -10,17 +11,20 @@ const Navbar = () => {
 
   const showDrawer = () => {
     setDrawerVisible(true);
-    setSelectedClass('class1');
+    setSelectedClass("class1");
   };
 
   const closeDrawer = () => {
     setDrawerVisible(false);
-    setSelectedClass("")
+    setSelectedClass("");
   };
 
   const handleButtonHover = (selectedClassName) => {
     setSelectedClass(selectedClassName);
-  };
+  }
+  const handleLinkClick = () => {
+    closeDrawer();
+  } 
   useEffect(() => {
     // Disable body scrolling when the drawer is open
     if (drawerVisible) {
@@ -58,57 +62,59 @@ const Navbar = () => {
           </button>
           <div className="md:py-8 flex flex-col  text-xl md:text-3xl md:px-12 mt-[10%] md:mt-20 p-8">
             <ul className="flex flex-col space-y-[5%] md:space-y-7 px-8">
-
-            
-            <li
-              className=" inter cursor-pointer text-white text-[15.52px] md:text-[30px] font-[700]"
-              onMouseEnter={() => handleButtonHover("class1")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-              HOME
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class2")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-              MASTERPIECES
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class3")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-              BOARD OF DIRECTORS
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class4")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-              MANAGEMENT TEAM
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class5")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-              OUR STORY
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class6")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-            BLOG
-            </li>
-            <li
-              className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
-              onMouseEnter={() => handleButtonHover("class7")}
-              onMouseLeave={() => handleButtonHover("")}
-            >
-             SEARCH
-            </li>
+              <li
+                className=" inter cursor-pointer text-white text-[15.52px] md:text-[30px] font-[700]"
+                onMouseEnter={() => handleButtonHover("class1")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link onClick={handleLinkClick} to="/">HOME</Link>
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class2")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link onClick={handleLinkClick} to="/masterpieces">MASTERPIECES</Link>
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class3")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link to="/board-of-directors"></Link>
+                BOARD OF DIRECTORS
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class4")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link to="/management-team"></Link>
+                MANAGEMENT TEAM
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class5")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link to="/our-story"></Link>
+                OUR STORY
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class6")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link to="/blog">BLOG</Link>
+              </li>
+              <li
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                onMouseEnter={() => handleButtonHover("class7")}
+                onMouseLeave={() => handleButtonHover("")}
+              >
+                <Link to="/contact-us"></Link>
+                CONTACT US
+              </li>
             </ul>
           </div>
           <div className="mt-[15%] px-12 md:fixed md:bottom-[7%] ml-[5%] md:ml-7">

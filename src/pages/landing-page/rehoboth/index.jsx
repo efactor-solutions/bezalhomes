@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 
 import SeeDetails from "../assets/SeeDetails.svg"; 
+import { useNavigate } from "react-router-dom";
 
 const ProgressBar = ({ totalImages, currentImage }) => {
   return (
@@ -39,6 +40,7 @@ const ScrollBar = ({ totalImages, onPrev, onNext }) => {
   );
 };
 const Rehoboth = () => {
+  const navigate = useNavigate()
   const [currentImage, setCurrentImage] = useState(0);
 
   const classnames = ["reho1", "reho2", "reho3", "reho4", "reho5"];
@@ -69,7 +71,7 @@ const Rehoboth = () => {
       <div className="flex  justify-center gap-[20%] md:gap-60  w-full  absolute bottom-[3%] lg:bottom-[7%] px-12">
         <div className="w-full flex flex-col lg:flex-row space-y-9 lg:space-x-20">
        
-          <div className="lg:absolute lg:bottom-[25%]  cursor-pointer">
+          <div onClick={ () => navigate('/rehoboth-details')} className="lg:absolute lg:bottom-[25%]  cursor-pointer">
          
             
           <img src={SeeDetails} alt="Button"  className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]"/>

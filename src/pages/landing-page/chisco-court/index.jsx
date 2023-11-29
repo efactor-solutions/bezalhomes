@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SeeDetails from "../assets/SeeDetails.svg"; 
+import { useNavigate } from "react-router-dom";
+
 
 
 // import Play from '../assets/playIcon.png'
@@ -41,6 +43,7 @@ const ProgressBar = ({ totalImages, currentImage }) => {
     );
   };
 const ChiscoCourt = () => {
+  const navigate = useNavigate()
     const [currentImage, setCurrentImage] = useState(0);
   
     const classnames = ['chisco1', 'chisco2', 'chisco3', 'chisco4', 'chisco5'];
@@ -85,7 +88,7 @@ const ChiscoCourt = () => {
       </div> */}
        <div className="flex  justify-center gap-[20%] md:gap-60  w-full  absolute bottom-[6%] lg:bottom-[7%] px-12">
         <div className='w-full flex flex-col lg:flex-row space-y-9 lg:space-x-20'>
-        <div className="lg:absolute lg:bottom-[40%]  cursor-pointer">
+        <div onClick={ () => navigate('/chisco-details')} className="lg:absolute lg:bottom-[40%]  cursor-pointer">
            
         <img src={SeeDetails} alt="Button"  className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]"/>
           </div>
