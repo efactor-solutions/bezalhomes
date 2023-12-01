@@ -1,0 +1,110 @@
+import React, { useState } from "react";
+
+import image1 from "../../assets/LegacyGallery1.png";
+import image2 from "../../assets/legacyGallery2.png";
+import image3 from "../../assets/legacyGallery3.png";
+import image4 from "../../assets/legacyGallery4.png";
+import image5 from "../../assets/legacyGallery5.png";
+
+
+
+
+
+
+
+
+const images = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+
+];
+
+const LegacyGallery = () => {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const handleImageClick = (index) => {
+    setLightboxIndex(index);
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxIndex(null);
+    setZoomLevel(1); // Reset zoom level when closing lightbox
+  };
+
+  const handleMovePrev = () => {
+    setLightboxIndex(
+      (prevIndex) => (prevIndex + images.length - 1) % images.length
+    );
+  };
+
+  const handleMoveNext = () => {
+    setLightboxIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handleZoomIn = () => {
+    setZoomLevel((prevZoom) => prevZoom + 0.1);
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.1, 0.1));
+  };
+
+  return (
+    <div className="w-full lg:py-20">
+      <div className="w-[90%] m-auto py-10">
+        <div className="text-zinc-800 text-[16px] lg:text-3xl font-normal Inter uppercase leading-normal tracking-wide">
+          Explore the gallery
+        </div>
+        <div className="w-full mt-2 h-[1px] lg:h-[3px] bg-zinc-600" />
+      </div>
+      <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Show ${index + 1}`}
+            className="w-full h-full cursor-pointer"
+            onClick={() => handleImageClick(index)}
+          />
+        ))}
+      </div>
+
+      {lightboxIndex !== null && (
+        <div className="lightbox">
+          <div className="" style={{ transform: `scale(${zoomLevel})` }}>
+            {/* <div className='overlay'></div> */}
+
+            <div>
+              <span
+                className="text-white text-4xl absolute  right-[37%] cursor-pointer top-[3%]"
+                onClick={handleCloseLightbox}
+              >
+                &times;
+              </span>
+              <div className="text-white flex gap-4 text-4xl absolute  right-[45%] top-[3%]">
+                <button onClick={handleZoomIn}>+</button>
+                <button onClick={handleZoomOut}>-</button>
+              </div>
+              <div className="text-4xl text-white absolute bottom-[6%] flex gap-8 right-[34%]">
+                <button onClick={handleMovePrev}>&#8592;</button>
+                <button onClick={handleMoveNext}>&#8594;</button>
+              </div>
+            </div>
+
+            <img
+              className="w-full"
+              src={images[lightboxIndex]}
+              alt={`Imag ${lightboxIndex + 1}`}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default LegacyGallery;

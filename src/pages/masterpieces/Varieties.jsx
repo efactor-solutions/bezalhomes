@@ -31,7 +31,7 @@ const Varieties = () => {
             </p>
           </div>
         </div>
-        <div className=" relative rounded-[30px] hover-zoom">
+        <div  onClick={ () => navigate('/rehoboth-details')} className="cursor-pointer relative rounded-[30px] hover-zoom">
           <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
           <img src={Rehoboth} alt="Chisco" className="rounded-[30px] w-full hover-zoom" />
           <div className="absolute w-full left-[1%]  bottom-[5%] flex flex-col">
@@ -43,7 +43,7 @@ const Varieties = () => {
             </p>
           </div>
         </div>
-        <div className=" relative rounded-[30px] hover-zoom">
+        <div onClick={ () => navigate('/legacy-place')} className=" cursor-pointer relative rounded-[30px]  hover-zoom">
           <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
           <img src={Legacy} alt="Chisco" className="rounded-[30px] w-full" />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
