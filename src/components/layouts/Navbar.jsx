@@ -35,7 +35,7 @@ const Navbar = () => {
   }, [drawerVisible]);
 
   return (
-    <div className="bg-black bg-opacity-80 fixed w-full z-10">
+    <div className="bg-black bg-opacity-80  w-full absolute z-10">
       {drawerVisible && <div className={`class1 ${selectedClass}`}></div>}
 
       <div className="flex items-center md:px-12 p-2 md:p-4">
