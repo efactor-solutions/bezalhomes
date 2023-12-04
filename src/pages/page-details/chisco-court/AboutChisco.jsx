@@ -1,27 +1,27 @@
 import React from "react";
-import { useSpring, animated, config } from "react-spring";
+// import { useSpring, animated, config } from "react-spring";
 import AboutImage from "../../../assets/AboutChisco.png";
 import Timeline from "../../../assets/Timeline.svg";
 import Units from "../../../assets/Units.svg";
 import Progress from "../../../assets/Progress.svg";
 
-const cards = [
-  { icon: Timeline, text: "Timeline - Q4 - 2026" },
-  { icon: Units, text: "100 Units" },
-  { icon: Progress, text: "Status - In Progress" },
-];
+// const cards = [
+//   { icon: Timeline, text: "Timeline - Q4 - 2026" },
+//   { icon: Units, text: "100 Units" },
+//   { icon: Progress, text: "Status - In Progress" },
+// ];
 
 const AboutChisco = () => {
-  const [index, setIndex] = React.useState(0);
+  // const [index, setIndex] = React.useState(0);
 
-  const props = useSpring({
-    opacity: 1,
-    transform: `translateX(${-100 * index}%)`, // Use index to determine the translateX value
-    from: { opacity: 0, transform: 'translateX(100%)' },
-    reset: false,
-    onRest: () => setIndex((prev) => (prev + 1) % cards.length),
-    config: { ...config.default, duration: 1000 }, // Adjust duration as needed
-  });
+  // const props = useSpring({
+  //   opacity: 1,
+  //   transform: `translateX(${-100 * index}%)`, // Use index to determine the translateX value
+  //   from: { opacity: 0, transform: 'translateX(100%)' },
+  //   reset: false,
+  //   onRest: () => setIndex((prev) => (prev + 1) % cards.length),
+  //   config: { ...config.default, duration: 1000 }, // Adjust duration as needed
+  // });
   return (
     <main className="flex lg:py-20 ">
       <div className="lg:w-[90%] w-full m-auto lg:space-x-12 items-center flex flex-col-reverse lg:flex-row">
@@ -45,7 +45,7 @@ const AboutChisco = () => {
             the best that Lagos has to offer.{" "}
           </div>
           <div>
-          <div className="lg:flex flex-col hidden  lg:space-x-6 mt-6  md:flex-row gap-4 md:gap-0 mb-7 md:mb-0 justify-center items-center">
+          <div className="flex flex-col   lg:space-x-6 mt-6  md:flex-row gap-4 md:gap-0 mb-7 md:mb-0 justify-center items-center">
               <div className="w-[200.99px] h-[115.36px] relative">
                 <div className="w-[200.99px] h-[115.36px] left-0 top-0 absolute flex justify-center items-center bg-white rounded-[7.08px] border border-neutral-200 hover:shadow-2xl ">
                 <img src={Timeline} alt="Icon" className="w-[] h-[] lg:w-[30px] lg:h-[33.33px] absolute top-6" />
@@ -77,10 +77,10 @@ const AboutChisco = () => {
                 <div className="w-[30px] h-[33.33px] left-[81px] top-[58.33px] absolute flex-col justify-start items-start inline-flex" />
               </div>
             </div>
-            <div className="flex max-w-5xl lg:hidden card-container mt-6 mb-7 justify-center items-center">
+            {/* <div className="flex max-w-5xl mx-auto  flex-col lg:hidden card-container mt-6 mb-7 justify-center items-center">
               {cards.map((card, i) => (
                 <animated.div key={i} className="w-full h-[115.36px] relative" style={i === index ? props : {}}>
-                  <div className="w-full h-[115.36px] left-0 top-0 absolute flex justify-center items-center bg-white rounded-[7.08px] border border-neutral-200 hover:shadow-2xl">
+                  <div className="w-[200.99px] h-[115.36px] left-0 top-0 absolute flex justify-center items-center bg-white rounded-[7.08px] border border-neutral-200 hover:shadow-2xl">
                     <img src={card.icon} alt="Icon" className="w-[30px] h-[33.33px]  absolute top-6" />
                   </div>
                   <div className="w-[199.58px] h-[0.71px] left-[0.71px] top-[74.71px] absolute bg-neutral-200" />
@@ -90,7 +90,7 @@ const AboutChisco = () => {
                   <div className="w-[30px] h-[33.33px] left-[81px] top-[58.33px] absolute flex-col justify-start items-start inline-flex" />
                 </animated.div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="w-full">
