@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import Explore from '../../../assets/Explore.svg'
 import Video from '../../../assets/productVideo.png'
 

@@ -87,7 +87,7 @@ const RehobothGallery = () => {
                 <button onClick={handleZoomIn}>+</button>
                 <button onClick={handleZoomOut}>-</button>
               </div>
-              <div className="md:text-5xl text-2xl text-white absolute bottom-[30%] md:bottom-[6%] right-[40%] flex gap-8 md:right-[4%]">
+              <div className="md:text-5xl text-2xl text-white absolute bottom-[25%] md:bottom-[6%] right-[40%] flex gap-8 md:right-[4%]">
                 <button onClick={handleMovePrev}>&#8592;</button>
                 <button onClick={handleMoveNext}>&#8594;</button>
               </div>
