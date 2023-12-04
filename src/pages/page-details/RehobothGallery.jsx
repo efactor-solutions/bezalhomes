@@ -11,12 +11,6 @@ import image8 from "../../assets/Rehoboth8.png";
 import image9 from "../../assets/Rehoboth9.png";
 import image10 from "../../assets/Rehoboth10.png";
 
-
-
-
-
-
-
 const images = [
   image1,
   image2,
@@ -44,9 +38,7 @@ const RehobothGallery = () => {
   };
 
   const handleMovePrev = () => {
-    setLightboxIndex(
-      (prevIndex) => (prevIndex + images.length - 1) % images.length
-    );
+    setLightboxIndex((prevIndex) => (prevIndex + images.length - 1) % images.length);
   };
 
   const handleMoveNext = () => {
@@ -84,8 +76,6 @@ const RehobothGallery = () => {
       {lightboxIndex !== null && (
         <div className="lightbox">
           <div className="lightbox-content" style={{ transform: `scale(${zoomLevel})` }}>
-            {/* <div className='overlay'></div> */}
-
             <div>
               <span
                className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"

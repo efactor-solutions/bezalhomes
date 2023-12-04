@@ -6,21 +6,7 @@ import image3 from "../../assets/legacyGallery3.png";
 import image4 from "../../assets/legacyGallery4.png";
 import image5 from "../../assets/legacyGallery5.png";
 
-
-
-
-
-
-
-
-const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-
-];
+const images = [image1, image2, image3, image4, image5];
 
 const LegacyGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -36,9 +22,7 @@ const LegacyGallery = () => {
   };
 
   const handleMovePrev = () => {
-    setLightboxIndex(
-      (prevIndex) => (prevIndex + images.length - 1) % images.length
-    );
+    setLightboxIndex((prevIndex) => (prevIndex + images.length - 1) % images.length);
   };
 
   const handleMoveNext = () => {
@@ -76,11 +60,9 @@ const LegacyGallery = () => {
       {lightboxIndex !== null && (
         <div className="lightbox">
           <div className="lightbox-content" style={{ transform: `scale(${zoomLevel})` }}>
-            {/* <div className='overlay'></div> */}
-
             <div>
               <span
-                    className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
+                className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
                 onClick={handleCloseLightbox}
               >
                 &times;
@@ -96,7 +78,7 @@ const LegacyGallery = () => {
             </div>
 
             <img
-              className="w-full "
+              className="w-full"
               src={images[lightboxIndex]}
               alt={`Imag ${lightboxIndex + 1}`}
             />
