@@ -54,16 +54,13 @@ const ChiscoGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  // const isSmallScreen = window.innerWidth <= 768;
-
-  
   const handleImageClick = (index) => {
     setLightboxIndex(index);
   };
 
   const handleCloseLightbox = () => {
     setLightboxIndex(null);
-    setZoomLevel(1); // Reset zoom level when closing lightbox
+    setZoomLevel(1);
   };
 
   const handleMovePrev = () => {
@@ -95,7 +92,7 @@ const ChiscoGallery = () => {
       <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
         {images.map((image, index) => (
           <img
-          loading="lazy"
+            loading="lazy"
             key={index}
             src={image}
             alt={`Show ${index + 1}`}
@@ -107,12 +104,13 @@ const ChiscoGallery = () => {
 
       {lightboxIndex !== null && (
         <div className="lightbox">
-          <div className="lightbox-content" style={{ transform: `scale(${zoomLevel})` }}>
-            {/* <div className='overlay'></div> */}
-
+          <div
+            className="lightbox-content"
+            style={{ transform: `scale(${zoomLevel})` }}
+          >
             <div>
               <span
-                    className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
+                className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
                 onClick={handleCloseLightbox}
               >
                 &times;
@@ -128,7 +126,7 @@ const ChiscoGallery = () => {
             </div>
 
             <img
-            loading="lazy"
+              loading="lazy"
               className="w-full"
               src={images[lightboxIndex]}
               alt={`Imag ${lightboxIndex + 1}`}
