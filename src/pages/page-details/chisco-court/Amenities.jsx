@@ -17,13 +17,13 @@ import PrivatePools from "../../../assets/PrivatePools.svg";
 
 const Amenities = () => {
   return (
-    <main>
+    <main id="chisco-details">
       <div className="w-[90%] m-auto">
         <h1 className="text-zinc-800 text-[16px] lg:text-3xl font-normal Inter uppercase leading-normal tracking-wide">
           The amenities
         </h1>
         <div className="w-full my-2 h-[1px] lg:h-[3px] bg-zinc-600" />
-        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter leading-[34px] tracking-wide">
+        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter lg:leading-[34px] tracking-wide">
           Our commitment at Chisco Court is to redefine affordable luxury real
           estate. We've created a project that offers exceptional residential
           apartments, equipped with top-notch amenities, all while catering to

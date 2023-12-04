@@ -12,13 +12,13 @@ import PrivatePools from "../../../assets/PrivatePools.svg";
 
 const Amenities = () => {
   return (
-    <main>
+    <main id="rehoboth-details">
       <div className="w-[90%] mt-10 lg:mt-2 m-auto">
         <h1 className="text-zinc-800 text-[16px] lg:text-3xl font-normal Inter uppercase leading-normal tracking-wide">
           The amenities
         </h1>
         <div className="w-full my-2 h-[1px] lg:h-[3px] bg-zinc-600" />
-        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter leading-[34px] tracking-wide">
+        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter lg:leading-[34px] tracking-wide">
           The moment you step into Rehoboth Apartments, you'll be greeted by an
           air of sophistication and an ambiance that speaks of exclusivity; a
           testament to the unadulterated luxury that awaits you inside. Rehoboth

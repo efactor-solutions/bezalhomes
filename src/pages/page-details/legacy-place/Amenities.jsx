@@ -12,13 +12,13 @@ import PrivatePools from "../../../assets/TreatedWS.svg";
 
 const Amenities = () => {
   return (
-    <main>
+    <main id="explore-section">
       <div className="w-[90%] mt-10 lg:mt-2 m-auto">
         <h1 className="text-zinc-800 text-[16px] lg:text-3xl font-normal Inter uppercase leading-normal tracking-wide">
           The amenities
         </h1>
         <div className="w-full my-2 h-[1px] lg:h-[3px] bg-zinc-600" />
-        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter leading-[34px] tracking-wide">
+        <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter lg:leading-[34px] tracking-wide">
           The Legacy Place at Omole offers two exquisite units of 4 & 5 Bedroom
           luxury duplexes, meticulously designed to cater to the most discerning
           tastes. These smart duplexes feature cutting-edge architecture and a

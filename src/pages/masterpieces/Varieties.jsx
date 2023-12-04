@@ -20,7 +20,7 @@ const Varieties = () => {
 
       <div className="3-divs w-[94%] py-10 lg:mb-24  justify-between grid lg:grid-cols-2 gap-8">
         <div onClick={ () => navigate('/chisco-details')} className=" cursor-pointer relative rounded-[30px]  hover-zoom">
-          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
+          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img src={Chisco} alt="Chisco" className="rounded-[30px] w-full  hover-zoom" />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
             <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[50px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
@@ -32,7 +32,7 @@ const Varieties = () => {
           </div>
         </div>
         <div  onClick={ () => navigate('/rehoboth-details')} className="cursor-pointer relative rounded-[30px] hover-zoom">
-          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
+          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img src={Rehoboth} alt="Chisco" className="rounded-[30px] w-full hover-zoom" />
           <div className="absolute w-full left-[1%]  bottom-[5%] flex flex-col">
             <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[48px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
@@ -44,7 +44,7 @@ const Varieties = () => {
           </div>
         </div>
         <div onClick={ () => navigate('/legacy-place')} className=" cursor-pointer relative rounded-[30px]  hover-zoom">
-          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
+          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img src={Legacy} alt="Chisco" className="rounded-[30px] w-full" />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
             <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[50px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">

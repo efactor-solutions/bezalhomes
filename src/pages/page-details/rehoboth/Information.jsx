@@ -3,7 +3,7 @@ import GetInTouch from "../../../assets/getTouch.svg";
 
 const Information = () => {
   return (
-    <div className="w-[90%] m-auto py-20 relative md:mb-8">
+    <div className="w-[90%] m-auto py-20 lg:py-28 relative md:mb-8">
       <h1 className="text-zinc-800 text-[16px] md:text-3xl font-normal Inter uppercase leading-relaxed tracking-wide">
         Request Information
       </h1>
@@ -20,7 +20,7 @@ const Information = () => {
         Contact us today to learn more about Rehoboth Apartments and how you can
         be part of this unique opportunity.
       </div>
-      <div className="lg:absolute lg:bottom-[2%] right-[4%]  cursor-pointer">
+      <div className="lg:absolute lg:bottom-0 right-[4%]  cursor-pointer">
         <img
           src={GetInTouch}
           alt="Button"

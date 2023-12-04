@@ -24,12 +24,6 @@ import image21 from "../../assets/chiscoG21.png";
 import image22 from "../../assets/chiscoG22.png";
 import image23 from "../../assets/chiscoG23.png";
 
-
-
-
-
-
-
 const images = [
   image1,
   image2,
@@ -53,13 +47,16 @@ const images = [
   image20,
   image21,
   image22,
-  image23
+  image23,
 ];
 
 const ChiscoGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
+  // const isSmallScreen = window.innerWidth <= 768;
+
+  
   const handleImageClick = (index) => {
     setLightboxIndex(index);
   };
@@ -98,6 +95,7 @@ const ChiscoGallery = () => {
       <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
         {images.map((image, index) => (
           <img
+          loading="lazy"
             key={index}
             src={image}
             alt={`Show ${index + 1}`}
@@ -109,27 +107,28 @@ const ChiscoGallery = () => {
 
       {lightboxIndex !== null && (
         <div className="lightbox">
-          <div className="" style={{ transform: `scale(${zoomLevel})` }}>
+          <div className="lightbox-content" style={{ transform: `scale(${zoomLevel})` }}>
             {/* <div className='overlay'></div> */}
 
             <div>
               <span
-                className="text-white text-4xl absolute  right-[37%] cursor-pointer top-[3%]"
+                    className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
                 onClick={handleCloseLightbox}
               >
                 &times;
               </span>
-              <div className="text-white flex gap-4 text-4xl absolute  right-[45%] top-[3%]">
+              <div className="text-white flex gap-4 text-2xl md:text-5xl absolute top-[25%]  right-[45%] md:right-[7%] md:top-[3%]">
                 <button onClick={handleZoomIn}>+</button>
                 <button onClick={handleZoomOut}>-</button>
               </div>
-              <div className="text-4xl text-white absolute bottom-[6%] flex gap-8 right-[34%]">
+              <div className="md:text-5xl text-2xl text-white absolute bottom-[30%] md:bottom-[6%] right-[40%] flex gap-8 md:right-[4%]">
                 <button onClick={handleMovePrev}>&#8592;</button>
                 <button onClick={handleMoveNext}>&#8594;</button>
               </div>
             </div>
 
             <img
+            loading="lazy"
               className="w-full"
               src={images[lightboxIndex]}
               alt={`Imag ${lightboxIndex + 1}`}

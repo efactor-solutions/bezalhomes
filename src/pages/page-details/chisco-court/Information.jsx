@@ -3,7 +3,7 @@ import GetInTouch from "../../../assets/getTouch.svg";
 
 const Information = () => {
   return (
-    <div className="w-[90%] m-auto py-20 relative">
+    <div className="w-[90%] m-auto py-20 lg:mb-8 relative">
       <h1 className="text-zinc-800 text-[16px] md:text-3xl font-normal Inter uppercase leading-relaxed tracking-wide">
         Request Information
       </h1>
@@ -20,7 +20,7 @@ const Information = () => {
         Contact us today to learn more about Chisco Court and how you can be
         part of this unique opportunity.
       </div>
-      <div className="lg:absolute lg:bottom-[3%] right-[4%]  cursor-pointer">
+      <div className="lg:absolute lg:bottom-0 right-[4%]  cursor-pointer">
         <img
           src={GetInTouch}
           alt="Button"

@@ -1,7 +1,17 @@
 import React from "react";
 import Explore from "../../../assets/Explore.svg";
 
+
 const Head = () => {
+  const scrollToExplore = () => {
+    const exploreSection = document.getElementById("explore-section");
+    if (exploreSection) {
+      exploreSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div className="legacy4 flex flex-col">
       <div className="overlay "></div>
@@ -18,7 +28,7 @@ const Head = () => {
           unveil two smart luxury duplexes that are the epitome of
           sophistication, nestled in the prestigious Omole Phase I of Ikeja.
         </p>
-        <div className="lg:mt-[5%] mt-[40%] cursor-pointer">
+        <div onClick={scrollToExplore} className="lg:mt-[5%] mt-[40%] cursor-pointer">
           <img
             src={Explore}
             alt="Button"

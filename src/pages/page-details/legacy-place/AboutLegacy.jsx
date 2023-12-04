@@ -3,11 +3,11 @@ import AboutImage from "../../../assets/AboutLegacy.png";
 
 const AboutLegacy = () => {
   return (
-    <main className="flex py-20 mobileGray">
+    <main className="flex py-5 lg:py-20 mobileGray">
       <div className="lg:w-[90%] w-full m-auto lg:space-x-12 items-center flex flex-col-reverse lg:flex-row">
         <div className=" px-5 lg:px-0">
           <h1 className="text-zinc-800 mt-6 lg:mt-0  text-[16px] lg:text-3xl font-normal Inter uppercase lg:leading-[21px] lg:tracking-[3px]">
-            About legacy court
+            About legacy Place
           </h1>
           <div className="max-w-5xl py-6 lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter lg:leading-[30px]">
             The Legacy Place is situated in the heart of Omole, Ikeja, this

@@ -4,7 +4,7 @@ import DuplexSD from '../../../assets/Duplex2.svg'
 import Terraces from '../../../assets/Terraces.svg'
 import Maisonnete from '../../../assets/Maisonnete.svg'
 import Flat from '../../../assets/Flat.svg'
-import Video from '../../../assets/productVideo.svg'
+import Video from '../../../assets/productVideo.png'
 
 export const Cards = () => {
   return (
@@ -49,7 +49,7 @@ export const CardsMobile = () => {
     return (
       <div className="flex lg:hidden py-10">
         <div className="w-[90%] flex flex-col space-y-4 items-center m-auto">
-        <div className="block md:w-full lg:hidden">
+        <div className="block hover-zoom  md:w-full lg:hidden">
         <img src={Video} alt="Icon" className="md:w-full" />
       </div>
           <div className="px-8 w-full  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
@@ -64,7 +64,7 @@ export const CardsMobile = () => {
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Semi-Detached Duplexes</div>
           </div>
-          <div className="px-8  w-full  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="px-8  w-full  py-5 flex gap-7 justify-center items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={Terraces} alt="Icon" className="w-full" />
             </div>
@@ -76,7 +76,7 @@ export const CardsMobile = () => {
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Terraces and townhouses</div>
           </div>
-          <div className="px-8  w-full  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="px-8  w-full  py-5 flex gap-12 justify-center items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={Flat} alt="Icon" className="w-full" />
             </div>
@@ -87,9 +87,4 @@ export const CardsMobile = () => {
     );
   };
 
-<div className="w-[275px] h-[108px] relative">
-  <div className="w-[126px] left-[100px] top-[32px] absolute text-zinc-800 text-lg font-normal font-['Optima Pro'] leading-[27px] tracking-wide">
-  Flat and Apartments
-  </div>
-  {/* <img className="w-[41px] h-[41px] left-[30px] top-[33px] absolute" src="https://via.placeholder.com/41x41" /> */}
-</div>;
+

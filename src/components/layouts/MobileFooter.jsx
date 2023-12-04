@@ -8,8 +8,8 @@ import Buttonicon from '../../pages/landing-page/assets/button-icon-orange.png'
 const MobileFooter = () => {
   return (
     <div className="bg-[#1D1D1D] block lg:hidden">
-          <div className="w-full bg-[#1D1D1D] py-8 lg:py-20">
-    <div className="giphy w-[80%] lg:w-[90%]  m-auto text-white flex justify-center items-center">
+          <div className="w-full bg-[#1D1D1D] py-6 lg:py-20">
+    <div className="giphy w-[90%] lg:w-[90%]  m-auto text-white flex justify-center items-center">
       <div className="w-full overlay4"></div>
    
       <div className="absolute z-10">

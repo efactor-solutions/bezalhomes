@@ -1,8 +1,18 @@
 import React from "react";
 import Explore from '../../../assets/Explore.svg'
-import Video from '../../../assets/productVideo.svg'
+import Video from '../../../assets/productVideo.png'
 
 const Head = () => {
+  const scrollToExplore = () => {
+    const exploreSection = document.getElementById("chisco-details");
+    if (exploreSection) {
+      exploreSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="chisco-details flex flex-col">
       <div className="overlay "></div>
@@ -19,12 +29,12 @@ const Head = () => {
           Investment Ltd. Chisco Court is set to redefine the expectations of
           upscale living in the city of Lagos, Nigeria.
         </p>
-        <div  className="lg:mt-[5%] mt-[40%] cursor-pointer">
+        <div onClick={scrollToExplore}  className="lg:mt-[5%] mt-[40%] cursor-pointer">
            
         <img src={Explore} alt="Button"  className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]"/>
           </div>
       </div>
-      <div className="absolute w-[419px] h-[234px] hidden lg:block right-[5%] bottom-[10%]">
+      <div className="absolute cursor-pointer hover-zoom w-[419px] h-[234px] hidden lg:block right-[5%] bottom-[10%]">
         <img src={Video} alt="Icon" className="" />
       </div>
     </div>
