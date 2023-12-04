@@ -11,7 +11,7 @@ import BezalSmall from "../assets/BezalSmall.svg";
 
 const About = () => {
   return (
-    <div className=" relative">
+    <div  className=" relative">
       <div className="flex flex-col gap-4 w-full ">
         <div className=" flex flex-col justify-center relative items-center py-10  lg:py-[10%] lg:mt-10 gap-2 lg:gap-4">
           <h2 className="text-[#2D6462] md:text-[#E9682B] inter font-medium text-sm ">

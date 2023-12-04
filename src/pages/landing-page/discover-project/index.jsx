@@ -1,7 +1,7 @@
 import React from "react";
 import Buttonicon from '../assets/button-icon-orange.png'
 
-const index = () => {
+const DiscoverProject = () => {
   return (
 
     <div className="w-full bg-[#1D1D1D] hidden lg:block py-8 lg:py-20">
@@ -29,4 +29,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default DiscoverProject;

@@ -27,9 +27,9 @@ const Header = () => {
           <img src={Logo} alt='logo' className="w-[50%] animate-pulse " />
         </div>
       )}
-      <div className="overlay"></div>
+     
       <div className="video-container">
-        <video autoPlay loop muted controls={false} className="video">
+        <video autoPlay loop muted controls={false} className="video" style={{ filter: 'brightness(50%)' }}>
           {/* Include different video formats for better browser compatibility */}
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
