@@ -11,7 +11,7 @@ const Header = () => {
     // Hide the animation after 2 seconds
     const animationTimeout = setTimeout(() => {
       setShowAnimation(false);
-    }, 2000);
+    }, 4000);
 
   
 
