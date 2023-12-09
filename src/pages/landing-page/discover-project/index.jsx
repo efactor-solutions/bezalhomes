@@ -4,7 +4,7 @@ import Buttonicon from '../assets/button-icon-orange.png'
 const DiscoverProject = () => {
   return (
 
-    <div className="w-full bg-[#1D1D1D] hidden lg:block py-8 lg:py-20">
+    <div className="w-full bg-[#1D1D1D] hidden lg:block py-8 lg:py-20" >
     <div className="giphy w-[80%] lg:w-[90%]  m-auto text-white flex justify-center items-center">
       <div className="w-full overlay4"></div>
    

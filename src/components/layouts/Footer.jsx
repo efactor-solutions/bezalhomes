@@ -9,11 +9,11 @@ import SendButton from "../../assets/Group 20.png";
 const Footer = () => {
   return (
     <div className="bg-[#1D1D1D] hidden lg:block">
-      <div className="w-[97%] m-auto flex flex-col justify-center items-center  py-10">
+      <div className="w-[90%] m-auto flex flex-col justify-center items-center  py-10">
         <div className="logo text-white w-[180px] md:w-[398px] flex justify-center py-10 items-center">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
-        <div className="5-divs-container  flex flex-col md:flex-row space-x-12 justify-between w-full">
+        <div className="5-divs-container justify-between flex w-full">
           <div className="div-1 w-full">
             <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
              OUR STORY
@@ -83,7 +83,7 @@ const Footer = () => {
             Management Team
             </div>
           </div>
-          <div className="div5 mt-8 md:mt-0">
+          <div className="div5 mt-8 w-full md:mt-0">
             <h1 className="inter uppercase font-[400] text-[20px] leading-[15.12px] footer-heading ">
               Stay in the know
             </h1>
@@ -93,16 +93,16 @@ const Footer = () => {
               </label>
               <input
                 type="email"
-                className="line-input text-white  w-full"
+                className="line-input text-white "
                 placeholder=""
               />
             </form>
-            <div className="inter font-[400] text-[10.63px] mt-8 leading-[15.12px] text-left w-full text-white ">
+            <div className="inter font-[400] text-[10.63px] mt-8 leading-[17.12px] text-left w-full text-white ">
               By signing up I want to hear about new updates and masterpieces
-              and
+              and agree with the data protection policy
             </div>
             <div className="inter font-[400] text-[10.8px] mt-2 leading-[16.2px] text-left max-w-[200px] text-white ">
-              agree with the data protection policy
+            
             </div>
             <div className="logo text-white w-[123px] h-[35px] flex justify-center py-10 items-center">
               <img
