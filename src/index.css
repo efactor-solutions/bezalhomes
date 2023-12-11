@@ -129,7 +129,25 @@ body {
   width: 100%;
   height: 100vh;
 }
+.our-story {
+  background-image: url(./assets/ourStory.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  
+}
 
+.core-values {
+  background-image: url(./assets/coreValueeess.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  
+}
 .chisco-details {
   background-image: url(./pages/landing-page/assets/chiscoDetailsImage.svg);
   background-repeat: no-repeat;
@@ -539,6 +557,32 @@ video{
 
 .nav-buttons button:hover {
   color: #ccc;
+}
+
+/* Add this to your CSS file or use a CSS-in-JS solution like styled-components */
+
+
+
+
+
+.thumb {
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumb:hover {
+  transform: scale(1.2);
+}
+
+.thumb.active {
+  transform: scale(1.3);
+}
+
+.thumb img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumb.hovered img {
+  transform: scale(1.2);
 }
 
 

@@ -21,10 +21,10 @@ const Navbar = () => {
 
   const handleButtonHover = (selectedClassName) => {
     setSelectedClass(selectedClassName);
-  }
+  };
   const handleLinkClick = () => {
     closeDrawer();
-  } 
+  };
   useEffect(() => {
     // Disable body scrolling when the drawer is open
     if (drawerVisible) {
@@ -67,45 +67,52 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class1")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/">HOME</Link>
+                <Link onClick={handleLinkClick} to="/">
+                  HOME
+                </Link>
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class2")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/masterpieces">MASTERPIECES</Link>
+                <Link to="/masterpieces" onClick={handleLinkClick} >
+                  MASTERPIECES
+                </Link>
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class3")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/board-of-directors"></Link>
-                BOARD OF DIRECTORS
+                <Link to="/board-of-directors" onClick={handleLinkClick} >
+                  BOARD OF DIRECTORS
+                </Link>
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class4")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/management-team"></Link>
-                MANAGEMENT TEAM
+                <Link  to="/management-team" onClick={handleLinkClick}>
+                  MANAGEMENT TEAM
+                </Link>
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class5")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/our-story"></Link>
-                OUR STORY
+                <Link to="/our-story" onClick={handleLinkClick} >
+                  OUR STORY
+                </Link>
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class6")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/blog">BLOG</Link>
+                <Link to="/blog"></Link>BLOG
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
