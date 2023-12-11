@@ -76,7 +76,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class2")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/masterpieces">
+                <Link to="/masterpieces" onClick={handleLinkClick} >
                   MASTERPIECES
                 </Link>
               </li>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class3")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/board-of-directors">
+                <Link to="/board-of-directors" onClick={handleLinkClick} >
                   BOARD OF DIRECTORS
                 </Link>
               </li>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class4")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/management-team">
+                <Link  to="/management-team" onClick={handleLinkClick}>
                   MANAGEMENT TEAM
                 </Link>
               </li>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class5")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link onClick={handleLinkClick} to="/our-story">
+                <Link to="/our-story" onClick={handleLinkClick} >
                   OUR STORY
                 </Link>
               </li>
@@ -112,7 +112,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class6")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/blog">BLOG</Link>
+                <Link to="/blog"></Link>BLOG
               </li>
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
