@@ -12,6 +12,7 @@ import director2 from "../../assets/directorPicture2.png";
 import director3 from "../../assets/directorPicture3.png";
 import director4 from "../../assets/directorPic4.png";
 import DiscoverProject from "../landing-page/discover-project";
+import CarouselComponent from "../../components/carousel";
 
 const BoardOfDirectors = () => {
   const [activeDirector, setActiveDirector] = useState("1");
@@ -27,7 +28,7 @@ const BoardOfDirectors = () => {
     setActiveDirector(defaultDirectorId);
   }, [defaultDirectorId])
 
- 
+
 
   const directors = [
     {
@@ -214,7 +215,7 @@ const BoardOfDirectors = () => {
         <img src={Scape} alt="scape" className="w-full object-cover" />
       </div>
       <div className=" lg:w-[90%]  m-auto py-10 md:py-20 flex flex-col">
-      <h1 className="text-teal-800 text-[20px] px-2 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
+        <h1 className="text-teal-800 text-[20px] px-2 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
           Board of Directors
         </h1>
         <div className=" text-zinc-800 px-2 md:px-0  py-5 md:py-10 text-sm md:text-lg font-normal Inter leading-[30px]">
@@ -227,7 +228,7 @@ const BoardOfDirectors = () => {
           in the industry.
         </div>
         <div className=" w-full lg:space-x-12  flex flex-col lg:flex-row">
-        <div className="md:w-[573px] md:h-[793px] w-full">
+          <div className="md:w-[573px] md:h-[793px] w-full">
             <img
               src={selectedDirector.image}
               alt={selectedDirector.name}
@@ -236,7 +237,7 @@ const BoardOfDirectors = () => {
           </div>
           <div className="w-full max-w-3xl mt-10 px-5 lg:px-0">
             <div className="flex gap-2">
-            <span className="text-zinc-800 text-xl md:text-3xl  font-normal Inter uppercase leading-[21px] tracking-[3px]">
+              <span className="text-zinc-800 text-xl md:text-3xl  font-normal Inter uppercase leading-[21px] tracking-[3px]">
                 {selectedDirector.name}
               </span>
               <span className="text-zinc-800 text-xl md:text-3xl font-black Inter uppercase leading-[21px] tracking-[3px]">
@@ -251,29 +252,55 @@ const BoardOfDirectors = () => {
           </div>
         </div>
 
-        <div className="director-thumbnails md:mb-20  md:w-full h-full flex gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
-        {directors.map((director) => (
-          <div
-            key={director.id}
-            className={`thumb cursor-pointer  flex flex-col ${activeDirector === director.id ? 'active md:mx-7' : ''}`}
-            onClick={() => handleThumbnailClick(director.id)}
-            onMouseEnter={() => setHoveredDirector(director.id)}
-            onMouseLeave={() => setHoveredDirector(null)}
-          >
-          
-            <div>
-              <img
-                className={` ${hoveredDirector === director.id ? 'hovered' : ''}`}
-                src={director.Thumbnail}
-                alt={director.ThumbName}
-              />
+        <div className="director-thumbnails hidden md:flex md:mb-20  md:w-full h-full gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
+          {directors.map((director) => (
+            <div
+              key={director.id}
+              className={`thumb cursor-pointer  flex flex-col ${activeDirector === director.id ? 'active md:mx-7' : ''}`}
+              onClick={() => handleThumbnailClick(director.id)}
+              onMouseEnter={() => setHoveredDirector(director.id)}
+              onMouseLeave={() => setHoveredDirector(null)}
+            >
+
+              <div>
+                <img
+                  className={` ${hoveredDirector === director.id ? 'hovered' : ''}`}
+                  src={director.Thumbnail}
+                  alt={director.ThumbName}
+                />
+              </div>
+              {(hoveredDirector === director.id || activeDirector === director.id) && (
+                <p className="text-[8px] md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
+              )}
             </div>
-            {(hoveredDirector === director.id || activeDirector === director.id) && (
-              <p className="text-[8px] md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+
+        <div className="block md:hidden mt-10">
+          <CarouselComponent>
+            {directors.map((director) => (
+              <div
+                key={director.id}
+                className={`thumb cursor-pointer  flex items-center flex-col ${false ? 'active md:mx-7' : ''}`}
+                onClick={() => handleThumbnailClick(director.id)}
+                onMouseEnter={() => setHoveredDirector(director.id)}
+                onMouseLeave={() => setHoveredDirector(null)}
+              >
+
+                <div className="flex items-center flex-col py-10">
+                  <img
+                    className={` ${[hoveredDirector, activeDirector].includes(director.id) ? 'hovered' : ''}`}
+                    src={director.Thumbnail}
+                    alt={director.ThumbName}
+                  />
+                  {(hoveredDirector === director.id || activeDirector === director.id) && (
+                    <p className="text-[8px] md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </CarouselComponent>
+        </div>
 
       </div>
       <DiscoverProject />
