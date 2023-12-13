@@ -11,12 +11,13 @@ const CarouselComponent = ({ children }) => {
             >
                 {children}
             </Carousel>
-            <div className='flex '>
-                <p onClick={() => slider.current.prev()} className='text-black'>Prev</p>
-                <p onClick={() => slider.current.next()} className='text-black'>Next</p>
+            <div className='flex  gap-4 justify-center'>
+                <p onClick={() => slider.current.prev()} className='text-black text-3xl'>&#8592;</p>
+                <p onClick={() => slider.current.next()} className='text-black text-3xl'>&#8594;</p>
             </div>
         </div>
     );
 };
 
 export default CarouselComponent;
+

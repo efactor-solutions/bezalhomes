@@ -215,10 +215,10 @@ const BoardOfDirectors = () => {
         <img src={Scape} alt="scape" className="w-full object-cover" />
       </div>
       <div className=" lg:w-[90%]  m-auto py-10 md:py-20 flex flex-col">
-        <h1 className="text-teal-800 text-[20px] px-2 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
+        <h1 className="text-teal-800 text-[20px] px-5 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
           Board of Directors
         </h1>
-        <div className=" text-zinc-800 px-2 md:px-0  py-5 md:py-10 text-sm md:text-lg font-normal Inter leading-[30px]">
+        <div className=" text-zinc-800 px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter leading-[23px]">
           Our board of directors brings together a diverse mix of accomplished
           individuals with extensive expertise and experience in the real estate
           sector. Comprising seasoned professionals from various backgrounds,
@@ -276,18 +276,18 @@ const BoardOfDirectors = () => {
           ))}
         </div>
 
-        <div className="block md:hidden mt-10">
+        <div className="block px-5 md:hidden mt-10">
           <CarouselComponent>
             {directors.map((director) => (
               <div
                 key={director.id}
-                className={`thumb cursor-pointer  flex items-center flex-col ${false ? 'active md:mx-7' : ''}`}
+                className={`thumb cursor-pointer  flex items-center flex-col ${false ? 'active md:mx-7 ' : ''}`}
                 onClick={() => handleThumbnailClick(director.id)}
                 onMouseEnter={() => setHoveredDirector(director.id)}
                 onMouseLeave={() => setHoveredDirector(null)}
               >
 
-                <div className="flex items-center flex-col py-10">
+                <div className="flex items-center mx-1 flex-col py-10">
                   <img
                     className={` ${[hoveredDirector, activeDirector].includes(director.id) ? 'hovered' : ''}`}
                     src={director.Thumbnail}
