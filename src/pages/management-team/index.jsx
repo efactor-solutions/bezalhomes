@@ -10,6 +10,7 @@ import manager1 from "../../assets/directorPicture2.png";
 import manager2 from "../../assets/managerPicture2.png";
 import manager3 from "../../assets/managerPicture3.png";
 import DiscoverProject from "../landing-page/discover-project";
+import CarouselComponent from "../../components/carousel";
 
 const ManagementTeam = () => {
   const [activeManager, setActiveManager] = useState("1");
@@ -145,10 +146,10 @@ const ManagementTeam = () => {
         <img src={Scape} alt="scape" className="w-full object-cover" />
       </div>
       <div className=" lg:w-[90%]  m-auto py-10 md:py-20 flex flex-col">
-        <h1 className="text-teal-800 text-[20px] px-2 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
+        <h1 className="text-teal-800 text-[20px] px-5 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
           Core Management Team
         </h1>
-        <div className=" text-zinc-800 px-2 md:px-0  py-5 md:py-10 text-sm md:text-lg font-normal Inter leading-[30px]">
+        <div className=" text-zinc-800 px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter leading-[25px]">
           Our management team is made up of experienced professionals with
           valuable career footprints. Each member brings a unique set of skills,
           industry knowledge, and a proven track record in real estate
@@ -185,7 +186,7 @@ const ManagementTeam = () => {
           </div>
         </div>
 
-        <div className="director-thumbnails md:mb-20  md:w-full h-full flex gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
+        <div className="director-thumbnails hidden md:mb-20  md:w-full h-full md:flex gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
           {managers.map((manager) => (
             <div
               key={manager.id}
@@ -196,7 +197,6 @@ const ManagementTeam = () => {
               onMouseEnter={() => setHoveredManager(manager.id)}
               onMouseLeave={() => setHoveredManager(null)}
             >
-            
               <div>
                 <img
                   className={`w-[100px] md:w-full${
@@ -214,6 +214,40 @@ const ManagementTeam = () => {
               )}
             </div>
           ))}
+        </div>
+        <div className="block px-5 md:hidden mt-10">
+          <CarouselComponent>
+            {managers.map((manager) => (
+              <div
+                key={manager.id}
+                className={`thumb cursor-pointer  flex items-center flex-col ${
+                  false ? "active md:mx-7 " : ""
+                }`}
+                onClick={() => handleThumbnailClick(manager.id)}
+                onMouseEnter={() => setHoveredManager(manager.id)}
+                onMouseLeave={() => setHoveredManager(null)}
+              >
+                <div className="flex items-center mx-1 flex-col py-10">
+                  <img
+                    className={` ${
+                      [hoveredManager, activeManager].includes(manager.id)
+                        ? "hovered"
+                        : ""
+                    }`}
+                    src={manager.Thumbnail}
+                    alt={manager.ThumbName}
+                  />
+               
+                {(hoveredManager === manager.id ||
+                  activeManager === manager.id) && (
+                  <p className="text-[8px] md:text-sm w-full mt-2 text-center">
+                    {manager.ThumbName}
+                  </p>
+                )}
+                </div>
+              </div>
+            ))}
+          </CarouselComponent>
         </div>
       </div>
       <DiscoverProject />
