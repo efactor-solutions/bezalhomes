@@ -9,6 +9,7 @@ import ChiscoGallery from '../ChiscoGallery'
 import DiscoverProject from '../../landing-page/discover-project'
 import Information from './Information'
 import Map from './Map'
+import MobileCards from '../MobileCards'
 
 const ChiscoDetails = () => {
 
@@ -23,6 +24,7 @@ const ChiscoDetails = () => {
       <Cards />
       <CardsMobile />
       <AboutChisco />
+      <MobileCards />
       <Amenities />
       <HomeUnits />
         <ChiscoGallery />
