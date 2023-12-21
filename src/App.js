@@ -14,6 +14,9 @@ import LegacyPlaceDetails from "./pages/page-details/legacy-place";
 import BoardOfDirectors from "./pages/board-of-directors";
 import ManagementTeam from "./pages/management-team";
 import OurStory from "./pages/our-story";
+import ContactUs from "./pages/contact-us";
+import ContactUsSuccess from "./pages/contact-us/ContactUsSuccess";
+import TermsOfUse from "./pages/terms-of-use";
 
 function App() {
  
@@ -34,6 +37,9 @@ function App() {
     <Route path="management-team" element={<ManagementTeam />} />
     <Route path="management-team/:managerId" element={<ManagementTeam />} />
     <Route path="our-story" element={<OurStory/>} />
+    <Route path="contact-us" element={<ContactUs/>} />
+    <Route path="contact-us-success" element={<ContactUsSuccess/>} />
+    <Route path="terms-of-use" element={<TermsOfUse/>} />
 
 
      

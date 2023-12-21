@@ -5,14 +5,16 @@ import Twitter from "../../assets/Link (1).png";
 import Instagram from "../../assets/Link (2).png";
 import Youtube from "../../assets/Link (3).png";
 import Buttonicon from '../../pages/landing-page/assets/button-icon-orange.png'
+import { useNavigate } from "react-router-dom";
 const MobileFooter = () => {
+  const navigate = useNavigate()
   return (
     <div className="bg-[#1D1D1D] block lg:hidden">
           <div className="w-full bg-[#1D1D1D] py-6 lg:py-20">
     <div className="giphy w-[90%] lg:w-[90%]  m-auto text-white flex justify-center items-center">
-      <div className="w-full overlay4"></div>
+    {/* <div style={{ filter: 'brightness(50%)' }} className="w-full h-full absolute"></div> */}
    
-      <div className="absolute z-10">
+      <div className="">
         <h1 className="text-[12px] lg:text-[46px] mt-6 lg:mt-0 font-[400]  leading-[11.48px] lg:leading-[50.4px]">Discover exquisite Projects </h1>
         <span className="text-[8px] lg:text-[13.89px] font-[400] lg:leading-[24.5px] lg:tracking-[1.4 px] leading-[5.58px] self-center flex justify-center mt-2 tracking-[0.32 px]">Learn more</span>
         <div className="py-10 flex mt-2 lg:mt-4 justify-center">
@@ -31,7 +33,7 @@ const MobileFooter = () => {
     </div>
     </div>
       <div className="">
-        <div className="logo text-white w-[231px] h-[45px] m-auto flex justify-center py-10 items-center">
+        <div onClick={ () => {navigate('/')} } className="logo text-white w-[231px] h-[45px] m-auto flex justify-center py-10 items-center">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
         <div className="w-full mt-2 h-[0px] border border-neutral-200 border-opacity-20"></div>
@@ -50,7 +52,7 @@ const MobileFooter = () => {
           </div>
         </div>
 
-        <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
+        <h1 onClick={ () => {navigate('/our-story')} } className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         OUR STORY
         </h1>
         <p className="w-[317px] h-[74px] text-white text-xs font-normal mt-4 leading-[18px]">
@@ -62,14 +64,14 @@ const MobileFooter = () => {
         <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         MASTERPIECES
         </h1>
-        <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Legacy Place</p>
-        <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Rehoboth Apartment</p>
-        <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Chisco Court</p>
+        <p  onClick={ () => navigate('/legacy-place')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Legacy Place</p>
+        <p  onClick={ () => navigate('/rehoboth-details')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Rehoboth Apartment</p>
+        <p  onClick={ () => navigate('/chisco-details')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Chisco Court</p>
         <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         OUR PEOPLE
         </h1>
-        <div className="text-white text-xs font-normal mt-2 leading-[15.12px]">Board of Directors </div>
-        <div className="text-white text-xs font-normal mt-2 leading-[15.12px]">Management Team </div>
+        <div  onClick={ () => navigate('/board-of-directors')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Board of Directors </div>
+        <div  onClick={ () => navigate('/management-team')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Management Team </div>
         <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         CONTACT US
         </h1>

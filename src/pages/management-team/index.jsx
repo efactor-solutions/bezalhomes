@@ -10,9 +10,12 @@ import manager1 from "../../assets/directorPicture2.png";
 import manager2 from "../../assets/managerPicture2.png";
 import manager3 from "../../assets/managerPicture3.png";
 import DiscoverProject from "../landing-page/discover-project";
-import CarouselComponent from "../../components/carousel";
 
 const ManagementTeam = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, [])
   const [activeManager, setActiveManager] = useState("1");
   const [hoveredManager, setHoveredManager] = useState(null);
   const { managerId } = useParams();
@@ -137,7 +140,8 @@ const ManagementTeam = () => {
     // Navigate to the page for the selected director
     navigate(`/management-team/${id}`);
     // Set the clicked director as the active one
-    setActiveManager(id);
+    setActiveManager(id)
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -149,7 +153,7 @@ const ManagementTeam = () => {
         <h1 className="text-teal-800 text-[20px] px-5 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
           Core Management Team
         </h1>
-        <div className=" text-zinc-800 px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter leading-[25px]">
+        <div className=" text-zinc-800 text-justify  px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter md:leading-[25px]">
           Our management team is made up of experienced professionals with
           valuable career footprints. Each member brings a unique set of skills,
           industry knowledge, and a proven track record in real estate
@@ -160,14 +164,14 @@ const ManagementTeam = () => {
           and exceed customer expectations.
         </div>
         <div className=" w-full lg:space-x-12  flex flex-col lg:flex-row">
-          <div className="md:w-[573px] md:h-[793px] w-full">
+          <div className="w-[90%] pr-5 md:pr-0 mx-auto md:w-full">
             <img
               src={selectedManager.image}
               alt={selectedManager.name}
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full max-w-3xl mt-10 px-5 lg:px-0">
+          <div className="w-full  mt-10 px-5 lg:px-0">
             <div className="flex gap-2">
               <span className="text-zinc-800 text-xl md:text-3xl  font-normal Inter uppercase leading-[21px] tracking-[3px]">
                 {selectedManager.name}
@@ -186,37 +190,42 @@ const ManagementTeam = () => {
           </div>
         </div>
 
-        <div className="director-thumbnails hidden md:mb-20  md:w-full h-full md:flex gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
+        <div className="director-thumbnails hidden md:mb-20 mt-[5%]  md:w-full  md:flex gap-1  mx-auto  md:gap-6 ">
           {managers.map((manager) => (
             <div
               key={manager.id}
-              className={`thumb cursor-pointer  flex flex-col ${
-                activeManager === manager.id ? "active md:mx-8" : ""
+              className={`thumb cursor-pointer w-full flex flex-col ${
+                activeManager === manager.id ? "active md:mx-8 hidden" : ""
               }`}
               onClick={() => handleThumbnailClick(manager.id)}
               onMouseEnter={() => setHoveredManager(manager.id)}
               onMouseLeave={() => setHoveredManager(null)}
             >
-              <div>
+              <div className="relative">
+              <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
                 <img
-                  className={`w-[100px] md:w-full${
-                    hoveredManager === manager.id ? "hovered md:w-full" : ""
+                  className={` w-full ${
+                    hoveredManager === manager.id ? "hovered w-full" : "w-full"
                   }`}
                   src={manager.Thumbnail}
                   alt={manager.ThumbName}
                 />
-              </div>
-              {(hoveredManager === manager.id ||
+                <div className="absolute bottom-[5%] left-[25%]"> {(hoveredManager === manager.id ||
                 activeManager === manager.id) && (
-                <p className="text-[8px] md:text-sm w-full text-center mt-2">
+                <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">
                   {manager.ThumbName}
+                  <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
+              {manager.position}
+            </span>
                 </p>
-              )}
+              )}</div>
+              </div>
+              
             </div>
           ))}
         </div>
-        <div className="block px-5 md:hidden mt-10">
-          <CarouselComponent>
+        <div className="grid grid-cols-2 gap-2 px-5 md:hidden mt-10">
+          
             {managers.map((manager) => (
               <div
                 key={manager.id}
@@ -227,9 +236,11 @@ const ManagementTeam = () => {
                 onMouseEnter={() => setHoveredManager(manager.id)}
                 onMouseLeave={() => setHoveredManager(null)}
               >
-                <div className="flex items-center mx-1 flex-col py-10">
+                <div className="flex relative items-center mx-1 flex-col">
+        <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
+
                   <img
-                    className={` ${
+                    className={`w-full ${
                       [hoveredManager, activeManager].includes(manager.id)
                         ? "hovered"
                         : ""
@@ -238,16 +249,15 @@ const ManagementTeam = () => {
                     alt={manager.ThumbName}
                   />
                
-                {(hoveredManager === manager.id ||
-                  activeManager === manager.id) && (
-                  <p className="text-[8px] md:text-sm w-full mt-2 text-center">
+               <div className="absolute bottom-[5%] left-[20%]">
+                  <p className="text-[10px] font-[700] text-white md:text-sm w-full mt-2 text-center">
                     {manager.ThumbName}
-                  </p>
-                )}
+                  </p></div>
+                
                 </div>
               </div>
             ))}
-          </CarouselComponent>
+         
         </div>
       </div>
       <DiscoverProject />

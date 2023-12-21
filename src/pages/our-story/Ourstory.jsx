@@ -11,15 +11,15 @@ const Ourstory = () => {
           <h1 className="max-w-xl text-zinc-800 text-[20px] md:text-[55px] md:leading-[62px] mt-4 font-bold Inter capitalize tracking-wide">
             We are the promise of an enriched life.
           </h1>
-          <div className="flex  flex-col gap-4 md:flex-row mt-4 md:mt-10 md:gap-8">
-            <div>
+          <div className="flex w-full max-w-xl flex-col gap-4 md:flex-row mt-4 md:mt-10 ">
+            <div className="w-full ">
               <div className="flex mt-8 md:mt-0 items-center gap-3 md:gap-4">
                 <div className="w-[15px] h-[15px] bg-orange-500 rounded-full" />
                 <div className="text-zinc-800 text-xl font-normal Inter uppercase">
                   Vision
                 </div>
               </div>
-              <div className="w-[307px] mt-4 text-zinc-800 text-[12px]  md:text-sm font-normal Inter">
+              <div className="mt-4 w-full max-w-xl text-zinc-800 text-[12px]  md:text-sm font-normal Inter">
                 We are on a mission to revolutionize communities and society
                 through the development of smart, ultra-luxury quality homes.
                 Our approach involves sustainable investing that transforms the
@@ -35,7 +35,7 @@ const Ourstory = () => {
                   Mission
                 </div>
               </div>
-              <div className="w-[307px] mt-4 text-zinc-800 text-[12px]  md:text-sm font-normal Inter">
+              <div className="w-full max-w-lg mt-4 text-zinc-800 text-[12px]  md:text-sm font-normal Inter">
                 Our aspiration is clear - to stand as a distinctive high-end
                 luxury homes development company within the real estate sector.
               </div>
@@ -44,7 +44,7 @@ const Ourstory = () => {
         </div>
         <div className="w-full mt-8 block md:hidden h-[2px] bg-orange-500 " />
         <div>
-          <div className="w-full text-[12px]  md:w-[698px] text-zinc-800 md:text-lg font-normal mt-8 md:mt-0 leading-[30px]">
+          <div className="w-full text-[12px] max-w-3xl    text-zinc-800 md:text-lg font-normal mt-8 md:mt-0 md:leading-[30px]">
             Once upon a time, in the dynamic realm of the Nigerian real estate
             market, a subsidiary emerged from the fertile grounds of innovation
             and ambition—Bezal Homes, a proud offshoot of Farmcenta. Much more

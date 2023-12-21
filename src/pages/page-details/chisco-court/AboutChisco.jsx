@@ -16,7 +16,7 @@ const AboutChisco = () => {
           <h1 className="text-zinc-800 mt-6 lg:mt-0   text-[16px] lg:text-3xl font-normal Inter uppercase lg:leading-[21px] lg:tracking-[3px]">
             About chisco court
           </h1>
-          <div className="max-w-5xl py-6  lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter lg:leading-[30px]">
+          <div className="max-w-5xl py-6  lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter leading-[15px] lg:leading-[30px]">
             Welcome to Chisco Court, where luxury living takes on a new meaning.
             As an exquisite residential haven developed by Bezal Homes and
             Investment Ltd. Chisco Court is set to redefine the expectations of
@@ -49,7 +49,7 @@ const AboutChisco = () => {
                 </div>
                 <div className="w-[199.58px] h-[0.71px] left-[0.71px] top-[74.71px] absolute bg-neutral-200" />
                 <div className="left-[60px] top-[87px] absolute text-black text-[13px] font-normal Inter ml-4 leading-[13px] tracking-tight">
-                  100 Units
+                  130 Units
                 </div>
                 <div className="w-[30px] h-[33.33px] left-[81px] top-[58.33px] absolute flex-col justify-start items-start inline-flex" />
               </div>

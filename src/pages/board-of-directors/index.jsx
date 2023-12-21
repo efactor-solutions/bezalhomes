@@ -12,9 +12,12 @@ import director2 from "../../assets/directorPicture2.png";
 import director3 from "../../assets/directorPicture3.png";
 import director4 from "../../assets/directorPic4.png";
 import DiscoverProject from "../landing-page/discover-project";
-import CarouselComponent from "../../components/carousel";
 
 const BoardOfDirectors = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, [])
   const [activeDirector, setActiveDirector] = useState("1");
   const [hoveredDirector, setHoveredDirector] = useState(null);
   const { directorId } = useParams();
@@ -207,6 +210,7 @@ const BoardOfDirectors = () => {
     navigate(`/board-of-directors/${id}`);
     // Set the clicked director as the active one
     setActiveDirector(id);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -218,7 +222,7 @@ const BoardOfDirectors = () => {
         <h1 className="text-teal-800 text-[20px] px-5 md:px-0  md:text-[40px] font-black  Inter uppercase leading-[21px] tracking-[3px]">
           Board of Directors
         </h1>
-        <div className=" text-zinc-800 px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter leading-[23px]">
+        <div className=" text-zinc-800 text-justify px-5 md:px-0  py-3 md:py-10 text-sm md:text-lg font-normal Inter md:leading-[23px]">
           Our board of directors brings together a diverse mix of accomplished
           individuals with extensive expertise and experience in the real estate
           sector. Comprising seasoned professionals from various backgrounds,
@@ -228,14 +232,14 @@ const BoardOfDirectors = () => {
           in the industry.
         </div>
         <div className=" w-full lg:space-x-12  flex flex-col lg:flex-row">
-          <div className="md:w-[573px] md:h-[793px] w-full">
+          <div className="w-[90%] pr-5 md:pr-0 mx-auto md:w-full">
             <img
               src={selectedDirector.image}
               alt={selectedDirector.name}
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full max-w-3xl mt-10 px-5 lg:px-0">
+          <div className="w-full mt-10 px-5 lg:px-0">
             <div className="flex gap-2">
               <span className="text-zinc-800 text-xl md:text-3xl  font-normal Inter uppercase leading-[21px] tracking-[3px]">
                 {selectedDirector.name}
@@ -252,54 +256,64 @@ const BoardOfDirectors = () => {
           </div>
         </div>
 
-        <div className="director-thumbnails hidden md:flex md:mb-20  md:w-full h-full gap-1  justify-center items-center md:gap-3 mt-10 md:mt-40 md:max-w-3xl">
+        <div className="director-thumbnails hidden md:flex md:mb-20  md:w-full h-full gap-1   md:gap-3 mt-10 md:mt-40">
+          
           {directors.map((director) => (
             <div
               key={director.id}
-              className={`thumb cursor-pointer  flex flex-col ${activeDirector === director.id ? 'active md:mx-7' : ''}`}
+              className={`thumb cursor-pointer w-full  flex flex-col ${activeDirector === director.id ? 'active md:mx-7 hidden' : ''}`}
               onClick={() => handleThumbnailClick(director.id)}
               onMouseEnter={() => setHoveredDirector(director.id)}
               onMouseLeave={() => setHoveredDirector(null)}
             >
 
-              <div>
+              <div className="relative">
+              <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
                 <img
-                  className={` ${hoveredDirector === director.id ? 'hovered' : ''}`}
+                  className={` ${hoveredDirector === director.id ? 'hovered w-full ' : 'w-full'}`}
                   src={director.Thumbnail}
                   alt={director.ThumbName}
                 />
+                     <div className="absolute bottom-[5%] left-[20%]">{(hoveredDirector === director.id || activeDirector === director.id) && (
+                <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">{director.ThumbName}
+                 <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
+              {director.position}
+            </span>
+                </p>
+                
+                
+              )}</div>
               </div>
-              {(hoveredDirector === director.id || activeDirector === director.id) && (
-                <p className="text-[8px] md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
-              )}
+         
             </div>
           ))}
         </div>
 
-        <div className="block px-5 md:hidden mt-10">
-          <CarouselComponent>
+        <div className=" grid grid-cols-2 gap-2 px-5 md:hidden mt-10">
+         
             {directors.map((director) => (
               <div
                 key={director.id}
-                className={`thumb cursor-pointer  flex items-center flex-col ${false ? 'active md:mx-7 ' : ''}`}
+                className={`thumb cursor-pointer    ${false ? 'active md:mx-7 ' : ''}`}
                 onClick={() => handleThumbnailClick(director.id)}
                 onMouseEnter={() => setHoveredDirector(director.id)}
                 onMouseLeave={() => setHoveredDirector(null)}
               >
 
-                <div className="flex items-center mx-1 flex-col py-10">
+                <div className="mx-1 relative ">
                   <img
                     className={` ${[hoveredDirector, activeDirector].includes(director.id) ? 'hovered' : ''}`}
                     src={director.Thumbnail}
                     alt={director.ThumbName}
                   />
-                  {(hoveredDirector === director.id || activeDirector === director.id) && (
-                    <p className="text-[8px] md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
-                  )}
+                  <div className="absolute bottom-[5%] left-[20%]">
+                
+                    <p className="text-[12px] font-[700] text-white md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
+                  </div>
                 </div>
               </div>
             ))}
-          </CarouselComponent>
+         
         </div>
 
       </div>

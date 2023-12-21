@@ -119,8 +119,8 @@ const Navbar = () => {
                 onMouseEnter={() => handleButtonHover("class7")}
                 onMouseLeave={() => handleButtonHover("")}
               >
-                <Link to="/contact-us"></Link>
-                CONTACT US
+                <Link onClick={handleLinkClick} to="/contact-us">
+                CONTACT US</Link>
               </li>
             </ul>
           </div>

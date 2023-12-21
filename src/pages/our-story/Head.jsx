@@ -16,7 +16,7 @@ const Head = () => {
     <div className="w-full flex flex-col">
       <div style={{ filter: "brightness(50%)" }} className="our-story"></div>
       <div className="lg:w-[90%]  m-auto absolute px-4 top-[30%] left-[5%]">
-        <div className=" text-[12px]  text-white md:text-3xl font-normal Inter leading-10">
+        <div className=" text-[12px]  text-white md:text-3xl font-normal Inter md:leading-10">
           welcome To
         </div>
         <div className="md:mt-4 flex flex-col ">
