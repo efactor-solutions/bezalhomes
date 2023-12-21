@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
   text-decoration: none;
 }
 
@@ -66,24 +65,6 @@ body {
 
 }
 
-/* .imacge1 {
-  background-image: url(./pages/landing-page/assets/image1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.image2 {
-  background-image: url(./pages/landing-page/assets/image2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.image3 {
-  background-image: url(./pages/landing-page/assets/image3.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
 /* Legacy place */
 .legacy4{
   background-image: url(./pages/landing-page/assets/legacyImage1.jpeg);
@@ -138,6 +119,15 @@ body {
   height: 100vh;
   
 }
+.terms {
+  background-image: url(./assets/terms.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  
+}
 
 .core-values {
   background-image: url(./assets/coreValueeess.png);
@@ -145,7 +135,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  
   
 }
 .chisco-details {
@@ -569,9 +559,9 @@ video{
   transition: transform 0.3s ease-in-out;
 }
 
-.thumb:hover {
+/* .thumb:hover {
   transform: scale(1.2);
-}
+} */
 
 .thumb.active {
   transform: scale(1.3);

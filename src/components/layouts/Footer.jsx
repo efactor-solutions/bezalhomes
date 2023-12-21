@@ -5,17 +5,19 @@ import Twitter from "../../assets/Link (1).png";
 import Instagram from "../../assets/Link (2).png";
 import Youtube from "../../assets/Link (3).png";
 import SendButton from "../../assets/Group 20.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <div className="bg-[#1D1D1D] hidden lg:block">
       <div className="w-[90%] m-auto flex flex-col justify-center items-center  py-10">
-        <div className="logo text-white w-[180px] md:w-[398px] flex justify-center py-10 items-center">
+        <div onClick={ () => {navigate('/')} } className="logo text-white w-[180px] cursor-pointer md:w-[398px] flex justify-center py-10 items-center">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
-        <div className="5-divs-container justify-between flex w-full">
+        <div className="5-divs-container gap-8 justify-between flex w-full">
           <div className="div-1 w-full">
-            <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+            <h1 onClick={ () => {navigate('/our-story')} } className="inter font-[400] cursor-pointer text-[20px] leading-[15.12px] footer-heading ">
              OUR STORY
             </h1>
             <div className="inter font-[400] text-[12.6px] mt-8 leading-20px] text-left max-w-[250px] text-white ">
@@ -34,13 +36,13 @@ const Footer = () => {
           <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
           MASTERPIECES
             </h1>
-            <div className="inter font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
+            <div onClick={ () => navigate('/legacy-place')} className="inter cursor-pointer font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
             Legacy Place
             </div>
-            <div className="inter font-[400] mt-2 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
+            <div onClick={ () => navigate('/rehoboth-details')} className="inter font-[400] cursor-pointer mt-2 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
             Rehoboth Apartment
             </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+            <div onClick={ () => navigate('/chisco-details')} className="inter font-[400] cursor-pointer text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
             Chisco Court
             </div>
            
@@ -60,13 +62,13 @@ const Footer = () => {
             +234 (0) 817 8206002
             </div>
             <div className="flex gap-2 w-full mt-4 md:mt-[90px] md:left-[0%]">
-            <span className="inter underline font-[400] text-[11.11px] mt-4 md:mt-20 leading-[15.12px]  footer-text ">
+            <span onClick={ () => navigate('/terms-of-use')} className="inter underline cursor-pointer font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px]  footer-text ">
               Terms of Use
             </span>
-            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
+            <span className="inter underline font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
               Privacy
             </span>
-            <span className="inter underline font-[400] text-[12.11px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
+            <span className="inter underline font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
               Cookie Policy
             </span>
           </div>
@@ -76,10 +78,10 @@ const Footer = () => {
           <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
           OUR PEOPLE
             </h1>
-            <div className="inter font-[400] text-[12.4px] mt-8 leading-[15.12px] text-left max-w-[250px] text-white ">
+            <div onClick={ () => navigate('/board-of-directors')} className="inter cursor-pointer font-[400] text-[12.4px] mt-8 leading-[15.12px] text-left max-w-[250px] text-white ">
             Board of Directors 
             </div>
-            <div className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+            <div onClick={ () => navigate('/management-team')} className="inter font-[400] cursor-pointer text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
             Management Team
             </div>
           </div>

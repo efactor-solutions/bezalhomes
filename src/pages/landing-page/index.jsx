@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Header from "./header-page";
 import About from "./about";
@@ -13,6 +13,10 @@ import MasterPieces from "./master-pieces";
 import DiscoverProjects from "./discover-project";
 
 const LandingPage = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className="">
       <Header />

@@ -10,7 +10,7 @@ const AboutRehoboth = () => {
           <h1 className="text-zinc-800 mt-6 lg:mt-0  text-[16px] lg:text-3xl font-normal Inter uppercase lg:leading-[21px] lg:tracking-[3px]">
             About rehoboth court
           </h1>
-          <div className="max-w-5xl py-6 lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter lg:leading-[30px]">
+          <div className="max-w-5xl py-6 lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter leading-[15px] lg:leading-[30px]">
             The Rehoboth redefined the art of contemporary living, aiming to set
             a new standard in the Nigerian real estate landscape.
             <br />
