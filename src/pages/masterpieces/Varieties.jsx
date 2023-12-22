@@ -34,7 +34,7 @@ const Varieties = () => {
             className="rounded-[30px] w-full scale-105 group-hover:scale-100 transition-all duration-700"
           />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
-            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[50px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
+            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[45px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
               Chisco Court
             </h1>
             <p className="font-[400] text-[9px] lg:text-[18px] lg:ml-2 lg:leading-[28px] masterpiece-head">
@@ -53,10 +53,10 @@ const Varieties = () => {
             className="rounded-[30px] w-full scale-105 group-hover:scale-100 transition-all duration-700"
           />
           <div className="absolute w-full left-[1%]  bottom-[5%] flex flex-col">
-            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[48px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
+            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[45px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
               Rehoboth Apartments
             </h1>
-            <p className="font-[400] lg:text-[18px] text-[9px] ml-14 lg:ml-8 lg:leading-[28px] masterpiece-head">
+            <p className="font-[400] lg:text-[18px] text-[9px] ml-14 lg:ml-[10%] lg:leading-[28px] masterpiece-head">
               Shonibare, Ikeja, Lagos.
             </p>
           </div>
@@ -72,7 +72,7 @@ const Varieties = () => {
             className="rounded-[30px] w-full scale-105 group-hover:scale-100 transition-all duration-700"
           />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
-            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[50px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
+            <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[45px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
               LEgacy Place
             </h1>
             <p className="font-[400] text-[9px] lg:text-[18px] lg:ml-2 lg:leading-[28px] masterpiece-head">
