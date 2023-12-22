@@ -52,35 +52,35 @@ export const CardsMobile = () => {
         <div className="block hover-zoom  md:w-full lg:hidden">
         <img src={Video} alt="Icon" className="md:w-full" />
       </div>
-          <div className="px-8 w-full  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="px-8 w-full  py-5 flex justify-around items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={DuplexD} alt="Icon" className="w-full" />
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Fully detached duplexes</div>
           </div>
-          <div className="px-8  w-full   py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
-            <div className="w-[27px] h-[27px]">
+          <div className="px-8  w-full   py-5 flex gap-6 justify-around  items-center  bg-slate-50 rounded-[10px]">
+            <div className="w-[27px] h-[27px] ml-2">
               <img src={DuplexSD} alt="Icon" className="w-full" />
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Semi-Detached Duplexes</div>
           </div>
-          <div className="px-8  w-full  py-5 flex gap-7 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="px-8  w-full  py-5 flex gap-7 justify-around  items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={Terraces} alt="Icon" className="w-full" />
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Fully detached duplexes</div>
           </div>
-          <div className="px-8  w-full  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="px-8  w-full  py-5 flex gap-6 justify-around  items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={Maisonnete} alt="Icon" className="w-full" />
             </div>
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Terraces and townhouses</div>
           </div>
-          <div className="px-8  w-full  py-5 flex gap-12 justify-center items-center  bg-slate-50 rounded-[10px]">
-            <div className="w-[27px] h-[27px]">
+          <div className="px-8  w-full  py-5 flex  justify-around  items-center  bg-slate-50 rounded-[10px]">
+            <div className="w-[27px] h-[27px] mr-8">
               <img src={Flat} alt="Icon" className="w-full" />
             </div>
-            <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Maisonette duplexes</div>
+            <div className=" text-zinc-800 text-[14px] mr-10 font-normal Inter leading-[27px] tracking-[0.45px]">Maisonette duplexes</div>
           </div>
         </div>
       </div>

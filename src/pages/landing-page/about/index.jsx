@@ -132,7 +132,7 @@ const About = () => {
           <img
             src={BezalSmall}
             alt=""
-            className="block animate-spin spinner lg:hidden  absolute left-[35%] top-[62%]"
+            className="block animate-spin spinner w-[40%] lg:hidden  absolute left-[30%] top-[59%]"
           />
         </div>
 

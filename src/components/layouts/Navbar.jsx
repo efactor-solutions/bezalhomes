@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="md:py-8 flex flex-col  text-xl md:text-3xl md:px-12 mt-[10%] md:mt-20 p-8">
             <ul className="flex flex-col space-y-[5%] md:space-y-7 px-8">
               <li
-                className=" inter cursor-pointer text-white text-[15.52px] md:text-[30px] font-[700]"
+                className=" inter cursor-pointer text-white text-[15.52px] md:text-[26px] font-[700]"
                 onMouseEnter={() => handleButtonHover("class1")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -72,7 +72,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class2")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class3")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -90,7 +90,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class4")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -99,7 +99,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class5")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -108,14 +108,14 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class6")}
                 onMouseLeave={() => handleButtonHover("")}
               >
                 <Link to="/blog"></Link>BLOG
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[30px] font-[400]  hover:text-white md:hover:text-[30px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class7")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -125,7 +125,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="mt-[15%] px-12 md:fixed md:bottom-[7%] ml-[5%] md:ml-7">
-            <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[25px] font-[400]  hover:text-white md:hover:text-[25px] hover:font-[700]">
+            <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[21px] font-[400]  hover:text-white md:hover:text-[21px] hover:font-[700]">
               Sign In
             </span>
           </div>
