@@ -8,8 +8,10 @@ import Development from "../assets/development.png";
 import Buttonicon from "../assets/button-icon-orange.png";
 import BezalSpinner from "../assets/welcomeBezals.svg";
 import BezalSmall from "../assets/BezalSmall.svg";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate()
   return (
     <div className=" relative">
       <div className="flex flex-col gap-4 w-full ">
@@ -111,7 +113,7 @@ const About = () => {
             </div>
           </div>
           <div className="py-10">
-            <button className="py-2 text-[#E9682B] text-[8px] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc">
+            <button onClick={ () => {navigate('/our-story')}} className="py-2 text-[#E9682B] text-[8px] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc">
               DISCOVER OUR STORY
               <span>
                 <img

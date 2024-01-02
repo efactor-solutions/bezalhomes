@@ -17,7 +17,7 @@ const BoardOfDirectors = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
   const [activeDirector, setActiveDirector] = useState("1");
   const [hoveredDirector, setHoveredDirector] = useState(null);
   const { directorId } = useParams();
@@ -29,9 +29,7 @@ const BoardOfDirectors = () => {
   useEffect(() => {
     // Set the default director as active on component mount
     setActiveDirector(defaultDirectorId);
-  }, [defaultDirectorId])
-
-
+  }, [defaultDirectorId]);
 
   const directors = [
     {
@@ -125,40 +123,34 @@ const BoardOfDirectors = () => {
       position: "Director, Bezal Homes and Investment Ltd.",
       details: (
         <>
-          Oluseun (FCA, CPA, MBA) serves as the Managing Partner of QFE
-          Consulting, a prominent corporate advisory firm specializing in Public
-          Private Partnerships (PPP) and Project Finance, headquartered in
-          Lagos, Nigeria. Renowned as a seasoned business strategist, serial
-          entrepreneur, and accomplished corporate executive, Oluseun boasts
-          extensive experience gained from global accounting firms such as
-          Deloitte-Nigeria and PwC-Canada, as well as the banking sector in
-          Africa and North America. His expertise extends to Infrastructure
-          Concessioning and Operations, and Public Sector engagements.
+          Oluseun (FCA, CPA, MBA) is the Managing Partner of QFE Consulting, a
+          corporate advisory firm with strong expertise in Public Private
+          Partnerships (PPP) and Project Finance based in Lagos, Nigeria.
+          Oluseun is a business strategist, serial entrepreneur, and a corporate
+          executive with extensive working experience in global accounting firms
+          (Deloitte-Nigeria, PwC-Canada), Banking (Africa and North America),
+          Infrastructure Concessioning and Operations, and Public Sector.
           <br />
           <br />
-          In his role, Oluseun has achieved significant milestones, successfully
-          raising funding for numerous green and brown field infrastructure
-          projects. He has facilitated corporate funding in the form of equity,
-          debt, mezzanine capital through public offers, private placements,
-          bonds, and various debt instruments on both local and international
-          fronts. Notably, he played a pivotal role in structuring a deal to
-          secure $500 million in capital for the construction of the Lekki-Epe
-          tolled road in Lagos, Nigeria, and has been involved in various other
-          high-profile projects in Nigeria and Canada. Presently, Oluseun serves
-          as an Advisor in Corporate/Project Finance with the City of Calgary,
-          Alberta, Canada.
+          Oluseun has successfully participated in raising funding for several
+          green and brown field infrastructure projects, and corporate funding
+          in the form of equity, debt, mezzanine capital through public offers,
+          private placements, bonds, and various debt instruments locally and
+          internationally. He actively participated in structuring a deal to
+          raise $500 million capital for the construction of the Lekki-Epe
+          tolled road in Lagos, Nigeria, and various other high-profile projects
+          in Nigeria and Canada. He is currently an Advisor, Corporate/Project
+          Finance with the City of Calgary, Alberta, Canada.
           <br />
           <br />
-          Oluseun holds the esteemed title of Fellow of the Institute of
-          Chartered Accountants of Nigeria (ICAN) and is a proud member of the
-          Certified Public Accountants (CPA), Canada. Additionally, he holds an
-          MBA degree from the University of Lagos, Nigeria.
+          Oluseun is a Fellow of the Institute of Chartered Accountants of
+          Nigeria (ICAN), a member of the Certified Public Accountants (CPA),
+          Canada, and an MBA graduate from the University of Lagos, Nigeria.
           <br />
           <br />
-          Beyond his professional pursuits, Oluseun actively engages in
-          volunteering activities, particularly in youth development programs,
-          environmental and community support initiatives, and leadership
-          mentoring.
+          Oluseun participates in various volunteering activities, especially in
+          youth development programs, environmental and community supports, and
+          leadership mentoring.
         </>
       ),
       image: director3,
@@ -252,70 +244,80 @@ const BoardOfDirectors = () => {
               {selectedDirector.position}
             </div>
             <div className="md:w-[791px] h-[3px] my-4 bg-zinc-600" />
-            <p className="text-justify text-gray-600 text-sm md:text-lg font-normal Inter mt-8 leading-[30px">{selectedDirector.details}</p>
+            <p className="text-justify text-gray-600 text-sm md:text-lg font-normal Inter mt-8 leading-[30px">
+              {selectedDirector.details}
+            </p>
           </div>
         </div>
 
         <div className="director-thumbnails hidden md:flex md:mb-20  md:w-full h-full gap-1   md:gap-3 mt-10 md:mt-40">
-          
           {directors.map((director) => (
             <div
               key={director.id}
-              className={`thumb cursor-pointer w-full  flex flex-col ${activeDirector === director.id ? 'active md:mx-7 hidden' : ''}`}
+              className={`thumb cursor-pointer w-full  flex flex-col ${
+                activeDirector === director.id ? "active md:mx-7 hidden" : ""
+              }`}
               onClick={() => handleThumbnailClick(director.id)}
               onMouseEnter={() => setHoveredDirector(director.id)}
               onMouseLeave={() => setHoveredDirector(null)}
             >
-
               <div className="relative">
-              <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
+                <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
                 <img
-                  className={` ${hoveredDirector === director.id ? 'hovered w-full ' : 'w-full'}`}
+                  className={` ${
+                    hoveredDirector === director.id
+                      ? "hovered w-full "
+                      : "w-full"
+                  }`}
                   src={director.Thumbnail}
                   alt={director.ThumbName}
                 />
-                     <div className="absolute bottom-[5%] left-[20%]">{(hoveredDirector === director.id || activeDirector === director.id) && (
-                <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">{director.ThumbName}
-                 <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
-              {director.position}
-            </span>
-                </p>
-                
-                
-              )}</div>
+                <div className="absolute bottom-[5%] left-[20%]">
+                  {(hoveredDirector === director.id ||
+                    activeDirector === director.id) && (
+                    <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">
+                      {director.ThumbName}
+                      <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
+                        {director.position}
+                      </span>
+                    </p>
+                  )}
+                </div>
               </div>
-         
             </div>
           ))}
         </div>
 
         <div className=" grid grid-cols-2 gap-2 px-5 md:hidden mt-10">
-         
-            {directors.map((director) => (
-              <div
-                key={director.id}
-                className={`thumb cursor-pointer    ${false ? 'active md:mx-7 ' : ''}`}
-                onClick={() => handleThumbnailClick(director.id)}
-                onMouseEnter={() => setHoveredDirector(director.id)}
-                onMouseLeave={() => setHoveredDirector(null)}
-              >
-
-                <div className="mx-1 relative ">
-                  <img
-                    className={` ${[hoveredDirector, activeDirector].includes(director.id) ? 'hovered' : ''}`}
-                    src={director.Thumbnail}
-                    alt={director.ThumbName}
-                  />
-                  <div className="absolute bottom-[5%] left-[20%]">
-                
-                    <p className="text-[12px] font-[700] text-white md:text-sm w-full text-center mt-2">{director.ThumbName}</p>
-                  </div>
+          {directors.map((director) => (
+            <div
+              key={director.id}
+              className={`thumb cursor-pointer    ${
+                false ? "active md:mx-7 " : ""
+              }`}
+              onClick={() => handleThumbnailClick(director.id)}
+              onMouseEnter={() => setHoveredDirector(director.id)}
+              onMouseLeave={() => setHoveredDirector(null)}
+            >
+              <div className="mx-1 relative ">
+                <img
+                  className={` ${
+                    [hoveredDirector, activeDirector].includes(director.id)
+                      ? "hovered"
+                      : "wsz"
+                  }`}
+                  src={director.Thumbnail}
+                  alt={director.ThumbName}
+                />
+                <div className="absolute bottom-[5%] left-[20%]">
+                  <p className="text-[12px] font-[700] text-white md:text-sm w-full text-center mt-2">
+                    {director.ThumbName}
+                  </p>
                 </div>
               </div>
-            ))}
-         
+            </div>
+          ))}
         </div>
-
       </div>
       <DiscoverProject />
     </main>

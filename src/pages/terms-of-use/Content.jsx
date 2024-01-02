@@ -83,7 +83,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 We reserve the right to withdraw and / or amend the Website, and
                 any service or material we provide on the Website, in our sole
                 discretion without notice. We will not be liable if for any
@@ -163,7 +163,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 The Website and its entire contents, features and functionality
                 (including but not limited to all information, software, text,
                 displays, images, video and audio, and the design, selection and
@@ -244,7 +244,7 @@ const Content = () => {
                 <span className="text-zinc-800 text-xs md:text-xl font-normal Inter underline leading-[30px]">
                   <br />
                 </span>
-                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                   Bezal Homes’ names, brand names, Bezal Homes’ logos and all
                   related names, logos, product and service names, designs and
                   slogans are trademarks of Bezal Homes or its affiliates or
@@ -264,14 +264,14 @@ const Content = () => {
                 <span className="text-zinc-800 text-xl font-normal Inter underline leading-[30px]">
                   <br />
                 </span>
-                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                   You may use the Website only for lawful purposes and in
                   accordance with these Terms of Use. You agree not to use the
                   Website:
                   <br />
                   <br />
                 </span>
-                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                   <ol className="list-decimal">
                     <li>
                       In any way that violates any applicable federal, local or
@@ -300,7 +300,7 @@ const Content = () => {
                     <li>Additionally, you agree not to:</li>
                   </ol>
                 </span>
-                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                   <div className="md:ml-12">
                     {" "}
                     <br /> a.) Use any robot, spider or other automatic device,
@@ -337,7 +337,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 The information presented on or through the Website is made
                 available solely for general information purposes. We do not
                 warrant the accuracy, completeness or usefulness of this
@@ -364,7 +364,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter  underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter  leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 We may update the content on the Website from time to time, but
                 its content is not necessarily complete or up-to-date. Any of
                 the material on the Website may be out of date at any given
@@ -382,7 +382,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 All information we collect on this Website is subject to our
                 Privacy Policy. By using the Website, you consent to all actions
                 taken by us with respect to your information in compliance with
@@ -396,7 +396,7 @@ const Content = () => {
                 ONLINE PURCHASES AND OTHER TERMS AND CONDITIONS
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 <br />
                 All purchases through our site or other transactions for the
                 sale of goods, property or services formed through the Website
@@ -482,7 +482,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter  underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter  leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 All purchases shall be in Nigeria Naira or Dollars, regardless
                 of whether the corresponding property advertisements are in
                 other currencies. Please note that, due to currency fluctuations
@@ -511,7 +511,7 @@ const Content = () => {
               <span className="text-zinc-800 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
                 <br />
               </span>
-              <span className="text-zinc-800 text-xs  md:text-xl font-normal Inter  leading-[30px]">
+              <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
                 You may link to any page, provided you do so in a way that is
                 fair and legal and does not damage our reputation or take
                 advantage of it, but you must not establish a link in such a way
@@ -522,12 +522,14 @@ const Content = () => {
                 <br />
                 This Website may provide certain social media features that
                 enable you to: <br />
-                <br /> <div className="md:ml-12">a.) Link from your own or certain third-party websites to
-                certain content on this Website. <br /> b.) Send e-mails or
-                other communications with certain content, or links to certain
-                content, on this Website. <br /> c.) Cause limited portions of
-                content on this Website to be displayed or appear to be
-                displayed on your own or certain third-party <br /> websites.
+                <br />{" "}
+                <div className="md:ml-12">
+                  a.) Link from your own or certain third-party websites to
+                  certain content on this Website. <br /> b.) Send e-mails or
+                  other communications with certain content, or links to certain
+                  content, on this Website. <br /> c.) Cause limited portions of
+                  content on this Website to be displayed or appear to be
+                  displayed on your own or certain third-party <br /> websites.
                 </div>
                 <br />
                 <br />
@@ -537,24 +539,318 @@ const Content = () => {
                 we provide with respect to such features. <br />
                 Subject to the foregoing, you must not:
                 <br />
-                <br /> <div className="md:ml-12"> a.) Establish a link from any website that is not owned
-                by you.
-                <br /> b.) Otherwise take any action with respect to the
-                materials on this Website that is inconsistent with any other
-                provision of these Terms <br /> of Use.
-                <br /> c.) You agree to cooperate with us in causing any
-                unauthorized framing or linking immediately to cease. We reserve
-                the right to <br /> withdraw linking permission without notice.</div>
+                <br />{" "}
+                <div className="md:ml-12">
+                  {" "}
+                  a.) Establish a link from any website that is not owned by
+                  you.
+                  <br /> b.) Otherwise take any action with respect to the
+                  materials on this Website that is inconsistent with any other
+                  provision of these Terms <br /> of Use.
+                  <br /> c.) You agree to cooperate with us in causing any
+                  unauthorized framing or linking immediately to cease. We
+                  reserve the right to <br /> withdraw linking permission
+                  without notice.
+                </div>
                 <br />
                 <br />
                 We may disable all or any social media features and any links at
                 any time without notice in our discretion.
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
               </span>
+            </li>
+            <li>
+              <div className="">
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  LINKS FROM THE WEBSITE
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal Inter underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  If the Website contains links to other sites and resources
+                  provided by third parties, these links are provided for your
+                  convenience only. This includes links contained in
+                  advertisements, including banner advertisements and sponsored
+                  links. We have no control over the contents of those sites or
+                  resources, and accept no responsibility for them or for any
+                  loss or damage that may arise from your use of them. If you
+                  decide to access any of the third party websites linked to
+                  this Website, you do so entirely at your own risk and subject
+                  to the terms and conditions of use for such websites and Bezal
+                  Homes accepts no responsibility and shall not be liable, in
+                  any way, for any consequences arising either directly or
+                  indirectly from your accessing such links.
+                  <br />
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  GEOGRAPHIC RESTRICTIONS
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  The owner of the Website is based in Nigeria. We make no
+                  claims that the Website or any of its content is accessible or
+                  appropriate outside of Nigeria. Access to the Website may not
+                  be legal by certain persons or in certain countries. If you
+                  access the Website from outside Nigeria, you do so on your own
+                  initiative and are responsible for compliance with local (or
+                  applicable) laws. <br />
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  DISCLAIMER OF WARRANTIES
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  You understand that we cannot and do not guarantee or warrant
+                  that the Website will be free of viruses or other destructive
+                  code. You are solely responsible for implementing sufficient
+                  procedures and checkpoints to satisfy your particular
+                  requirements for anti-virus protection and accuracy of data
+                  input and output, and for maintaining a means external to our
+                  Website for any reconstruction of any lost data.
+                  <br />
+                  <br />
+                  WE WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE CAUSED BY A
+                  DISTRIBUTED DENIAL-OF-SERVICE ATTACK, VIRUSES OR OTHER
+                  TECHNOLOGICALLY HARMFUL MATERIAL THAT MAY INFECT YOUR COMPUTER
+                  EQUIPMENT, COMPUTER PROGRAMS, DATA OR OTHER PROPRIETARY
+                  MATERIAL (DIRECTLY OR INDIRECTLY) DUE TO YOUR USE OF THE
+                  WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE
+                  OR TO YOUR DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR FROM
+                  ACCESSING ANY WEBSITE (OR MATERIALS) LINKED TO IT.
+                  <br />
+                  <br />
+                  YOUR USE OF THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS
+                  OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE,
+                  ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE
+                  WEBSITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS,
+                  WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+                  NEITHER BEZAL HOMES NOR ANY PERSON ASSOCIATED WITH BEZAL HOMES
+                  MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE
+                  COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY OR
+                  AVAILABILITY OF THE WEBSITE OR ITS CONTENTS. WITHOUT LIMITING
+                  THE FOREGOING, NEITHER BEZAL HOMES NOR ANYONE ASSOCIATED WITH
+                  BEZAL HOMES REPRESENTS OR WARRANTS THAT THE WEBSITE, ITS
+                  CONTENT OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE
+                  WILL BE ACCURATE, RELIABLE, ERROR-FREE OR UNINTERRUPTED, THAT
+                  DEFECTS WILL BE CORRECTED, THAT OUR SITE OR THE SERVER THAT
+                  MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL
+                  COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES WILL OTHERWISE
+                  MEET YOUR NEEDS OR EXPECTATIONS.
+                  <br />
+                  <br />
+                  BEZAL HOMES HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND,
+                  WHETHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING
+                  BUT NOT LIMITED TO ANY WARRANTIES OF NON-INFRINGEMENT. THE
+                  FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE
+                  EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+                  <br />
+                  LIMITATION ON LIABILITY
+                  <br />
+                  <br />
+                  TO THE FULLEST EXTENT PERMITTED BY APPLICALBE LAW, IN NO EVENT
+                  WILL BEZAL HOMES, ITS AFFILIATES OR THEIR LICENSORS, SERVICE
+                  PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE
+                  FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR
+                  PUNITIVE LOSS OR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY,
+                  ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO
+                  USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON
+                  THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS
+                  OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING
+                  ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR
+                  PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL
+                  INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF
+                  REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED
+                  SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND
+                  WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF
+                  CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE. THE FOREGOING DOES
+                  NOT AFFECT ANY LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED
+                  UNDER APPLICABLE LAW.
+                  <br />
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  INDEMNIFICATION
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  You agree to defend, indemnify and hold harmless Bezal Homes,
+                  its affiliates, licensors and service providers, and its and
+                  their respective officers, directors, employees, contractors,
+                  agents, licensors, suppliers, successors and assigns from and
+                  against any claims, liabilities, damages, judgments, awards,
+                  losses, costs, expenses or fees (including all legal fees)
+                  arising out of or relating to your violation of these Terms of
+                  Use or your use of the Website and, any use of the Website’s
+                  content, services and products or your use of any information
+                  obtained from the Website regardless of whether they are
+                  permitted by this Terms of Use.
+                  <br />
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="">
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  GOVERNING LAW AND JURISDICTION
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  All matters relating to the Website and these Terms of Use and
+                  any dispute or claim arising therefrom or related thereto (in
+                  each case, including non-contractual disputes or claims),
+                  shall be governed by and construed in accordance with the laws
+                  in force in Nigeria, without giving effect to any choice or
+                  conflict of law provision or rule (whether of Nigeria or any
+                  other jurisdiction). Any legal suit, action or proceeding
+                  arising out of, or related to, these Terms of Use or the
+                  Website shall be instituted exclusively in the courts of
+                  Nigeria, although we retain the right to bring any suit,
+                  action or proceeding against you for breach of these Terms of
+                  Use in your place or country of residence or any other
+                  relevant country. You waive any and all objections to the
+                  exercise of jurisdiction over you by such courts and to venue
+                  in such courts.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="">
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  LIMITATION ON TIME TO FILE CLAIMS
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR
+                  RELATING TO THESE TERMS OF USE OR THE WEBSITE MUST BE
+                  COMMENCED WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION
+                  ACCRUES, OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS
+                  PERMANENTLY BARRED.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="">
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  WAVIER AND SEVERABILITY
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  <br />
+                  No waiver by Bezal Homes of any term or condition set forth in
+                  these Terms of Use shall be deemed a further or continuing
+                  waiver of such term or condition or a waiver of any other term
+                  or condition, and any failure of Bezal Homes to assert a right
+                  or provision under these Terms of Use shall not constitute a
+                  waiver of such right or provision.
+                  <br />
+                  <br />
+                  If any provision of these Terms of Use is held by a court or
+                  other tribunal of competent jurisdiction to be invalid,
+                  illegal or unenforceable for any reason, such provision shall
+                  be eliminated or limited to the minimum extent such that the
+                  remaining provisions of the Terms of Use will continue in full
+                  force and effect.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  ENTIRE AGREEMENT
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  The Terms of Use, our Privacy Policy and any Document(s) (if
+                  applicable) shall constitute the sole and entire agreement
+                  between you and Bezal Homes with respect to the Website and
+                  supersede all prior and contemporaneous understandings,
+                  agreements, representations and warranties, both written and
+                  oral, with respect to the Website or Bezal Homes as a whole.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="">
+              <span className="text-orange-500 text-xs  md:text-xl font-normal Inter  underline leading-[30px]">
+                  YOUR COMMENTS AND CONCERNS
+                  <br />
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  <br />
+                </span>
+               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  This website is operated and owned by Bezal Homes. In respect
+                  of requests for technical support and other communications
+                  relating to the Website, you can contact us by using our
+                  website contact form, or by emailing us at{" "}
+                </span>
+                <span className="text-zinc-800 text-xl font-normal font-['Optima Pro'] underline leading-[30px]">
+                  sales@bezalhomes.ng
+                </span>
+               <span className="text-zinc-800 text-xs md:text-xl font-normal Inter md:leading-[30px]">
+                  {" "}
+                  You understand and accept that by using this Website in
+                  updating, changing or altering your personal information,
+                  address(es) or contact details, you are accepting that Bezal
+                  Homes or any of its affiliates may, at their discretion, use
+                  such information as an alternative information to send legal
+                  notices under these Terms of Use, Privacy Policy or any
+                  relevant Document(s). It is your obligation to immediately
+                  inform Bezal Homes of any changes to such information.
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </span>
+              </div>
             </li>
           </ol>
         </div>

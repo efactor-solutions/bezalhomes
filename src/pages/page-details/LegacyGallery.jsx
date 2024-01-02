@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import image1 from "../../assets/LegacyGallery1.png";
-import image2 from "../../assets/legacyGallery2.png";
+import image4 from "../../assets/LegacyGallery1.png";
+import image5 from "../../assets/legacyGallery2.png";
 import image3 from "../../assets/legacyGallery3.png";
-import image4 from "../../assets/legacyGallery4.png";
-import image5 from "../../assets/legacyGallery5.png";
+import image1 from "../../assets/legacyGallery4.png";
+import image2 from "../../assets/legacyGallery5.png";
 
 const images = [image1, image2, image3, image4, image5];
 
