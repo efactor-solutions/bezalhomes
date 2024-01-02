@@ -1,11 +1,7 @@
-import React, { useEffect } from "react";
+
 
 const Head = () => {
-    useEffect(() => {
-        // Scroll to the top of the page when the component mounts
-        window.scrollTo(0, 0);
-      }, [])
-
+ 
   return (
     <div className="w-full flex flex-col">
       <div style={{ filter: "brightness(80%)" }} className="terms"></div>

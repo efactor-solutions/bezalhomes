@@ -44,43 +44,7 @@ const Ourstory = () => {
         </div>
         <div className="w-full mt-8 block md:hidden h-[2px] bg-orange-500 " />
         <div>
-          <div className="w-full text-[12px] max-w-3xl    text-zinc-800 md:text-lg font-normal mt-8 md:mt-0 md:leading-[30px]">
-            Once upon a time, in the dynamic realm of the Nigerian real estate
-            market, a subsidiary emerged from the fertile grounds of innovation
-            and ambition—Bezal Homes, a proud offshoot of Farmcenta. Much more
-            than a company, we are the veritable heart of real estate
-            development and investment, deeply entwined with the roots of
-            Farmcenta.
-            <br />
-            <br />
-            Our narrative unfolds in the residential sector, where our passion
-            thrives in the creation and investment of premier properties,
-            strategically nestled in prime locations across Nigeria. Bezal Homes
-            & Investment Ltd. stands tall, a luminous beacon of excellence
-            illuminating the real estate industry, crafting exquisite properties
-            that leave an indelible mark on sought-after landscapes throughout
-            Nigeria.
-            <br />
-            <br />
-            Our legacy is woven with threads of innovation, anchored in
-            unwavering integrity, and propelled by an unyielding commitment to
-            deliver unparalleled value. As our story unfolds, Bezal Homes
-            rapidly ascends the echelons, carving a trusted and reputable name
-            in the tapestry of the Nigerian real estate landscape.
-            <br />
-            <br />
-            Within the pages of our tale, meet a dedicated team of
-            professionals, bound by an unrelenting pursuit of excellence. Their
-            diligence knows no bounds as they contribute not only to the
-            Nigerian economy but also catalyze the forward march of the real
-            estate market.
-            <br />
-            <br />
-            Our proven track record stands proudly as a testament to the
-            expertise that shapes top-tier residential properties, setting the
-            gold standard in the ever-evolving narrative of Bezal Homes and
-            Investment Ltd.
-          </div>
+        <div className="w-full text-[12px] max-w-3xl    text-zinc-800 md:text-lg font-normal mt-8 md:mt-0 md:leading-[30px]">Once upon a time, in the vibrant realm of the Nigerian real estate market, Bezal Homes emerged as a force, rooted in innovation and ambition.<br/><br/>Our narrative unfolds in the residential sector, where our passion thrives in the creation and investment of premier properties, strategically nestled in prime locations across Nigeria. Bezal Homes & Investment Ltd. stands tall, a luminous beacon of excellence illuminating the real estate industry, crafting exquisite properties that leave an indelible mark on sought-after landscapes throughout Nigeria.<br/><br/>Our legacy is woven with threads of innovation, anchored in unwavering integrity, and propelled by an unyielding commitment to deliver unparalleled value. As our story unfolds, Bezal Homes rapidly ascends the echelons, carving a trusted and reputable name in the tapestry of the Nigerian real estate landscape.<br/><br/>Within the pages of our tale, meet a dedicated team of professionals, bound by an unrelenting pursuit of excellence. Their diligence knows no bounds as they contribute not only to the Nigerian economy but also catalyze the forward march of the real estate market.<br/><br/>Our proven track record stands proudly as a testament to the expertise that shapes top-tier residential properties, setting the gold standard in the ever-evolving narrative of Bezal Homes and Investment Ltd.</div>
         </div>
       </div>
     </main>

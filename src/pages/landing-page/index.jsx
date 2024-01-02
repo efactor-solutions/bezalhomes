@@ -16,17 +16,18 @@ const LandingPage = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
   return (
     <div className="">
       <Header />
       <About />
       <MasterPieces />
-      <LegacyPalace />
-      <ChiscoHeading />
+
       <ChiscoCourt />
-      <Partners />
+      <ChiscoHeading />
       <Rehoboth />
+      <Partners />
+      <LegacyPalace />
       <Blog />
       <DiscoverProjects />
     </div>

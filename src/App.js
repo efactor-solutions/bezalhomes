@@ -2,7 +2,6 @@
 import React from "react";
 import LandingPage from "./pages/landing-page";
 import MasterPieces from "./pages/masterpieces";
-import Blog from "./pages/blog";
 import Navbar from './components/layouts/Navbar'
 import MobileFooter from './components/layouts/MobileFooter'
 import Footer from './components/layouts/Footer'
@@ -17,6 +16,7 @@ import OurStory from "./pages/our-story";
 import ContactUs from "./pages/contact-us";
 import ContactUsSuccess from "./pages/contact-us/ContactUsSuccess";
 import TermsOfUse from "./pages/terms-of-use";
+import BlogPage from "./pages/blog";
 
 function App() {
  
@@ -28,7 +28,7 @@ function App() {
     
     <Route index element={<LandingPage />} />
     <Route path="masterpieces" element={<MasterPieces />} />
-    <Route path="blog" element={<Blog />} />
+    <Route path="blog" element={<BlogPage />} />
     <Route path="chisco-details" element={<ChiscoDetails />} />
     <Route path="rehoboth-details" element={<RehobothDetails />} />
     <Route path="legacy-place" element={<LegacyPlaceDetails/>} />

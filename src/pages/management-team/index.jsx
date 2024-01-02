@@ -4,18 +4,20 @@ import { useParams, useNavigate } from "react-router-dom";
 import director2Image from "../../assets/directorThumb2.png";
 import manager2Thumb from "../../assets/managerThumbnail2.png";
 import manager3Thumb from "../../assets/managerThumb3.png";
+import manager4Thumb from "../../assets/managerThumbnail.png";
 import Scape from "../../assets/cityscape-wuxi.png";
 
 import manager1 from "../../assets/directorPicture2.png";
 import manager2 from "../../assets/managerPicture2.png";
 import manager3 from "../../assets/managerPicture3.png";
+import manager4 from "../../assets/managerPicture.png";
 import DiscoverProject from "../landing-page/discover-project";
 
 const ManagementTeam = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
   const [activeManager, setActiveManager] = useState("1");
   const [hoveredManager, setHoveredManager] = useState(null);
   const { managerId } = useParams();
@@ -58,9 +60,53 @@ const ManagementTeam = () => {
       Thumbnail: director2Image,
       ThumbName: "AKINYEMI ADEMOLA",
     },
-
     {
       id: "2",
+      name: "OLUWATOSIN",
+      surname: "TOGUNBO",
+      position:
+        "Head of Communication & Marketing, Bezal Homes and Investment Ltd.",
+      details: (
+        <>
+          Oluwatosin O. Togunbo, a distinguished graduate of Economics from the
+          prestigious University of Lagos, stands at the helm of communication
+          and marketing as the Director at Bezal Homes and Investment Ltd.
+          <br />
+          <br />
+          As an Associate Member of the Advertising Regulatory Council of
+          Nigeria (ARCON), Oluwatosin brings a wealth of expertise cultivated
+          through diverse professional experiences. He garnered invaluable
+          insights during his tenure with MEDIATRAK NIGERIA, a leading Media
+          Monitoring Company in the country. There, he spearheaded campaigns for
+          renowned brands such as Nigeria Breweries, Coca Cola, Nokia, GLO,
+          Airtel, Procter and Gamble, Reckitt & Benckiser, Keystone Bank, 1XBET,
+          HONEYWELLL, and numerous other industry leaders.
+          <br />
+          <br />
+          Oluwatosin's major competency lies in meticulous data analysis,
+          contributing to the preparation of essential metrics such as Share of
+          Voice (SOV) and Share of Spend (SOS) among competing brands. His keen
+          insights and strategic approach have played a pivotal role in shaping
+          successful media planning and buying services over a decade and a
+          half.
+          <br />
+          <br />
+          In his current role, Oluwatosin takes charge of media placement for
+          prominent brands including 1BET, FAIRMONEY MFB, and FMN UNILEVER,
+          orchestrating comprehensive campaigns across various TV and RADIO
+          stations nationwide. His dedication to excellence and strategic
+          prowess positions Bezal Homes and Investment Ltd at the forefront of
+          effective communication and marketing strategies in the real estate
+          industry.
+        </>
+      ),
+      image: manager4,
+      Thumbnail: manager4Thumb,
+      ThumbName: "OLUWATOSIN TOGUNBO",
+    },
+
+    {
+      id: "3",
       name: "OLADOKUN",
       surname: "MICHAEL",
       position: "Head of Construction, Bezal Homes and Investment Ltd.",
@@ -86,7 +132,7 @@ const ManagementTeam = () => {
       ThumbName: "OLADOKUN MICHAEL",
     },
     {
-      id: "3",
+      id: "4",
       name: "FOLASADE",
       surname: "OLUMUTIMI",
       position: "Admin/HR Head, Bezal Homes and Investment Ltd.",
@@ -140,7 +186,7 @@ const ManagementTeam = () => {
     // Navigate to the page for the selected director
     navigate(`/management-team/${id}`);
     // Set the clicked director as the active one
-    setActiveManager(id)
+    setActiveManager(id);
     window.scrollTo(0, 0);
   };
 
@@ -202,7 +248,7 @@ const ManagementTeam = () => {
               onMouseLeave={() => setHoveredManager(null)}
             >
               <div className="relative">
-              <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
+                <div className="w-full absolute  bottom-0 left-0 h-full bg-black opacity-0 hover:opacity-40"></div>
                 <img
                   className={` w-full ${
                     hoveredManager === manager.id ? "hovered w-full" : "w-full"
@@ -210,54 +256,54 @@ const ManagementTeam = () => {
                   src={manager.Thumbnail}
                   alt={manager.ThumbName}
                 />
-                <div className="absolute bottom-[5%] left-[25%]"> {(hoveredManager === manager.id ||
-                activeManager === manager.id) && (
-                <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">
-                  {manager.ThumbName}
-                  <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
-              {manager.position}
-            </span>
-                </p>
-              )}</div>
+                <div className="absolute bottom-[5%] left-[10%]">
+                  {" "}
+                  {(hoveredManager === manager.id ||
+                    activeManager === manager.id) && (
+                    <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">
+                      {manager.ThumbName}
+                      <span className="text-[8px] text-white md:text-sm flex flex-col text-center">
+                        {manager.position}
+                      </span>
+                    </p>
+                  )}
+                </div>
               </div>
-              
             </div>
           ))}
         </div>
         <div className="grid grid-cols-2 gap-2 px-5 md:hidden mt-10">
-          
-            {managers.map((manager) => (
-              <div
-                key={manager.id}
-                className={`thumb cursor-pointer  flex items-center flex-col ${
-                  false ? "active md:mx-7 " : ""
-                }`}
-                onClick={() => handleThumbnailClick(manager.id)}
-                onMouseEnter={() => setHoveredManager(manager.id)}
-                onMouseLeave={() => setHoveredManager(null)}
-              >
-                <div className="flex relative items-center mx-1 flex-col">
-        <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
+          {managers.map((manager) => (
+            <div
+              key={manager.id}
+              className={`thumb cursor-pointer  flex items-center flex-col ${
+                false ? "active md:mx-7 " : ""
+              }`}
+              onClick={() => handleThumbnailClick(manager.id)}
+              onMouseEnter={() => setHoveredManager(manager.id)}
+              onMouseLeave={() => setHoveredManager(null)}
+            >
+              <div className="flex relative items-center mx-1 flex-col">
+                <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30"></div>
 
-                  <img
-                    className={`w-full ${
-                      [hoveredManager, activeManager].includes(manager.id)
-                        ? "hovered"
-                        : ""
-                    }`}
-                    src={manager.Thumbnail}
-                    alt={manager.ThumbName}
-                  />
-               
-               <div className="absolute bottom-[5%] left-[20%]">
+                <img
+                  className={`w-full ${
+                    [hoveredManager, activeManager].includes(manager.id)
+                      ? "hovered"
+                      : ""
+                  }`}
+                  src={manager.Thumbnail}
+                  alt={manager.ThumbName}
+                />
+
+                <div className="absolute bottom-[5%] left-[20%]">
                   <p className="text-[10px] font-[700] text-white md:text-sm w-full mt-2 text-center">
                     {manager.ThumbName}
-                  </p></div>
-                
+                  </p>
                 </div>
               </div>
-            ))}
-         
+            </div>
+          ))}
         </div>
       </div>
       <DiscoverProject />
