@@ -17,17 +17,17 @@ const Head = () => {
       <div style={{ filter: "brightness(50%)" }} className="our-story"></div>
       <div className="lg:w-[90%]  m-auto absolute px-4 top-[30%] left-[5%]">
         <div className=" text-[12px]  text-white md:text-3xl font-normal Inter md:leading-10">
-          welcome To
+          Welcome to
         </div>
         <div className="md:mt-4 flex flex-col ">
-          <span className="text-white text-[20px] md:text-6xl font-normal Inter uppercase md:leading-[60px] tracking-wide">
+          <span className="text-white text-[20px] md:text-5xl font-normal Inter uppercase md:leading-[60px] tracking-wide">
             Bezal Homes
           </span>
-          <span className="text-white text-[20px] md:text-6xl font-normal Inter uppercase md:leading-[60px] tracking-wide">
+          <span className="text-white text-[20px] md:mt-6 md:text-6xl font-bold Inter uppercase leading-[40px] md:leading-[60px] tracking-wide">
             Where Your Dream
           </span>
 
-          <span className="text-white text-opacity-90 text-[20px] md:text-6xl font-normal Inter uppercase md:leading-[60px] tracking-wide">
+          <span className="text-white text-opacity-90 text-[20px] md:mt-2 md:text-6xl font-bold Inter uppercase leading-[10px] md:leading-[60px] tracking-wide">
             Home Awaits
           </span>
         </div>

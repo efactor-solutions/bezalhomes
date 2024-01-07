@@ -33,17 +33,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="div2 mt-6 md:mt-0 w-full">
-          <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+          <h1 onClick={ () => {navigate('/masterpieces')}} className="inter cursor-pointer font-[400] text-[20px] leading-[15.12px] footer-heading ">
           MASTERPIECES
             </h1>
-            <div onClick={ () => navigate('/legacy-place')} className="inter cursor-pointer font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
-            Legacy Place
+            <div onClick={ () => navigate('/chisco-details')} className="inter cursor-pointer font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
+             Chisco Court
             </div>
             <div onClick={ () => navigate('/rehoboth-details')} className="inter font-[400] cursor-pointer mt-2 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] text-white ">
             Rehoboth Apartment
             </div>
-            <div onClick={ () => navigate('/chisco-details')} className="inter font-[400] cursor-pointer text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
-            Chisco Court
+            <div onClick={ () => navigate('/legacy-place')} className="inter font-[400] cursor-pointer text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+            Legacy Place
             </div>
            
             <div className="inter uppercase font-[400] text-[12.11px] mt-4 md:mt-[150px] leading-[15.12px] text-white ">
@@ -52,7 +52,7 @@ const Footer = () => {
 
           </div>
           <div className="div3 mt-8 md:mt-0 w-full">
-          <h1 className="inter font-[400] text-[20px] leading-[15.12px] footer-heading ">
+          <h1 onClick={ () => {navigate('/contact-us')}} className="inter cursor-pointer font-[400] text-[20px] leading-[15.12px] footer-heading ">
           CONTACT US
             </h1>
             <div className="inter font-[400] mt-8 text-[12.4px]  leading-[15.12px] text-left max-w-[200px] footer-text ">
@@ -65,7 +65,7 @@ const Footer = () => {
             <span onClick={ () => navigate('/terms-of-use')} className="inter underline cursor-pointer font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px]  footer-text ">
               Terms of Use
             </span>
-            <span className="inter underline font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
+            <span onClick={ () => navigate('/privacy-policy')} className="inter cursor-pointer underline font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">
               Privacy
             </span>
             <span className="inter underline font-[400] text-[10px] mt-4 md:mt-20 leading-[15.12px] text-left max-w-[200px] footer-text ">

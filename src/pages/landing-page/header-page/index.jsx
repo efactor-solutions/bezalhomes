@@ -39,11 +39,11 @@ const Header = () => {
         {/* Ensure the content is centered within the video container */}
         <div className="content">
           <div className="flex flex-col text-center w-full ">
-            <h1 className="text-center text-white text-[50px] font-normal Inter hidden md:block uppercase leading-[50.40px] tracking-wide">
+            <h1 className="text-center text-white text-[50px] font-bold Inter hidden md:block uppercase leading-[50.40px] tracking-wide">
               Dream Home Comes True
             </h1>
-            <h1 className="text-white flex md:hidden flex-col px-12 Smart-watch-heading header-text uppercase Outfit  font-[400] text-[20px] md:text-[30px] md:text-4xl lg:text-[40px]">
-              <span className="text-[12px] md:text-[20px] Inter mb-1 md:mb-3 tracking-widest">
+            <h1 className="text-white flex md:hidden flex-col px-12 Smart-watch-heading header-text uppercase Outfit text-[20px] md:text-[30px] md:text-4xl lg:text-[40px]">
+              <span className="">
               Dream Home 
               </span>
               Comes True

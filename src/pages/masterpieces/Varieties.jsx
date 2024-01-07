@@ -1,7 +1,7 @@
 import React from "react";
 import Chisco from "../landing-page/assets/Bezal Review_8 - Photo.svg";
-import Rehoboth from "../landing-page/assets/rehobothApt.svg";
-import Legacy from "../landing-page/assets/legacyreview.svg";
+import Rehoboth from "../landing-page/assets/reho1.svg";
+import Legacy from "../landing-page/assets/legacyImage1.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const Varieties = () => {
@@ -50,7 +50,7 @@ const Varieties = () => {
           <img
             src={Rehoboth}
             alt="Chisco"
-            className="rounded-[30px] w-full scale-105 group-hover:scale-100 transition-all duration-700"
+            className="rounded-[30px] h-full object-cover w-full scale-105 group-hover:scale-100 transition-all duration-700"
           />
           <div className="absolute w-full left-[1%]  bottom-[5%] flex flex-col">
             <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[45px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
