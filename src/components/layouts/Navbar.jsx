@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import Logo from "../../assets/BezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -28,32 +28,28 @@ const Navbar = () => {
     closeDrawer();
   };
 
-  const handleMasterpiecesHover = () => {
-    setShowMenu(true);
-  };
+  useLayoutEffect(() => {
+    if (showMenu && showOurPeople)
+      setShowOurPeople(false);
+  }, [showMenu])
 
-  const handleMasterpiecesLeave = () => {
-    setShowMenu(false);
-  };
-  const handleOurpeopleHover = () => {
-    setShowOurPeople(true);
-  };
+  useLayoutEffect(() => {
+    if (showMenu && showOurPeople)
+      setShowMenu(false)
+  }, [showOurPeople])
 
-  const handleOurpeopleLeave = () => {
-    setShowOurPeople(false);
-  };
 
   const renderOurPeople = () => (
     <div className="menu flex flex-col  mt-2">
       <Link
-       className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
         onClick={handleLinkClick}
         to="/board-of-directors"
       >
         BOARD OF DIRECTORS
       </Link>
       <Link
-       className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
         onClick={handleLinkClick}
         to="/management-team"
       >
@@ -72,14 +68,14 @@ const Navbar = () => {
         CHISCO COURT
       </Link>
       <Link
-         className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
         onClick={handleLinkClick}
         to="/rehoboth-details"
       >
         REHOBOTH APARTMENT
       </Link>
       <Link
-         className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
         onClick={handleLinkClick}
         to="/legacy-place"
       >
@@ -108,7 +104,7 @@ const Navbar = () => {
         >
           <img src={DropDown} alt="button" className="w-full object-cover" />
         </div>
-        <div onClick={ () => {navigate('/')}} className="logo cursor-pointer text-white w-[100px] md:w-[398px] ml-[8%] flex  ">
+        <div onClick={() => { navigate('/') }} className="logo cursor-pointer text-white w-[100px] md:w-[398px] ml-[8%] flex  ">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
         <div>
@@ -145,9 +141,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="menu-container"
-                onMouseEnter={handleMasterpiecesHover}
-                onMouseLeave={handleMasterpiecesLeave}
+                className={`menu-container group ${showMenu ? "show-menu" : ""}`}
+                onClick={() => setShowMenu(state => !state)}  
+              // onMouseLeave={handleMasterpiecesLeave}
               >
                 <div
                   className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-white md:hover:text-[26px] hover:font-[700]"
@@ -156,12 +152,33 @@ const Navbar = () => {
                 >
                   MASTERPIECES
                 </div>
-                {showMenu && renderMenu()}
+                <div className="menu md:group-hover:flex hidden group-[.show-menu]:flex flex-col  mt-2">
+                  <Link
+                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/chisco-details"
+                  >
+                    CHISCO COURT
+                  </Link>
+                  <Link
+                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/rehoboth-details"
+                  >
+                    REHOBOTH APARTMENT
+                  </Link>
+                  <Link
+                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/legacy-place"
+                  >
+                    LEGACY PLACE
+                  </Link>
+                </div>
               </li>
               <li
-                className="menu-container"
-                onMouseEnter={handleOurpeopleHover}
-                onMouseLeave={handleOurpeopleLeave}
+                className={`menu-container group ${showOurPeople ? "show-people" : ""}`}
+                onClick={() => setShowOurPeople(state => !state)}  
               >
                 <div
                   className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-white md:hover:text-[26px] hover:font-[700]"
@@ -170,10 +187,25 @@ const Navbar = () => {
                 >
                   OUR PEOPLE
                 </div>
-                {showOurPeople && renderOurPeople()}
+                <div className="menu hidden flex-col group-[.show-people]:flex mt-2 md:group-hover:flex">
+                  <Link
+                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/board-of-directors"
+                  >
+                    BOARD OF DIRECTORS
+                  </Link>
+                  <Link
+                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/management-team"
+                  >
+                    MANAGEMENT TEAM
+                  </Link>
+                </div>
               </li>
 
-           
+
               <li
                 className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class5")}
@@ -183,13 +215,13 @@ const Navbar = () => {
                   OUR STORY
                 </Link>
               </li>
-                 <li
+              <li
                 className=" inter uppercase cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class4")}
                 onMouseLeave={() => handleButtonHover("")}
               >
                 <Link to="/csr-initiative" onClick={handleLinkClick}>
-                CSR Initiatives
+                  CSR Initiatives
                 </Link>
               </li>
               <li
@@ -205,8 +237,8 @@ const Navbar = () => {
           </div>
           <div className="mt-[15%] px-12 md:fixed md:bottom-[15%] ml-[5%] md:ml-7">
             <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[21px] font-[400]  hover:text-white md:hover:text-[21px] hover:font-[700]">
-            <Link to="/blog" onClick={handleLinkClick}>
-              BLOG
+              <Link to="/blog" onClick={handleLinkClick}>
+                BLOG
               </Link>
             </span>
           </div>
