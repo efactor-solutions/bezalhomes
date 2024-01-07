@@ -293,7 +293,7 @@ const BoardOfDirectors = () => {
             <div
               key={director.id}
               className={`thumb cursor-pointer    ${
-                false ? "active md:mx-7 hidden" : ""
+                activeDirector === director.id  ? "active md:mx-7 hidden" : ""
               }`}
               onClick={() => handleThumbnailClick(director.id)}
               onMouseEnter={() => setHoveredDirector(director.id)}
