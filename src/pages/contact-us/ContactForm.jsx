@@ -45,17 +45,8 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col py-10 md:py-20 w-full">
-            <label className="text-zinc-800 text-opacity-60 text-sm md:text-xl  font-light Inter uppercase leading-none">
-              Your message
-            </label>
-            <input
-              type="text"
-              className="border-b border-slate-900"
-              placeholder=""
-            />
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-28">
+          
+          <div className="flex flex-col mt-5 md:mt-10 md:flex-row gap-8 md:gap-28">
             <div className="flex flex-col w-full">
               <label className="text-zinc-800 text-opacity-60 text-sm md:text-xl  font-light Inter uppercase leading-none">
               Mobile number
@@ -76,6 +67,17 @@ const ContactForm = () => {
                 placeholder=""
               />
             </div>
+          </div>
+          <div className="flex flex-col py-10 md:py-10 w-full">
+            <label className="text-zinc-800 text-opacity-60 text-sm md:text-xl  font-light Inter uppercase leading-none">
+              Your message
+            </label>
+            <textarea
+             rows="4" 
+              type="text"
+              className="border-b border-slate-900 resize-none p-3"
+              placeholder=""
+            />
           </div>
           <div>
             <h1 className=" text-zinc-800 text-[14px] md:text-[22px] mt-14 font-normal Inter leading-9">

@@ -59,7 +59,7 @@ const Rehoboth = () => {
     <div
       className={`chisco h-screen flex flex-col relative  ${classnames[currentImage]}`}
     >
-      <div className="overlay"></div>
+    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10"></div>
       <div className="flex  absolute flex-col lg:mt-8">
         <h2 className="uppercase text-[22px] md:text-[45px]  lg:text-[60px] px-4 ml-4 mt-7  inter text-white lg:font-[400] leading-[54.46px]">
           Rehoboth Apartments

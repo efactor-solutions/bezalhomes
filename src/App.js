@@ -17,6 +17,9 @@ import ContactUs from "./pages/contact-us";
 import ContactUsSuccess from "./pages/contact-us/ContactUsSuccess";
 import TermsOfUse from "./pages/terms-of-use";
 import BlogPage from "./pages/blog";
+import CsrIntitiative from "./pages/csr-initiative";
+import BlogDeatils from "./pages/blog/BlogDetails";
+import PrivacyPolicy from "./pages/privacy-policy";
 
 function App() {
  
@@ -40,6 +43,9 @@ function App() {
     <Route path="contact-us" element={<ContactUs/>} />
     <Route path="contact-us-success" element={<ContactUsSuccess/>} />
     <Route path="terms-of-use" element={<TermsOfUse/>} />
+    <Route path="csr-initiative" element={<CsrIntitiative/>} />
+    <Route path="image-details/:imageId" element={<BlogDeatils />} />
+    <Route path="privacy-policy" element={<PrivacyPolicy/>} />
 
 
      
