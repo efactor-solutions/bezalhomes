@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Head from './Head'
+import { Link } from "react-router-dom";
 
 
 const PrivacyPolicy = () => {
