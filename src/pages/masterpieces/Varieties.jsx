@@ -25,9 +25,9 @@ const Varieties = () => {
       <div className="3-divs w-[94%] py-10 lg:mb-24  justify-between grid lg:grid-cols-2 gap-8">
         <div
           onClick={() => navigate("/chisco-details")}
-          className="group cursor-pointer relative overflow-hidden rounded-[30px]"
+          className="group cursor-pointer relative h-72 md:h-full overflow-hidden rounded-[30px]"
         >
-          <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
+          <div className="w-full absolute bottom-0 left-0  bg-black opacity-30 rounded-[30px]"></div>
           <img
             src={Chisco}
             alt="Chisco"
@@ -44,7 +44,7 @@ const Varieties = () => {
         </div>
         <div
           onClick={() => navigate("/rehoboth-details")}
-          className="group cursor-pointer  relative overflow-hidden rounded-[30px]"
+          className="group cursor-pointer h-72 md:h-full relative overflow-hidden rounded-[30px]"
         >
           <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img
@@ -63,13 +63,13 @@ const Varieties = () => {
         </div>
         <div
           onClick={() => navigate("/legacy-place")}
-          className="group cursor-pointer relative overflow-hidden rounded-[30px]"
+          className="group cursor-pointer h-72 md:h-full relative overflow-hidden rounded-[30px]"
         >
           <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img
             src={Legacy}
             alt="Chisco"
-            className="rounded-[30px] w-full scale-105 group-hover:scale-100 transition-all duration-700"
+            className="rounded-[30px] h-full object-cover w-full scale-105 group-hover:scale-100 transition-all duration-700"
           />
           <div className="absolute left-[10%] bottom-[5%] flex flex-col">
             <h1 className="uppercase Inter lg:font-[600] text-[20px] lg:text-[45px] lg:leading-[50.4px] tracking-[1px] text-center masterpiece-head ">
