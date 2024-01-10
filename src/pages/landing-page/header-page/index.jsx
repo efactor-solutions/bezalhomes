@@ -42,11 +42,13 @@ const Header = () => {
             <h1 className="text-center text-white text-[50px] font-bold Inter hidden md:block uppercase leading-[50.40px] tracking-wide">
               Dream Home Comes True
             </h1>
-            <h1 className="text-white flex md:hidden flex-col px-12 Smart-watch-heading header-text uppercase Outfit text-[20px] md:text-[30px] md:text-4xl lg:text-[40px]">
-              <span className="">
+            <h1 className="text-white flex md:hidden font-bold flex-col px-12 Smart-watch-heading leading-[25px] header-text uppercase Outfit text-[20px] md:text-[30px] md:text-4xl lg:text-[40px]">
+              <span className="tracking-tight">
               Dream Home 
               </span>
+              <span className="tracking-widest">
               Comes True
+              </span>
             </h1>
             <span className="bg-white w-[52px] md:w-[100px] flex md:hidden self-center h-[2px]  my-2 md:my-7"></span>
             <p className="text-white leading-[18.97px] md:leading-[35px] mt-2 Smart-watch-text header-text inter max-w-5xl px-10 md:mt-4 text-center self-center font-normal text-[15px] md:text-[30px]">

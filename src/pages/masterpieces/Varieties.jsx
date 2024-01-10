@@ -44,7 +44,7 @@ const Varieties = () => {
         </div>
         <div
           onClick={() => navigate("/rehoboth-details")}
-          className="group cursor-pointer relative overflow-hidden rounded-[30px]"
+          className="group cursor-pointer  relative overflow-hidden rounded-[30px]"
         >
           <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-30 rounded-[30px]"></div>
           <img

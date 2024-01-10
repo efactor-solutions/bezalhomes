@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Head from './Head'
-import { Link } from "react-router-dom";
+import Content from "./Content";
 
 
 const PrivacyPolicy = () => {
@@ -12,6 +12,7 @@ const PrivacyPolicy = () => {
   return (
     <div>
         <Head />
+        <Content />
         
     </div>
   )

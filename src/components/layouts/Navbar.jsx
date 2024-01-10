@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import Logo from "../../assets/BezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
@@ -39,50 +40,9 @@ const Navbar = () => {
   }, [showOurPeople])
 
 
-  const renderOurPeople = () => (
-    <div className="menu flex flex-col  mt-2">
-      <Link
-        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
-        onClick={handleLinkClick}
-        to="/board-of-directors"
-      >
-        BOARD OF DIRECTORS
-      </Link>
-      <Link
-        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
-        onClick={handleLinkClick}
-        to="/management-team"
-      >
-        MANAGEMENT TEAM
-      </Link>
-    </div>
-  );
+ 
 
-  const renderMenu = () => (
-    <div className="menu flex flex-col  mt-2">
-      <Link
-        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
-        onClick={handleLinkClick}
-        to="/chisco-details"
-      >
-        CHISCO COURT
-      </Link>
-      <Link
-        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
-        onClick={handleLinkClick}
-        to="/rehoboth-details"
-      >
-        REHOBOTH APARTMENT
-      </Link>
-      <Link
-        className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
-        onClick={handleLinkClick}
-        to="/legacy-place"
-      >
-        LEGACY PLACE
-      </Link>
-    </div>
-  );
+  
 
   useEffect(() => {
     // Disable body scrolling when the drawer is open
@@ -100,11 +60,11 @@ const Navbar = () => {
       <div className="flex justify-between mx-auto items-center md:px-12 p-2 md:p-4">
         <div
           onClick={showDrawer}
-          className="logo cursor-pointer text-white w-[20px] md:w-[38px]"
+          className="logo cursor-pointer text-orange-600 w-[20px] md:w-[38px]"
         >
           <img src={DropDown} alt="button" className="w-full object-cover" />
         </div>
-        <div onClick={() => { navigate('/') }} className="logo cursor-pointer text-white w-[100px] md:w-[398px] ml-[8%] flex  ">
+        <div onClick={() => { navigate('/') }} className="logo cursor-pointer text-orange-600 w-[100px] md:w-[398px] ml-[8%] flex  ">
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
         <div>
@@ -121,7 +81,7 @@ const Navbar = () => {
       </div>
       {drawerVisible && (
         <div
-          className={`fixed top-0 left-0 h-full w-full max-w-2xl  bg-black bg-opacity-50 z-20 `}
+          className={`fixed top-0 left-0 h-full w-full max-w-2xl  bg-black bg-opacity-30 z-20 `}
         >
           <button
             className="text-white text-4xl absolute right-1 p-4"
@@ -130,9 +90,9 @@ const Navbar = () => {
             ✕
           </button>
           <div className="md:py-8 flex flex-col  text-xl md:text-3xl md:px-12 mt-[10%] md:mt-20 p-8">
-            <ul className="flex flex-col space-y-[5%] md:space-y-7 px-8">
+            <ul className="flex flex-col space-y-[5%] md:space-y-7 px-0">
               <li
-                className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-white md:hover:text-[26px] hover:font-[700]"
+                className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class1")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -146,7 +106,7 @@ const Navbar = () => {
               // onMouseLeave={handleMasterpiecesLeave}
               >
                 <div
-                  className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-white md:hover:text-[26px] hover:font-[700]"
+                  className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                   onMouseEnter={() => handleButtonHover("class7")}
                   onMouseLeave={() => handleButtonHover("")}
                 >
@@ -154,21 +114,21 @@ const Navbar = () => {
                 </div>
                 <div className="menu md:group-hover:flex hidden group-[.show-menu]:flex flex-col  mt-2">
                   <Link
-                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    className=" text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
                     onClick={handleLinkClick}
                     to="/chisco-details"
                   >
                     CHISCO COURT
                   </Link>
                   <Link
-                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    className="text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
                     onClick={handleLinkClick}
                     to="/rehoboth-details"
                   >
                     REHOBOTH APARTMENT
                   </Link>
                   <Link
-                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    className="text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
                     onClick={handleLinkClick}
                     to="/legacy-place"
                   >
@@ -181,7 +141,7 @@ const Navbar = () => {
                 onClick={() => setShowOurPeople(state => !state)}  
               >
                 <div
-                  className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-white md:hover:text-[26px] hover:font-[700]"
+                  className="inter text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400] hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                   onMouseEnter={() => handleButtonHover("class7")}
                   onMouseLeave={() => handleButtonHover("")}
                 >
@@ -189,14 +149,14 @@ const Navbar = () => {
                 </div>
                 <div className="menu hidden flex-col group-[.show-people]:flex mt-2 md:group-hover:flex">
                   <Link
-                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    className=" text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
                     onClick={handleLinkClick}
                     to="/board-of-directors"
                   >
                     BOARD OF DIRECTORS
                   </Link>
                   <Link
-                    className=" text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-white hover:border-b-white hover:border-b"
+                    className=" text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
                     onClick={handleLinkClick}
                     to="/management-team"
                   >
@@ -207,7 +167,7 @@ const Navbar = () => {
 
 
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class5")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -216,7 +176,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter uppercase cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
+                className=" inter uppercase cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class4")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -225,7 +185,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-white md:hover:text-[26px] hover:font-[700]"
+                className=" inter cursor-pointer text-[#B3B3B3CC] text-[15.52px] md:text-[26px] font-[400]  hover:text-orange-600 md:hover:text-[26px] hover:font-[700]"
                 onMouseEnter={() => handleButtonHover("class3")}
                 onMouseLeave={() => handleButtonHover("")}
               >
@@ -235,8 +195,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="mt-[15%] px-12 md:fixed md:bottom-[15%] ml-[5%] md:ml-7">
-            <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[21px] font-[400]  hover:text-white md:hover:text-[21px] hover:font-[700]">
+          <div className="mt-[15%] px-8 md:px-6 md:fixed md:bottom-[15%] ml-[0%] md:ml-7">
+            <span className=" inter cursor-pointer text-[#B3B3B3CC] text-[13px] md:text-[21px] font-[400]  hover:text-orange-600 md:hover:text-[21px] hover:font-[700]">
               <Link to="/blog" onClick={handleLinkClick}>
                 BLOG
               </Link>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import SeeDetails from "../assets/SeeDetails.svg"; 
 import { useNavigate } from "react-router-dom";
