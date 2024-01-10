@@ -15,7 +15,7 @@ const Head = () => {
 
   return (
     <div className=" flex flex-col">
-      <div style={{ filter: 'brightness(50%)' }} className="chisco-details"></div>
+      <div style={{ filter: 'brightness(70%)' }} className="chisco-details"></div>
       <div className="lg:w-[80%] m-auto absolute px-4 top-[30%] left-[5%]">
         <h1 className=" text-white text-[30px] leading-[30px] tracking-[1px] lg:text-[50px] font-[700] Inter uppercase lg:leading-[50.40px] lg:tracking-wide">
           Chisco Court

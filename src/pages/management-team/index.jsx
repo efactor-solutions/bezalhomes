@@ -277,7 +277,7 @@ const ManagementTeam = () => {
             <div
               key={manager.id}
               className={`thumb cursor-pointer  flex items-center flex-col ${
-                false ? "active md:mx-7 " : ""
+                activeManager === manager.id  ? "active md:mx-7 hidden" : ""
               }`}
               onClick={() => handleThumbnailClick(manager.id)}
               onMouseEnter={() => setHoveredManager(manager.id)}

@@ -128,6 +128,15 @@ body {
   height: 70vh;
   
 }
+.privacy {
+  background-image: url(./assets/privacy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  
+}
 .blog {
   background-image: url(./assets/blog.png);
   background-repeat: no-repeat;
@@ -413,7 +422,7 @@ video{
   height: 100vh;
   min-height: 100vh;
   object-fit: cover;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
  
 } 
 /* .details-overlay{

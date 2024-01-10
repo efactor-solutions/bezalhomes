@@ -3,7 +3,7 @@ import React from "react";
 const Head = () => {
   return (
     <div className="class4 flex flex-col justify-center items-center">
-      <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-20"></div>
+      <div className="w-full absolute bottom-0 left-0 h-full bg-black opacity-10"></div>
       <div className="absolute">
         <h1 className="masterpiece-head uppercase Inter text-[20px]  lg:text-[52px] text-center font-[700] lg:leading-[72px]">
           Elevated Living
