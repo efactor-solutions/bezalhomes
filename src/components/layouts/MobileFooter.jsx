@@ -61,7 +61,7 @@ const MobileFooter = () => {
           top-tier properties located in prime areas across Nigeria.
         </p>
 
-        <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
+        <h1 onClick={ () => navigate('/masterpieces')} className="text-white cursor-pointer text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         MASTERPIECES
         </h1>
         <p  onClick={ () => navigate('/chisco-details')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]"> Chisco Court</p>
@@ -72,7 +72,7 @@ const MobileFooter = () => {
         </h1>
         <div  onClick={ () => navigate('/board-of-directors')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Board of Directors </div>
         <div  onClick={ () => navigate('/management-team')}  className="text-white text-xs font-normal mt-2 leading-[15.12px]">Management Team </div>
-        <h1 className="text-white text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
+        <h1 onClick={ () => navigate('/contact-us')} className="text-white cursor-pointer text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
         CONTACT US
         </h1>
         <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">info@bezalhomes.ng</p>
@@ -84,8 +84,8 @@ const MobileFooter = () => {
               <img src={Instagram} alt="logo" className="w-[23.27x] h-[23.27px]" />
               <img src={Youtube} alt="logo" className="w-[23.27x] h-[23.27px]" />
             </div>
-            <p className="text-white text-xs font-normal mt-8 leading-[15.12px]">Terms of Use</p>
-            <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Privacy</p>
+            <p onClick={ () => navigate('/terms-of-use')} className="text-white cursor-pointer text-xs font-normal mt-8 leading-[15.12px]">Terms of Use</p>
+            <p onClick={ () => navigate('/privacy-policy')} className="text-white cursor-pointer text-xs font-normal mt-2 leading-[15.12px]">Privacy</p>
             <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Cookie Policy</p>
 
             <p className="text-white text-xs font-normal mt-10 uppercase leading-[15.12px]">Bezal Homes © 2023</p>
