@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ComingSoon from "../../ComingSoon";
+
 
 import image1 from "../../assets/chiscoG1.png";
 import image2 from "../../assets/chiscoG2.png";
@@ -52,7 +54,8 @@ const images = [
 
 const ChiscoGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [zoomLevel, setZoomLevel] = useState(1);
+  const [zoomLevel, setZoomLevel] = useState(1)
+  const [activeTab, setActiveTab] = useState("architecture")
 
   const handleImageClick = (index) => {
     setLightboxIndex(index);
@@ -80,6 +83,9 @@ const ChiscoGallery = () => {
   const handleZoomOut = () => {
     setZoomLevel((prevZoom) => Math.max(prevZoom - 0.1, 0.1));
   };
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <div className="w-full lg:py-20">
@@ -88,19 +94,41 @@ const ChiscoGallery = () => {
           Explore the gallery
         </div>
         <div className="w-full mt-2 h-[1px] lg:h-[3px] bg-zinc-600" />
+        <div className="flex gap-4 md:gap-8 mt-10">
+          <div
+            className={`tab cursor-pointer font-[400] text-[12px] md:text-[25px] ${activeTab === "architecture" ? "active text-[#E9682B] border-b border-b-[#E9682B]" : "text-[#333333]"}`}
+            onClick={() => handleTabChange("architecture")}
+          >
+            Architecture Design
+          </div>
+          <div
+            className={`tab cursor-pointer font-400 text-[12px] md:text-[25px] ${activeTab === "workInProgress" ? "active text-[#E9682B] border-b border-b-[#E9682B]" : "text-[#333333]"}`}
+            onClick={() => handleTabChange("workInProgress")}
+          >
+            Work in Progress
+          </div>
+        </div>
       </div>
-      <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
-        {images.map((image, index) => (
-          <img
-            loading="lazy"
-            key={index}
-            src={image}
-            alt={`Show ${index + 1}`}
-            className="w-full h-full cursor-pointer"
-            onClick={() => handleImageClick(index)}
-          />
-        ))}
-      </div>
+    
+
+      {activeTab === "architecture" ? (
+        <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
+          {/* Render images based on the active tab */}
+          {images.map((image, index) => (
+            <div key={index} className="relative">
+              <img
+                loading="lazy"
+                src={image}
+                alt={`Show ${index + 1}`}
+                className="w-full h-full cursor-pointer"
+                onClick={() => handleImageClick(index)}
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <ComingSoon />
+      )}
 
       {lightboxIndex !== null && (
         <div className="lightbox">

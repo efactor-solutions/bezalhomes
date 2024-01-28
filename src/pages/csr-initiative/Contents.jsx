@@ -86,7 +86,7 @@ const Contents = () => {
           </p>
         </div>
         <div className="py-5">
-          <img loading="lazy" src={Csr4} alt="fun" className="w-full" />
+          <img loading="lazy" src={Csr3} alt="fun" className="w-full" />
         </div>
         <div className="">
           <img loading="lazy" src={Csr5} alt="fun" className="w-full" />
@@ -118,7 +118,7 @@ const Contents = () => {
             <br />
           </p>
           <div className="mt-3">
-          <img loading="lazy" src={Csr3} alt="fun" className="w-full" />
+          <img loading="lazy" src={Csr4} alt="fun" className="w-full" />
         </div>
         </div>
       
