@@ -1,6 +1,6 @@
 import React from 'react';
 import backgroundImage from './assets/Background.jpg';
-import Logo from './assets/Bezal Logo.png';
+import Logo from './assets/logo.png';
 import BezalImage from './assets/In Construction.png';
 
 const ComingSoon = () => {
@@ -15,15 +15,13 @@ const ComingSoon = () => {
         <img src={Logo} alt="" className="w-[20rem]" /> 
       </div>
       <div className="text-black text-center mt-4"> 
-        <h1 className=" font-medium md:text-2xl tracking-wide">This Website is Under Construction</h1>
+        <h1 className=" font-medium md:text-2xl tracking-wide">This Section is Under Construction</h1>
         <p className="text-[#828282] text-xs md:text-base tracking-widest">Stay tuned for something amazing</p>
       </div>
       <div className="mt-10"> 
         <img src={BezalImage} alt="" className="w-[40rem]" /> 
       </div>
-      <div className="text-center mt-4">
-        <p className="text-[#828282] text-xs md:text-base font-medium tracking-widest">Contact us: <span className='text-black'>E: info@bezalhomes.ng</span> |<span className='text-black'> T: +234 (0) 817 8206002</span></p>
-      </div>
+     
     </div>
   );
 };

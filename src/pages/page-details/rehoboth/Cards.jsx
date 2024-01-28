@@ -39,7 +39,7 @@ export const Cards = () => {
             <img src={Maisonnete} alt="Icon" className="w-full" />
           </div>
           <div className=" text-zinc-800 max-w-[150px]  text-lg font-normal Inter leading-[27px] tracking-wide">
-            Timeline Q4 - 2024
+            Timeline Q1 - 2024
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ export const CardsMobile = () => {
             <img src={Maisonnete} alt="Icon" className="w-full" />
           </div>
           <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">
-            Timeline Q4 - 2024
+            Timeline Q1 - 2024
           </div>
         </div>
       </div>

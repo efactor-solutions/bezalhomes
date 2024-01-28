@@ -20,12 +20,8 @@ const Ourstory = () => {
                 </div>
               </div>
               <div className="mt-4 w-full max-w-xl text-zinc-800 text-[12px] leading-[15px] md:leading-[25px]    md:text-sm font-normal Inter">
-                We are on a mission to revolutionize communities and society
-                through the development of smart, ultra-luxury quality homes.
-                Our approach involves sustainable investing that transforms the
-                way we live. By doing so, we aim to leave a lasting imprint on
-                the real estate landscape and contribute to a better, more
-                vibrant society
+                Our aspiration is clear - to stand as a distinctive high-end
+                luxury homes development company within the real estate sector.
               </div>
             </div>
             <div className="ml-0 md:ml-5">
@@ -36,8 +32,12 @@ const Ourstory = () => {
                 </div>
               </div>
               <div className="w-full max-w-lg  mt-4 text-zinc-800 text-[12px] leading-[15px] md:leading-[25px]   md:text-sm font-normal Inter">
-                Our aspiration is clear - to stand as a distinctive high-end
-                luxury homes development company within the real estate sector.
+                We are on a mission to revolutionize communities and society
+                through the development of smart, ultra-luxury quality homes.
+                Our approach involves sustainable investing that transforms the
+                way we live. By doing so, we aim to leave a lasting imprint on
+                the real estate landscape and contribute to a better, more
+                vibrant society
               </div>
             </div>
           </div>

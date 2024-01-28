@@ -6,11 +6,36 @@ import image3 from "../../assets/legacyGallery3.png";
 import image1 from "../../assets/legacyGallery4.png";
 import image2 from "../../assets/legacyGallery5.png";
 
-const images = [image1, image2, image3, image4, image5];
+import LegaWork1 from "../../assets/legaWork1.png";
+import LegaWork2 from "../../assets/legaWork2.png";
+import LegaWork3 from "../../assets/legaWork3.png";
+import LegaWork4 from "../../assets/legaWork4.png";
+import LegaWork5 from "../../assets/legaWork5.png";
+import LegaWork6 from "../../assets/legaWork6.png";
+import LegaWork7 from "../../assets/legaWork7.png";
+
+const architecture = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+];
+
+const workInProgress = [
+  LegaWork1,
+  LegaWork2,
+  LegaWork3,
+  LegaWork4,
+  LegaWork5,
+  LegaWork6,
+  LegaWork7
+];
 
 const LegacyGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [activeTab, setActiveTab] = useState("architecture");
 
   const handleImageClick = (index) => {
     setLightboxIndex(index);
@@ -22,11 +47,11 @@ const LegacyGallery = () => {
   };
 
   const handleMovePrev = () => {
-    setLightboxIndex((prevIndex) => (prevIndex + images.length - 1) % images.length);
+    setLightboxIndex((prevIndex) => (prevIndex + activeImages.length - 1) % activeImages.length);
   };
 
   const handleMoveNext = () => {
-    setLightboxIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setLightboxIndex((prevIndex) => (prevIndex + 1) % activeImages.length);
   };
 
   const handleZoomIn = () => {
@@ -37,6 +62,13 @@ const LegacyGallery = () => {
     setZoomLevel((prevZoom) => Math.max(prevZoom - 0.1, 0.1));
   };
 
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+
+  // Choose the array of images based on the active tab
+  const activeImages = activeTab === "architecture" ? architecture : workInProgress;
+
   return (
     <div className="w-full lg:py-20">
       <div className="w-[90%] m-auto py-10">
@@ -44,9 +76,19 @@ const LegacyGallery = () => {
           Explore the gallery
         </div>
         <div className="w-full mt-2 h-[1px] lg:h-[3px] bg-zinc-600" />
+        <div className="flex gap-4 md:gap-8  mt-10 ">
+          <div className={`tab cursor-pointer ${activeTab === "architecture" ? "active text-orange-700 border-b border-b-orange-700" : ""}`} onClick={() => handleTabChange("architecture")}>
+            Architecture Design
+          </div>
+          <div className={`tab cursor-pointer ${activeTab === "workInProgress" ? "active text-orange-700 border-b border-b-orange-700" : ""}`} onClick={() => handleTabChange("workInProgress")}>
+            Work in Progress
+          </div>
+        </div>
       </div>
+     
       <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
-        {images.map((image, index) => (
+        {/* Render images based on the active tab */}
+        {activeImages.map((image, index) => (
           <img
             key={index}
             src={image}
@@ -79,8 +121,8 @@ const LegacyGallery = () => {
 
             <img
               className="w-full"
-              src={images[lightboxIndex]}
-              alt={`Imag ${lightboxIndex + 1}`}
+              src={activeImages[lightboxIndex]}
+              alt={`Gallery ${lightboxIndex + 1}`}
             />
           </div>
         </div>

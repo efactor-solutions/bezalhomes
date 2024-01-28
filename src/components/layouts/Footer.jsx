@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
            
             <div className="inter uppercase font-[400] text-[12.11px] mt-4 md:mt-[150px] leading-[15.12px] text-white ">
-            Bezal Homes © 2023
+            Bezal Homes © 2024
           </div>
 
           </div>
