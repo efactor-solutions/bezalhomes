@@ -32,6 +32,7 @@ function App() {
     <Route index element={<LandingPage />} />
     <Route path="masterpieces" element={<MasterPieces />} />
     <Route path="blog" element={<BlogPage />} />
+    <Route path="blog/:slug" element={<BlogDeatils />} />
     <Route path="chisco-details" element={<ChiscoDetails />} />
     <Route path="rehoboth-details" element={<RehobothDetails />} />
     <Route path="legacy-place" element={<LegacyPlaceDetails/>} />
