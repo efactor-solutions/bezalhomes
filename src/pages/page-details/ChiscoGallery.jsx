@@ -135,8 +135,15 @@ const ChiscoGallery = () => {
           <div
             className="lightbox-content relative">
           
+              
+                          <img
+                            loading="lazy"
+                            className="w-full absolute"  
+                            style={{ transform: `scale(${zoomLevel})` }}
+                            src={images[lightboxIndex]}
+                            alt={`Imag ${lightboxIndex + 1}`}
+                          />
         
-          <div className="relative z-10">
               <span
                 className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
                 onClick={handleCloseLightbox}
@@ -147,19 +154,11 @@ const ChiscoGallery = () => {
                 <button onClick={handleZoomIn}>+</button>
                 <button onClick={handleZoomOut}>-</button>
               </div>
-              <div className="md:text-5xl text-2xl text-white absolute bottom-[25%] md:bottom-[30%] right-[40%] flex gap-8 md:right-[4%]">
+              <div className="md:text-5xl text-2xl text-white absolute bottom-[25%] md:bottom-[5%] right-[40%] flex gap-8 md:right-[4%]">
                 <button onClick={handleMovePrev}>&#8592;</button>
                 <button onClick={handleMoveNext}>&#8594;</button>
               </div>
-            </div>
 
-            <img
-              loading="lazy"
-              className="w-full absolute"  
-              style={{ transform: `scale(${zoomLevel})` }}
-              src={images[lightboxIndex]}
-              alt={`Imag ${lightboxIndex + 1}`}
-            />
           </div>
         </div>
       )}

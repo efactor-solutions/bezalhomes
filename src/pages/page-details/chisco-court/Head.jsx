@@ -74,10 +74,10 @@ const Head = () => {
         onMouseLeave={handleMouseLeave}
       >
         <video
-          poster={Video}
+          preload="none"
           ref={videoRef}
           controls={false}
-          className="w-full h-full object-contain " 
+          className="w-full h-full object-contain small-video-player"
     
         >
           <source src={videoLink} type="video/mp4" />
