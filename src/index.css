@@ -633,6 +633,13 @@ video{
   object-fit: cover;
 }
 
+.small-video-player {
+  background: url(./assets/AboutChisco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 /* MEDIA QUERIES FOR MEDIUM DEVICES */
 
