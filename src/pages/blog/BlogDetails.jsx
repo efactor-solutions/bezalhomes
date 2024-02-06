@@ -27,7 +27,7 @@ export default function BlogDetails() {
                         {/* Header */}
                         <div className="w-full flex flex-col">
                             <div style={{ filter: "brightness(80%)" }} className="blog-header relative bg-slate-600">
-                                <img src={blog.header_image} className="!w-full !h-full block object-cover" />
+                                <img src={blog.header_image} alt="Blogs" className="!w-full !h-full block object-cover" />
                             </div>
                             <div className="lg:w-[90%] flex justify-center items-center mx-auto absolute flex-col top-[30%] ml-[25%] md:ml-[5%] px-4 ">
                                 <div className="">
