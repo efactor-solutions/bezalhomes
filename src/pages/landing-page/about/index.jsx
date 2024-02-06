@@ -11,7 +11,7 @@ import BezalSmall from "../assets/BezalSmall.svg";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className=" relative">
       <div className="flex flex-col gap-4 w-full ">
@@ -24,28 +24,23 @@ const About = () => {
           </h1>
           <p className="w-full flex md:hidden px-8 flex-col  Smart-watch-text max-w-5xl inter text-center text-xs  font-normal leading-5 md:text-xl">
             <span>
-              Once upon a time, in the dynamic realm of the Nigerian real estate
-              market, a subsidiary emerged from the fertile grounds of
-              innovation and ambition—Bezal Homes, a proud offshoot of
-              Farmcenta. Much more than a company, we are the veritable heart of
-              real estate development and investment, deeply entwined with the
-              roots of Farmcenta.
-            </span>{" "}
-            <span className="mt-4 md:mt-0">
               Our narrative unfolds in the residential sector, where our passion
               thrives in the creation and investment of premier properties,
-              strategically nestled in prime locations across Nigeria.
-            </span>
+              strategically nestled in prime locations across Nigeria. Bezal
+              Homes & Investment Ltd. stands tall, a luminous beacon of
+              excellence illuminating the real estate industry, crafting
+              exquisite properties that leave an indelible mark on sought-after
+              landscapes throughout Nigeria.
+            </span>{" "}
           </p>
           <p className="w-full hidden md:flex px-8 flex-col  Smart-watch-text max-w-5xl inter text-center text-xs  font-normal leading-5 md:text-xl">
-            Once upon a time, in the dynamic realm of the Nigerian real estate
-            market, a subsidiary emerged from the fertile grounds of innovation
-            and ambition—Bezal Homes, a proud offshoot of Farmcenta. Much more
-            than a company, we are the veritable heart of real estate
-            development and investment, deeply entwined with the roots of
-            Farmcenta. Our narrative unfolds in the residential sector, where
-            our passion thrives in the creation and investment of premier
-            properties, strategically nestled in prime locations across Nigeria.
+            Our narrative unfolds in the residential sector, where our passion
+            thrives in the creation and investment of premier properties,
+            strategically nestled in prime locations across Nigeria. Bezal Homes
+            & Investment Ltd. stands tall, a luminous beacon of excellence
+            illuminating the real estate industry, crafting exquisite properties
+            that leave an indelible mark on sought-after landscapes throughout
+            Nigeria.
           </p>
           <div className="div-3-cont flex space-y-9 py-10 flex-col lg:flex-row lg:justify-between lg:w-[90%] justify-center items-center w-full">
             <div className="div-1 lg:mt-4 flex items-center gap-4">
@@ -113,7 +108,12 @@ const About = () => {
             </div>
           </div>
           <div className="py-10">
-            <button onClick={ () => {navigate('/our-story')}} className="py-2 text-[#E9682B] text-[8px] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc">
+            <button
+              onClick={() => {
+                navigate("/our-story");
+              }}
+              className="py-2 text-[#E9682B] text-[8px] md:text-[20.74px] rounded-[1.586px] flex items-center gap-2 px-8 border border-[#E9682B] bg-transparent transition duration-300 hover:border-b-black hover:border-r-black hover:border-l-black hover:border-2 focus:outline-none foc"
+            >
               DISCOVER OUR STORY
               <span>
                 <img
