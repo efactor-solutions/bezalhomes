@@ -4,14 +4,27 @@ import SendButton from '../../assets/SendButton.svg'
 import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
-    const navigate = useNavigate()
-    const onChange = (e) => {
-        console.log(`checked = ${e.target.checked}`);
-      }
-      const Back = () => {
-        navigate('/')
-            }
-     
+  const navigate = useNavigate()
+
+  const Back = () => {
+    navigate('/')
+  }
+
+  const [formData, setFormData] = React.useState({
+    first_name: "",
+    last_name: "",
+    phone_number: "",
+    email: "",
+    message: "",
+    mode: "",
+    receive_communication: false
+  });
+
+  const onChange = (e) => {
+    console.log(e);
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
   return (
     <main className="md:py-20">
       <div className="w-full md:w-[90%] mx-auto md:py-10">
@@ -29,9 +42,12 @@ const ContactForm = () => {
                 First name
               </label>
               <input
+                onChange={onChange}
                 type="text"
-                className="border-b border-slate-900"
+                
+                className="border-b border-slate-900 focus:outline-none"
                 placeholder=""
+                value={formData.first_name}
               />
             </div>
             <div className="flex flex-col w-full">
@@ -40,30 +56,33 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
-                className="border-b border-slate-900"
+                className="border-b border-slate-900 focus:outline-none"
+                onChange={onChange}
                 placeholder=""
               />
             </div>
           </div>
-          
+
           <div className="flex flex-col mt-5 md:mt-10 md:flex-row gap-8 md:gap-28">
             <div className="flex flex-col w-full">
               <label className="text-zinc-800 text-opacity-60 text-sm md:text-xl  font-light Inter uppercase leading-none">
-              Mobile number
+                Mobile number
               </label>
               <input
                 type="number"
-                className="border-b border-slate-900"
+                className="border-b border-slate-900 focus:outline-none"
+                onChange={onChange}
                 placeholder=""
               />
             </div>
             <div className="flex flex-col w-full">
               <label className="text-zinc-800 text-opacity-60 text-sm md:text-xl  font-light Inter uppercase leading-none">
-           Email
+                Email
               </label>
               <input
                 type="email"
-                className="border-b border-slate-900"
+                className="border-b border-slate-900 focus:outline-none"
+                onChange={onChange}
                 placeholder=""
               />
             </div>
@@ -73,7 +92,7 @@ const ContactForm = () => {
               Your message
             </label>
             <textarea
-             rows="4" 
+              rows="4"
               type="text"
               className="border-b border-slate-900 resize-none p-3"
               placeholder=""
@@ -84,11 +103,11 @@ const ContactForm = () => {
               Please select a preferred mode of contact
             </h1>
             <div className="flex flex-col md:flex-row gap-4 justify-between mt-4">
-            <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-            <Checkbox onChange={onChange}><p className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">Request a phone call back</p></Checkbox>
-            <Checkbox onChange={onChange}><div className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">Request email communications</div></Checkbox>
-            </div>
-            <Checkbox onChange={onChange}><div className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">I would like to receive communications from Bezal Homes</div></Checkbox>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+                <Checkbox onChange={onChange}><p className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">Request a phone call back</p></Checkbox>
+                <Checkbox onChange={onChange}><div className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">Request email communications</div></Checkbox>
+              </div>
+              <Checkbox name="" onChange={onChange}><div className=" text-zinc-800 text-xs md:text-base font-normal Inter leading-7">I would like to receive communications from Bezal Homes</div></Checkbox>
             </div>
           </div>
           <div
@@ -102,7 +121,7 @@ const ContactForm = () => {
             />
           </div>
         </form>
-    
+
       </div>
     </main>
   );
