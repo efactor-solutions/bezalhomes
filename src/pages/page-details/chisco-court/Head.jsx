@@ -5,8 +5,10 @@ const Head = () => {
   const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(false); // New state for fullscreen mode
   const videoRef = useRef(null);
-
+  const chiscoDetailsRef = useRef(null)
+ 
   const togglePlay = () => {
     if (videoRef.current.paused) {
       videoRef.current.play();
@@ -35,6 +37,28 @@ const Head = () => {
     setIsPlaying(false);
   };
 
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      setIsFullScreen(true);
+      videoRef.current.requestFullscreen();
+    } else {
+      setIsFullScreen(false);
+      document.exitFullscreen();
+    }
+  };
+  
+  useEffect(() => {
+    // Assign the ref after the chisco-details element is rendered in the DOM
+    chiscoDetailsRef.current = document.querySelector('#chisco-details');
+  }, []);
+  
+  const scrollToChiscoDetails = () => {
+    // Check if chiscoDetailsRef.current is not null before calling scrollIntoView
+    if (chiscoDetailsRef.current) {
+      chiscoDetailsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   useEffect(() => {
     const video = videoRef.current;
     video.addEventListener("play", handlePlay);
@@ -64,12 +88,12 @@ const Head = () => {
           Investment Ltd. Chisco Court is set to redefine the expectations of
           upscale living in the city of Lagos, Nigeria.
         </p>
-        <div onClick={togglePlay} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="lg:mt-[5%] mt-[40%] cursor-pointer">
-          <img src={Explore} alt="Button" className="animate-pulse transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]" />
+        <div className="lg:mt-[5%] mt-[40%] cursor-pointer" onClick={scrollToChiscoDetails}>
+          <img src={Explore} alt="Button" className="animate-pulse exploredetailsbutton transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]" />
         </div>
       </div>
       <div
-        className="absolute w-[40%] h-[40%] overflow-hidden cursor-pointer !rounded-xl hidden lg:block right-[5%] bottom-[10%]"
+        className={`absolute w-[40%] h-[40%] overflow-hidden cursor-pointer !rounded-xl hidden lg:block right-[5%] bottom-[10%] ${isFullScreen ? 'fullscreen-video' : ''}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -78,7 +102,6 @@ const Head = () => {
           ref={videoRef}
           controls={false}
           className="w-full h-full object-contain small-video-player"
-    
         >
           <source src={videoLink} type="video/mp4" />
           Your browser does not support the video tag.
@@ -116,6 +139,32 @@ const Head = () => {
             )}
           </div>
         )}
+        <div
+          className="absolute top-2 right-2 cursor-pointer text-white"
+          onClick={toggleFullScreen}
+        >
+          {isFullScreen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#fff"
+            >
+              <path d="M5 5h14v14H5z" />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#fff"
+            >
+              <path d="M3 3h18v18H3z" />
+            </svg>
+          )}
+        </div>
       </div>
     </div>
   );
