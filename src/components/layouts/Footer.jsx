@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/BezalLogo.png";
 import Facebook from "../../assets/Link.png";
 import Twitter from "../../assets/Link (1).png";
@@ -6,12 +6,32 @@ import Instagram from "../../assets/Link (2).png";
 import Youtube from "../../assets/Link (3).png";
 import SendButton from "../../assets/Group 20.png";
 import { useNavigate } from "react-router-dom";
+import { useSendStayInTheKnow } from "../../hooks/api";
+
 
 const Footer = () => {
+
   const navigate = useNavigate();
   const openSocialMediaLink = (url) => {
     window.open(url, "_blank");
   };
+
+  const [email, setEmail] = React.useState("");
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+
+  const {
+    isLoading,
+    sendStayInTheKnow
+  } = useSendStayInTheKnow({
+    onError: () => { },
+    callBack: (res) => {
+      setEmail("");
+    }
+  });
+
   return (
     <div className="bg-[#1D1D1D] hidden lg:block">
       <div className="w-[90%] m-auto flex flex-col justify-center items-center  py-10">
@@ -49,19 +69,19 @@ const Footer = () => {
                 alt="logo"
                 className="w-full cursor-pointer object-cover"
               />
-              <img  onClick={() =>
-                  openSocialMediaLink(
-                    "https://twitter.com/Bezalhomes"
-                  )
-                } src={Twitter} alt="logo" className="w-full cursor-pointer object-cover" />
-              <img  onClick={() =>
-                  openSocialMediaLink(
-                    "https://web.facebook.com/profile.php?id=61556152582287"
-                  )
-                }
-                 src={Instagram} alt="logo" className="w-full cursor-pointer object-cover" />
-              <img  
-                 src={Youtube} alt="logo" className="w-full object-cover" />
+              <img onClick={() =>
+                openSocialMediaLink(
+                  "https://twitter.com/Bezalhomes"
+                )
+              } src={Twitter} alt="logo" className="w-full cursor-pointer object-cover" />
+              <img onClick={() =>
+                openSocialMediaLink(
+                  "https://web.facebook.com/profile.php?id=61556152582287"
+                )
+              }
+                src={Instagram} alt="logo" className="w-full cursor-pointer object-cover" />
+              <img
+                src={Youtube} alt="logo" className="w-full object-cover" />
             </div>
           </div>
           <div className="div2 mt-6 md:mt-0 w-full">
@@ -146,20 +166,22 @@ const Footer = () => {
               Management Team
             </div>
           </div>
-          <div className="div5 mt-8 w-full md:mt-0">
+          <form className="div5 mt-8 w-full md:mt-0">
             <h1 className="inter uppercase font-[400] text-[20px] leading-[15.12px] footer-heading ">
               Stay in the know
             </h1>
-            <form className="mt-4 flex flex-col">
+            <div className="mt-4 flex flex-col">
               <label className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
                 Email Address
               </label>
               <input
+                onChange={handleEmailChange}
                 type="email"
                 className="line-input text-white "
                 placeholder=""
+                value={email}
               />
-            </form>
+            </div>
             <div className="inter font-[400] text-[10.63px] mt-8 leading-[17.12px] text-left w-full text-white ">
               By signing up I want to hear about new updates and masterpieces
               and agree with the data protection policy
@@ -169,10 +191,11 @@ const Footer = () => {
               <img
                 src={SendButton}
                 alt="logo"
-                className="w-full object-cover"
+                className={`w-full object-cover cursor-pointer ${isLoading ? "opacity-60" : ""}`}
+                onClick={() => !isLoading && sendStayInTheKnow(email)}
               />
             </div>
-          </div>
+          </form>
         </div>
         <div className="2-divs-container  flex w-full items-center "></div>
       </div>
