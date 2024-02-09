@@ -60,14 +60,15 @@ const VideoComponent = () => {
 
   return (
     <div
-      className="block md:hidden"
+      className="md:hidden relative flex"
       onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
     >
       <video
         preload="none"
         ref={videoRef}
         controls={false}
-        className="w-full  h-full object-contain small-video-player"
+        className="w-full  h-full object-contain small-video-player "
       >
         <source src={videoLink} type="video/mp4" />
         Your browser does not support the video tag.
@@ -75,7 +76,7 @@ const VideoComponent = () => {
       {(!isPlaying || isHovered) && (
         <div
           onClick={togglePlay}
-          className="left-[45%] absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+          className="absolute top-[calc(50%-46px)] left-[calc(50%-46px)] cursor-pointer"
           style={{
             border: "2px solid #fff",
             borderRadius: "2%",
