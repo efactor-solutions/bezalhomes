@@ -49,9 +49,7 @@ export const CardsMobile = () => {
     return (
       <div className="flex lg:hidden py-10">
         <div className="w-[90%] flex flex-col space-y-4 items-center m-auto">
-        <div className="block hover-zoom  md:w-full lg:hidden">
-        <img src={Video} alt="Icon" className="md:w-full" />
-      </div>
+       
           <div className="px-8 w-full  py-5 flex justify-around items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
               <img src={DuplexD} alt="Icon" className="w-full" />

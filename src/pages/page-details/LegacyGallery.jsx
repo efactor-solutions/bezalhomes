@@ -102,7 +102,12 @@ const LegacyGallery = () => {
       {lightboxIndex !== null && (
        <div className="lightbox z-[999999]">
           <div className="lightbox-content relative">
-          <div className="relative z-10">
+          <img
+             className="w-full absolute"
+              style={{ transform: `scale(${zoomLevel})` }}
+              src={activeImages[lightboxIndex]}
+              alt={`Gallery ${lightboxIndex + 1}`}
+            />
               <span
                 className="text-white md:text-5xl text-2xl absolute top-[25%]  right-[35%] md:right-[2%] cursor-pointer md:top-[3%]"
                 onClick={handleCloseLightbox}
@@ -119,13 +124,8 @@ const LegacyGallery = () => {
               </div>
             </div>
 
-            <img
-             className="w-full absolute"
-              style={{ transform: `scale(${zoomLevel})` }}
-              src={activeImages[lightboxIndex]}
-              alt={`Gallery ${lightboxIndex + 1}`}
-            />
-          </div>
+          
+         
         </div>
       )}
     </div>

@@ -10,6 +10,7 @@ import DiscoverProject from '../../landing-page/discover-project'
 import Information from './Information'
 import Map from './Map'
 import MobileCards from '../MobileCards'
+import VideoComponent from './VideoComponent'
 
 const ChiscoDetails = () => {
 
@@ -21,6 +22,7 @@ const ChiscoDetails = () => {
   return (
     <div className=''>
       <Head />
+      <VideoComponent />
       <Cards />
       <CardsMobile />
       <AboutChisco />
