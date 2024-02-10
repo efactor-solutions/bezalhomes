@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../assets/BezalLogo.png";
 import Facebook from "../../assets/Link.png";
 import Twitter from "../../assets/Link (1).png";
@@ -76,7 +76,7 @@ const Footer = () => {
               } src={Twitter} alt="logo" className="w-full cursor-pointer object-cover" />
               <img onClick={() =>
                 openSocialMediaLink(
-                  "https://web.facebook.com/profile.php?id=61556152582287"
+                  "https://www.instagram.com/bezal.homes/"
                 )
               }
                 src={Instagram} alt="logo" className="w-full cursor-pointer object-cover" />

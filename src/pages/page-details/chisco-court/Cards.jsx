@@ -4,7 +4,7 @@ import DuplexSD from '../../../assets/Duplex2.svg'
 import Terraces from '../../../assets/Terraces.svg'
 import Maisonnete from '../../../assets/Maisonnete.svg'
 import Flat from '../../../assets/Flat.svg'
-import Video from '../../../assets/productVideo.png'
+
 
 export const Cards = () => {
   return (

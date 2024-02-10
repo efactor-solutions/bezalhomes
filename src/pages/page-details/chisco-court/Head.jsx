@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Explore from '../../../assets/Explore.svg'
-import Video from '../../../assets/AboutChisco.png'
+
 const Head = () => {
   const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
   const [isPlaying, setIsPlaying] = useState(false);
