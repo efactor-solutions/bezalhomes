@@ -76,7 +76,7 @@ const Footer = () => {
               } src={Twitter} alt="logo" className="w-full cursor-pointer object-cover" />
               <img onClick={() =>
                 openSocialMediaLink(
-                  "https://web.facebook.com/profile.php?id=61556152582287"
+                  "https://www.instagram.com/bezal.homes/"
                 )
               }
                 src={Instagram} alt="logo" className="w-full cursor-pointer object-cover" />
