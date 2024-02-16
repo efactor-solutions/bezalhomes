@@ -73,7 +73,6 @@ const VideoComponent = () => {
         ref={videoRef}
         controls={false}
         className="w-full  h-full object-contain small-video-player "
-        on
       >
         <source src={videoLink} type="video/mp4" />
         Your browser does not support the video tag.
