@@ -37,30 +37,34 @@ const VideoComponent = () => {
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
-      setIsFullScreen(true);
       videoRef.current.requestFullscreen();
     } else {
-      setIsFullScreen(false);
       document.exitFullscreen();
     }
   };
 
   useEffect(() => {
     const video = videoRef.current;
+
+    function handleFullScreenChange() {
+      setIsFullScreen(!!document.fullscreenElement);
+    }
     video.addEventListener("play", handlePlay);
     video.addEventListener("pause", handlePause);
     video.addEventListener("ended", handleEnded);
+    video.addEventListener("fullscreenchange", handleFullScreenChange);
 
     return () => {
       video.removeEventListener("play", handlePlay);
       video.removeEventListener("pause", handlePause);
       video.removeEventListener("ended", handleEnded);
+      video.removeEventListener("fullscreenchange", handleFullScreenChange);
     };
   }, []);
 
   return (
     <div
-      className="md:hidden relative flex"
+      className={`${!isFullScreen ? "md:hidden" : ""} relative flex`}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
     >
@@ -69,6 +73,7 @@ const VideoComponent = () => {
         ref={videoRef}
         controls={false}
         className="w-full  h-full object-contain small-video-player "
+        on
       >
         <source src={videoLink} type="video/mp4" />
         Your browser does not support the video tag.
