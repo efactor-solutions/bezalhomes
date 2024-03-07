@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import maximize from '../../../assets/maximize.png';
 
 const VideoComponent = () => {
   const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
@@ -125,15 +126,7 @@ const VideoComponent = () => {
             <path d="M5 5h14v14H5z" />
           </svg>
         ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="#fff"
-          >
-            <path d="M3 3h18v18H3z" />
-          </svg>
+          <img src={maximize} className="w-5 h-5" />
         )}
       </div>
     </div>
