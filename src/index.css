@@ -625,12 +625,13 @@ video{
 .blog-content h5 {
   text-decoration: underline;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .blog-content img {
   width: 100%;
-  height: 350px;
   object-fit: cover;
+  margin: 2rem 0 !important;
 }
 
 .blog-content ol {
