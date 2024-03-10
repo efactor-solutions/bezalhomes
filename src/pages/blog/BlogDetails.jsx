@@ -6,6 +6,11 @@ export default function BlogDetails() {
     const { slug } = useParams();
     const [blog, setBlog] = React.useState({})
     const [loading, setLoading] = React.useState(true)
+    const titleSplit = React.useMemo(
+        () => {
+            return blog.title && blog.title.toUpperCase().split(":",2)
+        }, [blog]
+    )
 
     React.useEffect(() => {
         if (slug) {
@@ -32,7 +37,8 @@ export default function BlogDetails() {
                             <div className="lg:w-[90%] flex justify-center items-center mx-auto absolute flex-col top-[30%] ml-[25%] md:ml-[5%] px-4 ">
                                 <div className="">
                                     <p className=" text-center text-slate-100 text-base md:text-4xl font-normal Inter">
-                                        {blog && blog.title.toUpperCase()}
+                                        {titleSplit?.[0]}: <br />
+                                        {titleSplit?.[1]}
                                     </p>
                                 </div>
                             </div>

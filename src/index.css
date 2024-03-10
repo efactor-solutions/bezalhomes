@@ -625,12 +625,35 @@ video{
 .blog-content h5 {
   text-decoration: underline;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .blog-content img {
   width: 100%;
-  height: 350px;
   object-fit: cover;
+  margin: 2rem 0 !important;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.blog-content ol ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  font-weight: normal;
+  margin-top: auto !important;
+}
+
+.blog-content li {
+  margin-top: auto !important;
 }
 
 .small-video-player {

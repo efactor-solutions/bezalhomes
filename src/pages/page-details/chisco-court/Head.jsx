@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Explore from '../../../assets/Explore.svg'
+import maximize from '../../../assets/maximize.png';
 
 const Head = () => {
   const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
@@ -144,25 +145,9 @@ const Head = () => {
           onClick={toggleFullScreen}
         >
           {isFullScreen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="#fff"
-            >
-              <path d="M5 5h14v14H5z" />
-            </svg>
+            <img src={maximize} className="w-5 h-5"/>
           ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="#fff"
-            >
-              <path d="M3 3h18v18H3z" />
-            </svg>
+            <img src={maximize} className="w-5 h-5"/>
           )}
         </div>
       </div>
