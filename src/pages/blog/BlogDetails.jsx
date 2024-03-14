@@ -30,13 +30,13 @@ export default function BlogDetails() {
                 !loading ?
                     <>
                         {/* Header */}
-                        <div className="w-full flex flex-col">
+                        <div className="w-full flex flex-col relative">
                             <div style={{ filter: "brightness(80%)" }} className="blog-header relative bg-slate-600">
                                 <img src={blog.header_image} alt="Blogs" className="!w-full !h-full block object-cover" />
                             </div>
-                            <div className="lg:w-[90%] flex justify-center items-center mx-auto absolute flex-col top-[30%] ml-[25%] md:ml-[5%] px-4 ">
+                            <div className="flex justify-center items-center mx-auto absolute w-full h-[100%]">
                                 <div className="">
-                                    <p className=" text-center text-slate-100 text-base md:text-4xl font-normal Inter">
+                                    <p className="text-slate-100 text-base md:text-4xl font-normal Inter text-center max-w-4xl">
                                         {titleSplit?.[0]}: <br />
                                         {titleSplit?.[1]}
                                     </p>
