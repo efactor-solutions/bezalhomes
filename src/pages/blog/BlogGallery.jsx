@@ -33,12 +33,12 @@ const BlogGallery = () => {
               >
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"></div>
                 <img src={blog.header_image} alt={blog.title} className="w-full " />
-                <div className=" absolute left-4 bottom-2 md:left-[8%] md:bottom-[16%]">
-                  <p className=" text-white text-opacity-90 text-sm md:text-3xl font-normal Inter uppercase md:leading-[50.40px] tracking-wide">
+                <div className=" absolute w-full h-[100%] top-0 p-4 flex flex-col justify-end gap-4">
+                  <p className=" text-white text-opacity-90 two-line-truncation w-full text-sm md:text-lg xl:text-3xl font-normal Inter uppercase md:leading-[50.40px] tracking-wide">
                     {blog.title}
                   </p>
-                  <p className=" text-white text-opacity-90 text-xs md:text-base font-normal Inter md:leading-7">
-                    {`${new Date(blog.date).toDateString()} - ${blog.author}`}
+                  <p className=" text-white text-opacity-90 text-xs md:text-base font-normal Inter md:leading-7 truncate w-full">
+                    {`${new Date(blog.date).toLocaleDateString()} - ${blog.author.split("-")[0]}`}
                   </p>
                 </div>
               </div>
