@@ -112,7 +112,7 @@ const VideoComponent = () => {
         </div>
       )}
       <div
-        className="absolute top-2 right-2 cursor-pointer bg-blue-500 text-white"
+        className="absolute top-2 right-2 cursor-pointer text-white"
         onClick={toggleFullScreen}
       >
         {isFullScreen ? (
@@ -126,7 +126,7 @@ const VideoComponent = () => {
             <path d="M5 5h14v14H5z" />
           </svg>
         ) : (
-          <img src={maximize} className="w-5 h-5" />
+          <img src={maximize} alt="expand" className="w-5 h-5" />
         )}
       </div>
     </div>

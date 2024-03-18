@@ -145,9 +145,9 @@ const Head = () => {
           onClick={toggleFullScreen}
         >
           {isFullScreen ? (
-            <img src={maximize} className="w-5 h-5"/>
+            <img src={maximize} alt="expand" className="w-5 h-5"/>
           ) : (
-            <img src={maximize} className="w-5 h-5"/>
+            <img src={maximize} alt="expand" className="w-5 h-5"/>
           )}
         </div>
       </div>
