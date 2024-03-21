@@ -30,12 +30,12 @@ const BlogGallery = () => {
               blogs.map((blog, index) => (
                 <div
                   key={`blog-${index}`}
-                  className={`gallery-item w-full relative cursor-pointer  ${index === 3 ? "md:col-span-2 h-full" : ""
+                  className={`gallery-item w-full relative cursor-pointer rounded-md overflow-hidden  ${index === 0 ? "md:col-span-2" : ""
                     }`}
                   onClick={() => navigate(`/blog/${blog.slug}`)}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"></div>
-                  <img src={blog.header_image} alt={blog.title} className="w-full " />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30"></div>
+                  <img src={blog.header_image} alt={blog.title} className="w-full md:h-80 object-cover" />
                   <div className=" absolute w-full h-[100%] top-0 p-4 flex flex-col justify-end gap-4">
                     <p className=" text-white text-opacity-90 two-line-truncation w-full text-sm md:text-lg xl:text-3xl font-normal Inter uppercase md:leading-[50.40px] tracking-wide">
                       {blog.title}
