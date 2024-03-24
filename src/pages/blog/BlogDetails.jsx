@@ -40,6 +40,8 @@ export default function BlogDetails() {
                                         {titleSplit?.[0]}: <br />
                                         {titleSplit?.[1]}
                                     </p>
+
+                                    <p className="text-white text-2xl text-center mt-10 font-extralight">{blog?.author}</p>
                                 </div>
                             </div>
                         </div>
