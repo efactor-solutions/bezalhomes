@@ -369,6 +369,15 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.four-line-truncation {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+
+}
+
 .dot {
   width: 5px;
   height: 5px;
