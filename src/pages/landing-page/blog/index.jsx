@@ -1,9 +1,7 @@
-import Image1 from "../assets/Rectangle.png";
-import Image2 from "../assets/Rectangle (1).png";
-import Image3 from "../assets/Rectangle (2).png";
+
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // ProgressBar component
 const ProgressBar = ({ totalImages, currentImage }) => {
@@ -43,8 +41,8 @@ const ScrollBar = ({ onPrev, onNext }) => {
     </div>
   );
 };
-const BlogCard = ({ title, date, content, cardNumber, currentCard, slug, image }) => {
-  const images = [Image1, Image2, Image3];
+const BlogCard = ({ title, author, content, cardNumber, currentCard, slug, image }) => {
+
   const isActive = cardNumber === currentCard;
 
   return (
@@ -61,7 +59,7 @@ const BlogCard = ({ title, date, content, cardNumber, currentCard, slug, image }
       {isActive && (
         <div className=" bg-white px-8 flex flex-col  p-4 text-left">
           <h3 className="text-2xl text-[#333333] uppercase font-[400] inter mt-7 mb-2">{title}</h3>
-          <p className="text-sm uppercase text-gray-500 mb-2">{date}</p>
+          <p className="text-sm uppercase text-gray-500 mb-2">{author}</p>
           <p className="text-[#3d2c2c] inter font-[300] text-[14px] mt-4 leading-[16.94px] four-line-truncation ">{content}</p>
           <Link to={`/blog/${slug}`} className="mt-8 uppercase tracking-[2px] leading-[20px] text-[14px] font-[400] flex justify-start text-[#333333] underline">
             Read
@@ -74,10 +72,11 @@ const BlogCard = ({ title, date, content, cardNumber, currentCard, slug, image }
 
 // Updated Blog component
 const Blog = () => {
+  const navigate = useNavigate()
   const [currentCard, setCurrentCard] = useState(0);
   
   const [blogs, setBlog] = React.useState([]);
-
+console.log(blogs)
   React.useEffect(() => {
     fetch(process.env.REACT_APP_API_URL + "/blog/get/all")
       .then(res => res.json())
@@ -104,7 +103,8 @@ const Blog = () => {
           <BlogCard
             key={index + 1}
             title={blog.title}
-            date={new Date(blog.date).toLocaleDateString()}
+            author={blog.author}
+            // date={new Date(blog.date).toLocaleDateString()}
             content={blog.description}
             cardNumber={index}
             currentCard={currentCard}
@@ -113,7 +113,7 @@ const Blog = () => {
           />
         ))}
       </div>
-      <button className="uppercase underline absolute bottom-[9%] md:right-[3%] md:bottom-[25%]">
+      <button onClick={() => navigate("/blog")} className="uppercase underline absolute bottom-[9%] md:right-[3%] md:bottom-[25%]">
         View all
       </button>
       {/* Progress Bar and Scroll Bar */}
