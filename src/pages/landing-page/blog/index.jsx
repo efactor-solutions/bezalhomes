@@ -1,5 +1,6 @@
 
 
+import { Empty, Spin } from "antd";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -75,17 +76,22 @@ const Blog = () => {
   const navigate = useNavigate()
   const [currentCard, setCurrentCard] = useState(0);
   
-  const [blogs, setBlog] = React.useState([]);
-console.log(blogs)
+  const [blogs, setBlog] = React.useState([])
+  const [isLoading, setIsLoading] = React.useState(true);
+
   React.useEffect(() => {
+    setIsLoading(true);
     fetch(process.env.REACT_APP_API_URL + "/blog/get/all")
       .then(res => res.json())
       .then(data => {
-        setBlog(data.data || null)
+        setBlog(data.data || []);
+        setIsLoading(false);
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.error(err);
+        setIsLoading(false);
+      });
   }, []);
-
 
   const handleNext = () => {
     setCurrentCard((prevCard) => (prevCard + 1) % 3);
@@ -96,23 +102,30 @@ console.log(blogs)
   };
 
   return (
-    <div className="text-center  py-10 lg:py-[180px] lg:px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative  bg-[#D9D9D9]">
+    <div className="text-center py-10 lg:py-[180px] lg:px-8 p-2 md:py-20 flex w-full justify-center items-center flex-col relative bg-[#D9D9D9]">
       <h1 className="text-[30px] leading-[45px] text-[#333333] md:text-[64px] inter font-[400]">Our Blog</h1>
-      <div className="justify-around py-20 lg:mt-8 grid gap-4  lg:grid-cols-4 w-full">
-        {blogs.map((blog, index) => (
-          <BlogCard
-            key={index + 1}
-            title={blog.title}
-            author={blog.author}
-            // date={new Date(blog.date).toLocaleDateString()}
-            content={blog.description}
-            cardNumber={index}
-            currentCard={currentCard}
-            slug={blog.slug}
-            image={blog.header_image}
-          />
-        ))}
-      </div>
+      {isLoading ? (
+        <p className="py-10"> <Spin size="large" /></p>
+      ) : blogs.length === 0 ? (
+        <div className="py-10 text-[#E9682B] text-[8px] lg:text-sm animate-pulse flex flex-col lg:space-y-6"> <span>No Blogs Available at the moment</span>
+       <div> <Empty description={false} /></div>
+        </div>
+      ) : (
+        <div className="justify-around py-20 lg:mt-8 grid gap-4 lg:grid-cols-4 w-full">
+          {blogs.map((blog, index) => (
+            <BlogCard
+              key={blog.id || index}
+              title={blog.title}
+              author={blog.author}
+              content={blog.description}
+              cardNumber={index}
+              currentCard={currentCard}
+              slug={blog.slug}
+              image={blog.header_image}
+            />
+          ))}
+        </div>
+      )}
       <button onClick={() => navigate("/blog")} className="uppercase underline absolute bottom-[9%] md:right-[3%] md:bottom-[25%]">
         View all
       </button>
