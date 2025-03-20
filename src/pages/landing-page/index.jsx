@@ -35,3 +35,14 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+<div
+  className="flex-shrink-0"
+  style={{
+    transitionProperty: 'transform',
+    transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    transitionDuration: '500ms',
+  }}
+>
+  {/* Your content */}
+</div>
