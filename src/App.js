@@ -23,6 +23,7 @@ import CsrIntitiative from "./pages/csr-initiative";
 import BlogDeatils from "./pages/blog/BlogDetails";
 import PrivacyPolicy from "./pages/privacy-policy";
 import { ToastContainer } from "react-toastify";
+import PhoneCallButton from "./components/PhoneCallButton";
 
 function App() {
 
@@ -57,6 +58,13 @@ function App() {
       </Routes>
       <MobileFooter />
       <Footer />
+
+      <PhoneCallButton 
+  phoneNumber="+2347012345678" // Replace with your actual phone number
+  text="Call Us" 
+  showText={true} 
+  pulseEffect={true} 
+/>
 
       <ToastContainer />
     </BrowserRouter>
