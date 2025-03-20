@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Video from "../assets/Video.mp4";
-import Logo from "../../../assets/BezalLogo.png";
+import Logo from "../../../assets/newBezalLogo.png";
 const Header = () => {
   const [showAnimation, setShowAnimation] = useState(true);
 

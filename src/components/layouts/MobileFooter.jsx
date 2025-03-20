@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/BezalLogo.png";
+import Logo from "../../assets/newBezalLogo.png";
 import Facebook from "../../assets/Link.png";
 import Twitter from "../../assets/Link (1).png";
 import Instagram from "../../assets/Link (2).png";

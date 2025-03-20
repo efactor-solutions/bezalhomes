@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import Logo from "../../assets/BezalLogo.png";
+import Logo from "../../assets/newBezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
 import { Link, useNavigate } from "react-router-dom";
 
