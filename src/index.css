@@ -170,7 +170,7 @@ body {
   
 }
 .chisco-details {
-  background-image: url(./pages/landing-page/assets/chiscoDetailsImage.svg);
+  background-image: url(./pages/landing-page/assets/chisco-details.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -268,31 +268,31 @@ body {
 /* chisco court */
 
 .chisco1 {
-  background-image: url(./pages/landing-page/assets/chisco1.png);
+  background-image: url(./pages/landing-page/assets/chisco-details.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .chisco2 {
-  background-image: url(./pages/landing-page/assets/chisco2.png);
+  background-image: url(./assets/chisco-court/ex/bhch2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .chisco3 {
-  background-image: url(./pages/landing-page/assets/chisco3.png);
+  background-image: url(./assets/chisco-court/in/bhchn5.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .chisco4 {
-  background-image: url(./pages/landing-page/assets/chisco4.png);
+  background-image: url(./assets/chisco-court/mall/chma4.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .chisco5 {
-  background-image: url(./pages/landing-page/assets/chisco5.png);
+  background-image: url(./assets/chisco-court/mall/chma19.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -301,7 +301,7 @@ body {
 /* Rehoboth */
 
 .reho1 {
-  background-image: url(./pages/landing-page/assets/reho1.svg);
+  background-image: url(./assets/Rehoboth6.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

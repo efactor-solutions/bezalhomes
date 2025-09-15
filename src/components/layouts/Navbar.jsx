@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import Logo from "../../assets/newBezalLogo.png";
 import DropDown from "../../pages/landing-page/assets/dropdown.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -68,7 +69,7 @@ const Navbar = () => {
           <img src={Logo} alt="logo" className="w-full object-cover" />
         </div>
         <div>
-          <button
+          {/*<button
             className=" inter cursor-pointer text-[#FFFFFF] py-1 md:py-2 text-[10.05px] rounded-md bg-[#414141] px-3 md:px-6 md:text-[26px] font-[400]  hover:text-[#414141] hover:bg-white md:hover:text-[26px] hover:font-[700]"
             onMouseEnter={() => handleButtonHover("class7")}
             onMouseLeave={() => handleButtonHover("")}
@@ -77,6 +78,20 @@ const Navbar = () => {
               Contact Us
             </Link>
           </button>
+          */}
+
+          <a
+  href="https://wa.me/2348178206002" // 🔗 replace with your real number
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 inter cursor-pointer text-[#FFFFFF] py-1 md:py-2 text-[10.05px] rounded-md bg-[#25D366] px-3 md:px-6 md:text-[20px] font-[500] hover:bg-[#1ebe57]"
+  onMouseEnter={() => handleButtonHover("class7")}
+  onMouseLeave={() => handleButtonHover("")}
+>
+  <FaWhatsapp className="text-[18px] md:text-[24px]" />
+  Chat with Bezal Homes
+</a>
+
         </div>
       </div>
       {drawerVisible && (

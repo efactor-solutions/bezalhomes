@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const PhoneCallButton = ({ 
-  phoneNumber = "+2347000000000",
+  phoneNumber = "+2348178206002",
   text = "Call Us Now",
   showText = true,
   pulseEffect = true

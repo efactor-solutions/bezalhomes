@@ -3,50 +3,51 @@ import Explore from '../../../assets/Explore.svg'
 import maximize from '../../../assets/maximize.png';
 
 const Head = () => {
-  const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFullScreen, setIsFullScreen] = useState(false); // New state for fullscreen mode
-  const videoRef = useRef(null);
+  // const videoLink = "https://api.bezalhomes.ng/media/proverty_videos/asdkmsdfklkdfls.mp4";
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isFullScreen, setIsFullScreen] = useState(false); // New state for fullscreen mode
+  // const videoRef = useRef(null);
+  
   const chiscoDetailsRef = useRef(null)
  
-  const togglePlay = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  };
+  // const togglePlay = () => {
+  //   if (videoRef.current.paused) {
+  //     videoRef.current.play();
+  //   } else {
+  //     videoRef.current.pause();
+  //   }
+  // };
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
+  // const handlePlay = () => {
+  //   setIsPlaying(true);
+  // };
 
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
+  // const handlePause = () => {
+  //   setIsPlaying(false);
+  // };
 
-  const handleEnded = () => {
-    setIsPlaying(false);
-  };
+  // const handleEnded = () => {
+  //   setIsPlaying(false);
+  // };
 
-  const toggleFullScreen = () => {
-    if (!document.fullscreenElement) {
-      setIsFullScreen(true);
-      videoRef.current.requestFullscreen();
-    } else {
-      setIsFullScreen(false);
-      document.exitFullscreen();
-    }
-  };
+  // const toggleFullScreen = () => {
+  //   if (!document.fullscreenElement) {
+  //     setIsFullScreen(true);
+  //     videoRef.current.requestFullscreen();
+  //   } else {
+  //     setIsFullScreen(false);
+  //     document.exitFullscreen();
+  //   }
+  // };
   
   useEffect(() => {
     // Assign the ref after the chisco-details element is rendered in the DOM
@@ -60,22 +61,24 @@ const Head = () => {
     }
   };
   
-  useEffect(() => {
-    const video = videoRef.current;
-    video.addEventListener("play", handlePlay);
-    video.addEventListener("pause", handlePause);
-    video.addEventListener("ended", handleEnded);
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   if (!video) return; // prevent null errors when video is removed
 
-    return () => {
-      video.removeEventListener("play", handlePlay);
-      video.removeEventListener("pause", handlePause);
-      video.removeEventListener("ended", handleEnded);
-    };
-  }, []);
+  //   video.addEventListener("play", handlePlay);
+  //   video.addEventListener("pause", handlePause);
+  //   video.addEventListener("ended", handleEnded);
+
+  //   return () => {
+  //     video.removeEventListener("play", handlePlay);
+  //     video.removeEventListener("pause", handlePause);
+  //     video.removeEventListener("ended", handleEnded);
+  //   };
+  // }, []);
 
   return (
     <div className="relative flex flex-col">
-      <div style={{ filter: 'brightness(70%)' }} className="chisco-details"></div>
+      <div style={{ filter: 'brightness(45%)' }} className="chisco-details"></div>
       <div className="lg:w-[80%] m-auto absolute px-4 top-[30%] left-[5%]">
         <h1 className="text-white text-[30px] leading-[30px] tracking-[1px] lg:text-[50px] font-[700] Inter uppercase lg:leading-[50.40px] lg:tracking-wide">
           Chisco Court
@@ -93,6 +96,8 @@ const Head = () => {
           <img src={Explore} alt="Button" className="animate-pulse exploredetailsbutton transition-all w-[77.83px] h-[77.94px] lg:w-[160.72px] lg:h-[160.94px]" />
         </div>
       </div>
+
+      {/* 
       <div
         className={`absolute w-[40%] h-[40%] overflow-hidden cursor-pointer !rounded-xl hidden lg:block right-[5%] bottom-[10%] ${isFullScreen ? 'fullscreen-video' : ''}`}
         onMouseEnter={handleMouseEnter}
@@ -151,6 +156,7 @@ const Head = () => {
           )}
         </div>
       </div>
+      */}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 // import { useSpring, animated, config } from "react-spring";
-import AboutImage from "../../../assets/AboutChisco.png";
+import AboutImage from "../../../assets/newAboutChisco.jpg";
 import Timeline from "../../../assets/Timeline.svg"
 import Units from "../../../assets/Units.svg";
 import Progress from "../../../assets/Progress.svg";
@@ -49,7 +49,7 @@ const AboutChisco = () => {
                 </div>
                 <div className="w-[199.58px] h-[0.71px] left-[0.71px] top-[74.71px] absolute bg-neutral-200" />
                 <div className="left-[60px] top-[87px] absolute text-black text-[13px] font-normal Inter ml-4 leading-[13px] tracking-tight">
-                  130 Units
+                  34 Units
                 </div>
                 <div className="w-[30px] h-[33.33px] left-[81px] top-[58.33px] absolute flex-col justify-start items-start inline-flex" />
               </div>

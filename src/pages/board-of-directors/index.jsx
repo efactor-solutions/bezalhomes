@@ -6,11 +6,13 @@ import director1Image from "../../assets/directorThumbnail1.png";
 import director2Image from "../../assets/directorThumb2.png";
 import director3Image from "../../assets/directorThumbnail3.png";
 import director4Image from "../../assets/directorThumbnail4.png";
+import director5Image from "../../assets/directorThumbnail5.png";
 import Scape from "../../assets/cityscape-wuxi.png";
 import director1 from "../../assets/directorPicture1.png";
 import director2 from "../../assets/directorPicture2.png";
 import director3 from "../../assets/directorPicture3.png";
 import director4 from "../../assets/directorPic4.png";
+import director5 from "../../assets/directorPicture5.png";
 import DiscoverProject from "../landing-page/discover-project";
 
 const BoardOfDirectors = () => {
@@ -187,6 +189,34 @@ const BoardOfDirectors = () => {
       image: director4,
       Thumbnail: director4Image,
       ThumbName: "IYKE OTUGO",
+    },
+    {
+      id: "5",
+      name: "ELIZABETH",
+      surname: "AMROVHE",
+      position: "Director, Bezal Homes and Investment Ltd.",
+      details: (
+        <>
+          Elizabeth Oghenesivwo Amrovhe retired from the Central Bank of Nigeria on October 17th, 2023, after serving as the Deputy Director in the Legal Services Department, Abuja. During her remarkable 33-year tenure from 1990 to 2023, Mrs. Amrovhe made significant contributions across various departments, including Finance, Banking Supervision, Other Financial Institutions Supervision, and Legal Services. Her diverse roles provided her with extensive expertise in banking and financial law, banking regulatory law, anti-money laundering, countering the finance of terrorism, and arbitration, among other areas.
+          <br />
+          <br />
+
+          Throughout her illustrious career, Mrs. Amrovhe played a pivotal role in drafting key legislations, regulations, and guidelines in Banking and Finance, particularly concerning other financial institutions. Her contributions not only advanced the legal framework but also ensured the financial stability of institutions within the sector.
+          <br />
+          <br />
+
+          Mrs. Amrovhe holds an LL.B (Hons) degree from the University of Ife, Ile-Ife (now Obafemi Awolowo University), obtained in 1984, and a B.L. from the Nigeria Law School in 1985. She furthered her education by earning an MBA from Lagos State University in 2006.
+          In recognition of her outstanding professionalism, Mrs. Amrovhe is an Associate of the Chartered Institute of Arbitrators (2023), an Honorary member of the Chartered Institute of Bankers of Nigeria (2023), and a Fellow of the Institute of Chartered Secretaries and Administrators since 2006. Additionally, she is a member of the Nigerian Bar Association.
+
+          <br />
+          <br />
+
+          Mrs. Amrovhe's exceptional dedication and expertise have also earned her numerous accolades, including a letter of commendation from the Management of the Central Bank of Nigeria for her pivotal role in the examination of banks that led to the consolidation of banks in the Nigerian Banking Sector in 2005.
+        </>
+      ),
+      image: director5,
+      Thumbnail: director5Image,
+      ThumbName: "ELIZABETH O. AMROVHE",
     },
   ];
 
