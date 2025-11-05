@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import HeroImage from "../../../assets/hero.jpg";
-//import Video from "../assets/Video.mp4";
+//import HeroImage from "../../../assets/hero.jpg";
+import Video from "../assets/Video.mp4";
 import Logo from "../../../assets/newBezalLogo.png";
 const Header = () => {
   const [showAnimation, setShowAnimation] = useState(true);
@@ -25,12 +25,24 @@ const Header = () => {
       )}
 
       <div className="video-container">
-        <img 
+        <video
+          autoPlay
+          loop
+          muted
+          controls={false}
+          className="video"
+          style={{ filter: "brightness(50%)" }}
+        >
+          {/* Include different video formats for better browser compatibility */}
+          <source src={Video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/*<img 
   src={HeroImage} 
   alt="Hero background" 
   className="video" 
   style={{ filter: "brightness(50%)", objectFit: "cover", width: "100%", height: "100vh" }}
-/>
+/>*/}
         {/* Ensure the content is centered within the video container */}
         <div className="content">
           <div className="flex flex-col text-center w-full ">
