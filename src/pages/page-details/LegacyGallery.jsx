@@ -14,11 +14,6 @@ import LegaWork5 from "../../assets/legaWork5.png";
 import LegaWork6 from "../../assets/legaWork6.png";
 import LegaWork7 from "../../assets/legaWork7.png";
 
-// New Manu gallery images (replace with your actual assets)
-import Manu1 from "../../assets/chisco-court/ex/bhch1.jpg";
-import Manu2 from "../../assets/chisco-court/ex/bhch2.jpg";
-import Manu3 from "../../assets/chisco-court/ex/bhch3.jpg";
-
 const architecture = [
   image1,
   image2,
@@ -35,13 +30,6 @@ const workInProgress = [
   LegaWork5,
   LegaWork6,
   LegaWork7
-];
-
-// 👇 Added Manu tab images
-const manu = [
-  Manu1,
-  Manu2,
-  Manu3
 ];
 
 const LegacyGallery = () => {
@@ -76,15 +64,12 @@ const LegacyGallery = () => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    setLightboxIndex(null);
+    setZoomLevel(1);
   };
 
   // Choose the array of images based on the active tab
-  const activeImages =
-    activeTab === "architecture"
-      ? architecture
-      : activeTab === "workInProgress"
-      ? workInProgress
-      : manu; // 👈 Added Manu tab
+  const activeImages = activeTab === "architecture" ? architecture : workInProgress;
 
   return (
     <div className="w-full lg:py-20">
@@ -95,38 +80,20 @@ const LegacyGallery = () => {
         <div className="w-full mt-2 h-[1px] lg:h-[3px] bg-zinc-600" />
         <div className="flex gap-4 md:gap-8  mt-10 ">
           <div
-            className={`tab cursor-pointer ${
-              activeTab === "architecture"
-                ? "active text-orange-700 border-b border-b-orange-700"
-                : ""
-            }`}
+            className={`tab cursor-pointer ${activeTab === "architecture" ? "active text-orange-700 border-b border-b-orange-700" : ""}`}
             onClick={() => handleTabChange("architecture")}
           >
             Architecture Design
           </div>
           <div
-            className={`tab cursor-pointer ${
-              activeTab === "workInProgress"
-                ? "active text-orange-700 border-b border-b-orange-700"
-                : ""
-            }`}
+            className={`tab cursor-pointer ${activeTab === "workInProgress" ? "active text-orange-700 border-b border-b-orange-700" : ""}`}
             onClick={() => handleTabChange("workInProgress")}
           >
             Work in Progress
           </div>
-          <div
-            className={`tab cursor-pointer ${
-              activeTab === "manu"
-                ? "active text-orange-700 border-b border-b-orange-700"
-                : ""
-            }`}
-            onClick={() => handleTabChange("manu")}
-          >
-            Manu
-          </div>
         </div>
       </div>
-
+     
       <div className="grid w-full gap-1 lg:gap-2 lg:grid-cols-3">
         {/* Render images based on the active tab */}
         {activeImages.map((image, index) => (
@@ -141,7 +108,7 @@ const LegacyGallery = () => {
       </div>
 
       {lightboxIndex !== null && (
-        <div className="lightbox z-[999999]">
+       <div className="lightbox z-[999999]">
           <div className="lightbox-content relative">
             <img
               className="w-full absolute"
