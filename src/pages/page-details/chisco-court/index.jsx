@@ -22,7 +22,6 @@ const ChiscoDetails = () => {
   return (
     <div className=''>
       <Head />
-      <VideoComponent />
       <Cards />
       <CardsMobile />
       <AboutChisco />
