@@ -26,7 +26,7 @@ const LandingPage = () => {
       <ChiscoCourt />
       <ChiscoHeading />
       <Rehoboth />
-      <Partners />
+     {/* <Partners />*/}
       <LegacyPalace />
       <Blog />
       <DiscoverProjects />
