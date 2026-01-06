@@ -1,6 +1,6 @@
 import React from "react";
 // import { useSpring, animated, config } from "react-spring";
-import AboutImage from "../../../assets/newAboutChisco.jpg";
+import AboutImage from "../../../assets/AboutChisco1.jpg";
 import Timeline from "../../../assets/Timeline.svg"
 import Units from "../../../assets/Units.svg";
 import Progress from "../../../assets/Progress.svg";

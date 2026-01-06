@@ -1,5 +1,5 @@
 import React from "react";
-import HomeUnit from "../../../assets/newHomeUnits.jpg";
+import HomeUnit from "../../../assets/HomeUnits1.png";
 import DuplexD from '../../../assets/Duplex1.svg'
 import DuplexSD from '../../../assets/Duplex2.svg'
 import Terraces from '../../../assets/Terraces.svg'
