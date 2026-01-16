@@ -6,7 +6,7 @@ import Progress from "../../assets/Progress.svg";
 
 const cards = [
     { icon: Timeline, text: "Timeline - Q4 - 2026" },
-    { icon: Units, text: "130 Units" },
+    { icon: Units, text: "34 Units" },
     { icon: Progress, text: "Status - In Progress" },
   ];
 

@@ -51,7 +51,7 @@ export const Cards = () => {
           <div className="w-[41px] h-[41px]">
             <img src={Flat} alt="Icon" className="w-full" />
           </div>
-          <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Flat and Apartments</div>
+          <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Terrace Buildings</div>
         </div>
       </div>
     </div>
@@ -83,12 +83,7 @@ export const CardsMobile = () => {
             <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Terraces and townhouses</div>
           </div>
           */}
-          <div className="px-8  w-full  py-5 flex gap-7 justify-around  items-center  bg-slate-50 rounded-[10px]">
-            <div className="w-[27px] h-[27px]">
-              <img src={Timeline} alt="Icon" className="w-full" />
-            </div>
-            <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Timeline - Q4 - 2026</div>
-          </div>
+          
           {/*
           <div className="px-8  w-full  py-5 flex gap-7 justify-around  items-center  bg-slate-50 rounded-[10px]">
             <div className="w-[27px] h-[27px]">
@@ -102,7 +97,14 @@ export const CardsMobile = () => {
             <div className="w-[27px] h-[27px] mr-8">
               <img src={Flat} alt="Icon" className="w-full" />
             </div>
-            <div className=" text-zinc-800 text-[14px] mr-10 font-normal Inter leading-[27px] tracking-[0.45px]">Flat and Apartments</div>
+            <div className=" text-zinc-800 text-[14px] mr-10 font-normal Inter leading-[27px] tracking-[0.45px]">Terrace Buildings</div>
+          </div>
+
+          <div className="px-8  w-full  py-5 flex gap-7 justify-around  items-center  bg-slate-50 rounded-[10px]">
+            <div className="w-[27px] h-[27px]">
+              <img src={Timeline} alt="Icon" className="w-full" />
+            </div>
+            <div className=" text-zinc-800 text-[14px] font-normal Inter leading-[27px] tracking-[0.45px]">Timeline - Q4 - 2026</div>
           </div>
         </div>
       </div>

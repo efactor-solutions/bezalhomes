@@ -3,7 +3,6 @@ import Vision from "../assets/vision.png";
 import Mission from "../assets/mission.png";
 
 import Masterpieces from "../assets/masterpieces.png";
-import Portfolio from "../assets/portfolio.png";
 import Development from "../assets/development.png";
 import Buttonicon from "../assets/button-icon-orange.png";
 import BezalSpinner from "../assets/welcomeBezals.svg";
@@ -42,7 +41,7 @@ const About = () => {
             that leave an indelible mark on sought-after landscapes throughout
             Nigeria.
           </p>
-          <div className="div-3-cont flex space-y-9 py-10 flex-col lg:flex-row lg:justify-between lg:w-[90%] justify-center items-center w-full">
+          <div className="div-3-cont flex space-y-9 py-10 flex-col lg:flex-row lg:justify-center lg:gap-32 lg:w-[90%] justify-center items-center w-full">
             <div className="div-1 lg:mt-4 flex items-center gap-4">
               <div className="line hidden lg:block about-line w-[1px] h-[39.47px] md:h-[73.47px]"></div>
               <div className="cont">
@@ -60,27 +59,6 @@ const About = () => {
                 </div>
                 <div className="text-[17.01px] capitalize lg:text-[31.67px] about-new-text">
                   masterpieces{" "}
-                </div>
-              </div>
-            </div>
-            <div className="line block lg:hidden about-line w-[200px] h-[1px]"></div>
-            <div className="div-1 flex items-center gap-4">
-              <div className="line hidden lg:block about-line w-[1px] h-[39.47px] md:h-[73.47px]"></div>
-              <div className="cont">
-                <div className="icon and figures flex items-center gap-3">
-                  <span>
-                    <img
-                      src={Portfolio}
-                      alt="Icon"
-                      className="w-[27.9px] h-[26.54px] md:w-[50.67px] md:h-[50.67px]"
-                    />
-                  </span>
-                  <span className="text-[27.22px] font-bold md:text-[50.67px] text-[#333333]">
-                    $33.8 M
-                  </span>
-                </div>
-                <div className="text-[17.01px] lg:text-[31.67px] ml-11 lg:ml-0 about-new-text">
-                  Portfolio{" "}
                 </div>
               </div>
             </div>

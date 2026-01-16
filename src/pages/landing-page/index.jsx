@@ -27,6 +27,7 @@ const LandingPage = () => {
       <ChiscoHeading />
       <Rehoboth />
      {/* <Partners />*/}
+      <div className="py-10 lg:py-20" aria-hidden="true" />
       <LegacyPalace />
       <Blog />
       <DiscoverProjects />
