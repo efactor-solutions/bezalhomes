@@ -121,7 +121,7 @@ const MobileFooter = () => {
           <p onClick={() => navigate('/privacy-policy')} className="text-white cursor-pointer text-xs font-normal mt-2 leading-[15.12px]">Privacy</p>
           <p className="text-white text-xs font-normal mt-2 leading-[15.12px]">Cookie Policy</p>
 
-          <p className="text-white text-xs font-normal mt-10 uppercase leading-[15.12px]">Bezal Homes © 2025</p>
+          <p className="text-white text-xs font-normal mt-10 uppercase leading-[15.12px]">Bezal Homes © 2026</p>
         </div>
       </div>
     </div>
