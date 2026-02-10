@@ -33,12 +33,7 @@ export const Cards = () => {
           <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Terraces and townhouses</div>
         </div>
         */}
-        <div className="px-8  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
-          <div className="w-[41px] h-[41px]">
-            <img src={Timeline} alt="Icon" className="w-full" />
-          </div>
-          <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Timeline - Q4 - 2026</div>
-        </div>
+        
         {/*
         <div className="px-8  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
           <div className="w-[41px] h-[41px]">
@@ -52,6 +47,13 @@ export const Cards = () => {
             <img src={Flat} alt="Icon" className="w-full" />
           </div>
           <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Terrace Buildings</div>
+        </div>
+
+      <div className="px-8  py-5 flex gap-6 justify-center items-center  bg-slate-50 rounded-[10px]">
+          <div className="w-[41px] h-[41px]">
+            <img src={Timeline} alt="Icon" className="w-full" />
+          </div>
+          <div className=" text-zinc-800 text-lg font-normal Inter leading-[27px] tracking-wide">Timeline - Q4 - 2026</div>
         </div>
       </div>
     </div>
