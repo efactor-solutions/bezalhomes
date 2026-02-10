@@ -7,12 +7,16 @@ const BlogGallery = () => {
   const navigate = useNavigate();
   const [blogs, setBlog] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   React.useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL + "/blog/get/all")
+    // Load local posts index from public folder and sort by date (newest first)
+    fetch('/blog/posts/posts.json')
       .then(res => res.json())
       .then(data => {
-        setBlog(data.data || null)
+        const posts = Array.isArray(data) ? data.slice() : []
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+        setBlog(posts)
       })
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
@@ -25,27 +29,33 @@ const BlogGallery = () => {
         !blogs ? <div className="h-48 flex justify-center items-center">
           <p className="text-xl text-gray-500">No blogs available</p>
         </div> :
-          <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {
-              blogs.map((blog, index) => (
-                <div
-                  key={`blog-${index}`}
-                  className={`gallery-item w-full relative cursor-pointer rounded-md overflow-hidden  ${index === 0 ? "md:col-span-2" : ""
-                    }`}
-                  onClick={() => navigate(`/blog/${blog.slug}`)}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30"></div>
-                  <img src={blog.header_image} alt={blog.title} className="w-full md:h-80 object-cover" />
-                  <div className=" absolute w-full h-[100%] top-0 p-4 flex flex-col justify-end gap-4">
-                    <p className=" text-white text-opacity-90 two-line-truncation w-full text-sm md:text-lg xl:text-3xl font-normal Inter uppercase md:leading-[50.40px] tracking-wide">
-                      {blog.title}
-                    </p>
-                    <p className=" text-white text-opacity-90 text-xs md:text-base font-normal Inter md:leading-7 truncate w-full">
-                      {`${new Date(blog.date).toLocaleDateString()} - ${blog.author.split("-")[0]}`}
-                    </p>
+              blogs.map((blog, index) => {
+                const isDimmed = hoveredIndex !== null && hoveredIndex !== index
+                return (
+                  <div
+                    key={`blog-${index}`}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    onClick={() => navigate(`/blog/${blog.slug}`)}
+                    className={`hover:shadow-xl rounded-lg hover:translate-y-[-30px] cursor-pointer transition-all duration-300 ${isDimmed ? 'grayscale filter opacity-80' : ''}`}
+                  >
+                    <div className="bg-white rounded-md overflow-hidden shadow-sm">
+                      <div className="h-44 md:h-56 lg:h-64 overflow-hidden">
+                        <img src={blog.header_image} alt={blog.title} className={`w-full h-full object-cover transition-transform duration-500 ${hoveredIndex === index ? 'scale-105' : ''}`} />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-xs text-orange-500 uppercase mb-2">{(blog.category || 'Blog').toUpperCase()}</p>
+                        <h3 className="text-2xl md:text-3xl font-semibold  text-[#363535] leading-tight mb-3 ">
+                          {blog.title}
+                        </h3>
+                        <p className="text-sm text-gray-500">{blog.date}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))
+                )
+              })
             }
           </div>
         : <div className="h-48 flex justify-center items-center">

@@ -81,24 +81,41 @@ const Blog = () => {
 
   React.useEffect(() => {
     setIsLoading(true);
-    fetch(process.env.REACT_APP_API_URL + "/blog/get/all")
+
+    // Load posts index from public folder and then fetch each markdown
+    fetch('/blog/posts/posts.json')
       .then(res => res.json())
-      .then(data => {
-        setBlog(data.data || []);
-        setIsLoading(false);
+      .then(async (data) => {
+        const posts = Array.isArray(data) ? data.slice() : [];
+        // sort by date (newest first)
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+        // fetch markdown content for each post
+        const withMd = await Promise.all(posts.map(async (p) => {
+          try {
+            const res = await fetch(`/blog/posts/${p.slug}.md`);
+            const md = await res.text();
+            return { ...p, md };
+          } catch (err) {
+            console.error('md load error', p.slug, err);
+            return { ...p, md: '' };
+          }
+        }));
+        setBlog(withMd);
       })
       .catch(err => {
         console.error(err);
-        setIsLoading(false);
-      });
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   const handleNext = () => {
-    setCurrentCard((prevCard) => (prevCard + 1) % 3);
+    if (!blogs || blogs.length === 0) return
+    setCurrentCard((prevCard) => (prevCard + 1) % blogs.length);
   };
 
   const handlePrev = () => {
-    setCurrentCard((prevCard) => (prevCard - 1 + 3) % 3);
+    if (!blogs || blogs.length === 0) return
+    setCurrentCard((prevCard) => (prevCard - 1 + blogs.length) % blogs.length);
   };
 
   return (
@@ -117,7 +134,7 @@ const Blog = () => {
               key={blog.id || index}
               title={blog.title}
               author={blog.author}
-              content={blog.description}
+              content={blog.md ? blog.md.substring(0, 300) : blog.excerpt}
               cardNumber={index}
               currentCard={currentCard}
               slug={blog.slug}
@@ -131,7 +148,7 @@ const Blog = () => {
       </button>
       {/* Progress Bar and Scroll Bar */}
       <div className="flex flex-col gap-5  md:flex-row justify-center items-center mt-12 md:space-x-[360px] w-full">
-        <ProgressBar totalImages={3} currentImage={currentCard} />
+        <ProgressBar totalImages={Math.max(blogs.length, 1)} currentImage={currentCard} />
         <ScrollBar onPrev={handlePrev} onNext={handleNext} />
       </div>
    
