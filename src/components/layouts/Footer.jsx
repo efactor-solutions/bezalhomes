@@ -58,7 +58,7 @@ const Footer = () => {
               passionately dedicate ourselves to the creation and investment in
               top-tier properties located in prime areas across Nigeria.
             </div>
-            <div className="icons w-[28.8px] space-x-6 mt-4 md:mt-20 flex">
+            <div className="icons w-[28.8px] space-x-6 mt-4 md:mt-24 flex ">
               <img
                 onClick={() =>
                   openSocialMediaLink(
@@ -171,7 +171,12 @@ const Footer = () => {
               Stay in the know
             </h1>
             <div className="mt-4 flex flex-col">
-              <label className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white ">
+            <div
+            onClick={() => navigate("/blog")}
+            className="inter font-[400] text-[12.4px] mt-4 leading-[15.12px] text-left max-w-[200px] text-white cursor-pointer ">
+                Blog
+              </div>
+              <label className="inter font-[400] text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-gray-100 ">
                 Email Address
               </label>
               <input
@@ -182,11 +187,11 @@ const Footer = () => {
                 value={email}
               />
             </div>
-            <div className="inter font-[400] text-[10.63px] mt-8 leading-[17.12px] text-left w-full text-white ">
+            <div className="inter font-[400] text-[10.63px] mt-4 leading-[17.12px] text-left w-full text-white ">
               By signing up I want to hear about new updates and masterpieces
               and agree with the data protection policy
             </div>
-            <div className="inter font-[400] text-[10.8px] mt-2 leading-[16.2px] text-left max-w-[200px] text-white "></div>
+            <div className="inter font-[400] text-[10.8px]  leading-[16.2px] text-left max-w-[200px] text-white "></div>
             <div className="logo text-white w-[123px] h-[35px] flex justify-center py-10 items-center">
               <img
                 src={SendButton}

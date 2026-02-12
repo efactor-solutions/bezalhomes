@@ -80,7 +80,7 @@ const Head = () => {
     <div className="relative flex flex-col">
       <div style={{ filter: 'brightness(45%)' }} className="chisco-details"></div>
       <div className="lg:w-[80%] m-auto absolute px-4 top-[30%] left-[5%]">
-        <h1 className="text-white text-[30px] leading-[30px] tracking-[1px] lg:text-[50px] font-[700] Inter uppercase lg:leading-[50.40px] lg:tracking-wide">
+        <h1 className="text-white text-[30px] leading-[30px] tracking-[1px] lg:text-[50px] font-[700] Inter uppercase lg:leading-[50.40px] lg:tracking-wide ml-1 lg:ml-4 ">
           Chisco Court
         </h1>
         <p className="uppercase masterpiece-head ml-1 text-[12px] lg:text-[20px] lg:leading-[28px] font-[400] mt-1 lg:mt-4 lg:ml-4">

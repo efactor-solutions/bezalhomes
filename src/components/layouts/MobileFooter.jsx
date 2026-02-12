@@ -61,6 +61,11 @@ const MobileFooter = () => {
           <div className="text-white text-opacity-50 text-xs mt-8 font-normal uppercase leading-[12.90px]">
             Stay in the know
           </div>
+           <div
+            onClick={() => navigate("/blog")}
+            className="inter font-[400] text-[12.4px] mt-4 leading-[15.12px] text-left max-w-[200px] text-white cursor-pointer ">
+                Blog
+              </div>
           <div className="w-[317.85px] h-[37.62px] relative mt-7 border-b border-white border-opacity-50">
             <div className="w-full justify-start items-center inline-flex">
               <input onChange={handleEmailChange} value={email} className=" text-stone-100 text-[11.04px] font-normal bg-transparent focus:outline-none" placeholder="Email Address" />
