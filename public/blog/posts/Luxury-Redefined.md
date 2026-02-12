@@ -133,4 +133,4 @@ As Bezal Homes takes the spotlight with The Chisco Court and Rehoboth Apartments
 
 ---
 
-Published: January 15, 2024
+Published: January 13, 2026
