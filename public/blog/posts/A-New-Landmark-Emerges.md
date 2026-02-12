@@ -124,7 +124,7 @@ and through the lives it will quietly hold over time.
 
 
 
-![Alt bezalbelzal](images/chisco-6.jpg)
+![Alt bezalbelzal](images/chisco-7.jpg)
 
 
 ---
