@@ -70,6 +70,9 @@ export default function BlogDetails() {
                                 <h3 className="text-white font-semibold text-lg md:text-xl uppercase leading-tight mb-2 line-clamp-2">
                                     {article.title}
                                 </h3>
+                                <p className="text-gray-200 text-xs md:text-sm line-clamp-2">
+                                    {article.subtitle}
+                                </p>
                                 <p className="text-gray-200 text-xs md:text-sm">
                                     {article.date.split("-")[0]}
                                 </p>
@@ -169,10 +172,13 @@ export default function BlogDetails() {
                                 <p className="text-white text-lg text-center mt-10 font-extralight">Blog | {blog?.date}</p>
                                     <p className="text-slate-100  md:text-3xl text-2xl font-normal Inter text-center max-w-4xl">
                                         {titleSplit?.[0]}: <br />
+                                        
                                         {titleSplit?.[1]}
-                                    </p>
-
+                                       
+                                        {blog.subtitle}
                                     
+                                    </p>
+                                   
                                 </div>
                             </div>
                         </div>

@@ -47,9 +47,10 @@ const BlogGallery = () => {
                       </div>
                       <div className="p-6">
                         <p className="text-xs text-orange-500 uppercase mb-2">{(blog.category || 'Blog').toUpperCase()}</p>
-                        <h3 className="text-2xl md:text-3xl font-semibold  text-[#363535] leading-tight mb-3 line-clamp-4">
+                        <h3 className="text-2xl md:text-3xl font-semibold  text-[#363535] leading-tight mb-3 line-clamp-4 uppercase">
                           {blog.title}
                         </h3>
+                        <h1 className="text-xl md:text-xl text-gray-500 mb-2">{blog.subtitle}</h1>
                         <p className="text-sm text-gray-500">{blog.date}</p>
                       </div>
                     </div>
