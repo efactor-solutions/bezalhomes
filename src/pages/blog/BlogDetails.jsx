@@ -171,7 +171,7 @@ export default function BlogDetails() {
 
                                 <p className="text-white text-lg text-center mt-10 font-extralight">Blog | {blog?.date}</p>
                                     <p className="text-slate-100  md:text-3xl text-2xl font-normal Inter text-center max-w-4xl">
-                                        {titleSplit?.[0]}: <br />
+                                        {titleSplit?.[0]} <br />
                                         
                                         {titleSplit?.[1]}
                                        

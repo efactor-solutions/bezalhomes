@@ -10,7 +10,7 @@
   },
   {
     "slug": "A-New-Landmark-Emerges",
-    "title": "A New Landmark Emerges ",
+    "title": "A New Landmark Emerges: ",
     "subtitle": "A considered residential development in the heart of Lekki. Crafted by Bezal Homes.",
     "date": "January 13, 2026",
     "author": "Ademola Akinyemi - Bezal Homes CEO",
@@ -29,5 +29,14 @@
 
 
 
+  },
+  {
+    "slug": "Coming-Home-to-Sophistication-and-Ease",
+    "title": "Coming Home to Sophistication and Ease",
+    "subtitle":"",
+    "date": "February 16, 2026",
+    "author": "Ademola Akinyemi - Bezal Homes CEO",
+    "header_image": "/blog/images/Coming_Home_to_Sophistication_and_Ease.jpg"
+    
   }
 ]
