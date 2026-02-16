@@ -40,7 +40,7 @@ The kind that does not fade once the excitement of a new space passes.
 
 The kind that feels just as meaningful on an ordinary Tuesday evening as it does during moments of gathering and celebration.
 
-**<u style="text-decoration: itallic;">It is luxury that does not announce itself, but is deeply felt.</u>**
+**<u style="font-style: italic;font-size:large">It is luxury that does not announce itself, but is deeply felt.</u>**
 
 At Bezal Homes, this understanding quietly informs how spaces are imagined, planned, and brought to life; with care given not just to how homes look, but to how they are lived in, day after day.
 

@@ -170,7 +170,7 @@ export default function BlogDetails() {
                                 <div className=" flex flex-col justify-center items-center text-center w-full gap-12">
 
                                 <p className="text-white text-lg text-center mt-10 font-extralight">Blog | {blog?.date}</p>
-                                    <p className="text-slate-100  md:text-3xl text-2xl font-normal Inter text-center max-w-4xl">
+                                    <p className="text-slate-100  md:text-3xl text-2xl font-normal Inter text-center max-w-4xl" style={{ whiteSpace: 'pre-line' }}>
                                         {titleSplit?.[0]} <br />
                                         
                                         {titleSplit?.[1]}
