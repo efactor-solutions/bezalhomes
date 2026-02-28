@@ -3,12 +3,12 @@ import React from "react";
 const Ourstory = () => {
   return (
     <main className="py-20 ">
-      <div className="w-[90%] flex flex-col md:flex-row justify-between  mx-auto">
+      <div className="w-[90%] gap-10 flex flex-col md:flex-row justify-between  mx-auto">
         <div>
           <h1 className="text-teal-800 text-[18px] md:text-3xl font-normal Inter uppercase leading-[21px] tracking-[3px]">
             our story
           </h1>
-          <h1 className="max-w-xl text-zinc-800 text-[20px] md:text-[55px] leading-[25px]   md:leading-[62px] mt-4 font-bold Inter capitalize tracking-wide">
+          <h1 className="max-w-xl text-zinc-800 text-[25px] md:text-[55px] leading-[30px]   md:leading-[62px] mt-4 font-bold Inter capitalize tracking-wide">
             We are the promise of an enriched life.
           </h1>
           <div className="flex w-full max-w-xl flex-col gap-4 md:flex-row mt-4 md:mt-10 ">
@@ -19,7 +19,7 @@ const Ourstory = () => {
                   Vision
                 </div>
               </div>
-              <div className="mt-4 w-full max-w-xl text-zinc-800 text-[12px] leading-[15px] md:leading-[25px]    md:text-sm font-normal Inter">
+              <div className="mt-4 w-full max-w-xl text-zinc-800 text-[14px] leading-[20px] md:leading-[25px] text-justify   md:text-sm font-normal Inter">
                 Our aspiration is clear - to stand as a distinctive high-end
                 luxury homes development company within the real estate sector.
               </div>
@@ -31,7 +31,7 @@ const Ourstory = () => {
                   Mission
                 </div>
               </div>
-              <div className="w-full max-w-lg  mt-4 text-zinc-800 text-[12px] leading-[15px] md:leading-[25px]   md:text-sm font-normal Inter">
+              <div className="w-full max-w-lg  mt-4 text-zinc-800 text-[14px] leading-[20px] md:leading-[25px]   md:text-sm font-normal Inter text-justify">
                 We are on a mission to revolutionize communities and society
                 through the development of smart, ultra-luxury quality homes.
                 Our approach involves sustainable investing that transforms the
@@ -44,7 +44,7 @@ const Ourstory = () => {
         </div>
         <div className="w-full mt-8 block md:hidden h-[2px] bg-orange-500 " />
         <div>
-          <div className="w-full text-[12px] max-w-3xl leading-[15px]    text-zinc-800 md:text-lg font-normal mt-8 md:mt-0  md:leading-[30px]">
+          <div className="w-full text-[14px] max-w-3xl leading-[20px]    text-zinc-800 md:text-lg font-normal mt-8 md:mt-0  md:leading-[30px] text-justify">
             Once upon a time, in the vibrant realm of the Nigerian real estate
             market, Bezal Homes emerged as a force, rooted in innovation and
             ambition.
