@@ -39,7 +39,7 @@ const AboutChisco = () => {
                 </div>
                 <div className="w-[199.58px] h-[0.71px] left-[0.71px] top-[74.71px] absolute bg-neutral-200" />
                 <div className="left-[38px] top-[87px] absolute text-black text-[13px] font-normal font-['Optima Pro'] leading-[13px] tracking-tight">
-                  Timeline - Q4 - 2026
+                  Timeline - Q2 - 2027
                 </div>
                 <div className="w-[30px] h-[33.33px] left-[81px] top-[58.33px] absolute flex-col justify-start items-start inline-flex" />
               </div>

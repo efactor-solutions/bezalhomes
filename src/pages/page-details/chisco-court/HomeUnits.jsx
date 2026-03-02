@@ -5,7 +5,7 @@ import DuplexSD from '../../../assets/Duplex2.svg'
 import Terraces from '../../../assets/Terraces.svg'
 import Maisonnete from '../../../assets/Maisonnete.svg'
 import Flat from '../../../assets/Flat.svg'
-import UnitSpinner from '../../../assets/UnitSpinner.svg'
+import UnitSpinner from '../../../assets/UnitSpinner.png'
 
 const HomeUnits = () => {
   return (
@@ -108,7 +108,7 @@ const HomeUnits = () => {
           <img
             src={UnitSpinner}
             alt=""
-            className="block animate-spin spinner lg:hidden  absolute right-[2%]"
+            className=" h-28 block animate-spin spinner lg:hidden  absolute right-[2%]"
           />
         </div>
       </div>
