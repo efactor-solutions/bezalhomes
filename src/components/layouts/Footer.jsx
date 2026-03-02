@@ -165,6 +165,12 @@ const Footer = () => {
             >
               Management Team
             </div>
+            <div
+              onClick={() => navigate("/operation-team")}
+              className="inter font-[400] cursor-pointer text-[12.4px] mt-2 leading-[15.12px] text-left max-w-[200px] text-white "
+            >
+              Operation Team
+            </div>
           </div>
           <form className="div5 mt-8 w-full md:mt-0">
             <h1 className="inter uppercase font-[400] text-[20px] leading-[15.12px] footer-heading ">

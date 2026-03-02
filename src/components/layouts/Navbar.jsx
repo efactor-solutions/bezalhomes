@@ -177,6 +177,13 @@ const Navbar = () => {
                   >
                     MANAGEMENT TEAM
                   </Link>
+                  <Link
+                    className=" text-[10px] md:text-[16px] text-[#B3B3B3CC] font-normal hover:font-semibol max-w-fit hover:text-orange-600 hover:border-b-orange-600 hover:border-b"
+                    onClick={handleLinkClick}
+                    to="/operation-team"
+                  >
+                    OPERATION TEAM
+                  </Link>
                 </div>
               </li>
 

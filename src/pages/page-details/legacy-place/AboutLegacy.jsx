@@ -10,7 +10,7 @@ const AboutLegacy = () => {
             About legacy Place
           </h1>
           <div className="max-w-5xl py-6 lg:py-0 text-[12px] lg:mt-8 about-new-text  lg:text-xl font-normal Inter lg:leading-[30px]">
-            The Legacy Place is situated in the heart of Omole, Ikeja, this
+            The Legacy Place is situated in the heart of Omole Phase I, Ikeja, this
             exceptional project is surrounded by the allure of a thriving
             neighborhood. Enjoy the convenience of being close to major business
             districts, educational institutions, shopping centers, and

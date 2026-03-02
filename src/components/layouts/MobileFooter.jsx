@@ -98,6 +98,7 @@ const MobileFooter = () => {
           </h1>
           <div onClick={() => navigate('/board-of-directors')} className="text-white text-xs font-normal mt-2 leading-[15.12px]">Board of Directors </div>
           <div onClick={() => navigate('/management-team')} className="text-white text-xs font-normal mt-2 leading-[15.12px]">Management Team </div>
+          <div onClick={() => navigate('/operation-team')} className="text-white text-xs font-normal mt-2 leading-[15.12px]">Operation Team </div>
           <h1 onClick={() => navigate('/contact-us')} className="text-white cursor-pointer text-opacity-50 text-xs font-normal mt-8 leading-[15.12px]">
             CONTACT US
           </h1>

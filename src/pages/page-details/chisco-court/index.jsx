@@ -24,7 +24,7 @@ const ChiscoDetails = () => {
       <Head />
       {/*<VideoComponent />*/}
       <Cards />
-      <CardsMobile />
+     {/*  <CardsMobile /> */}
       <AboutChisco />
       <MobileCards />
       <Amenities />

@@ -19,7 +19,7 @@ const Amenities = () => {
         </h1>
         <div className="w-full my-2 h-[1px] lg:h-[3px] bg-zinc-600" />
         <div className="max-w-7xl mt-4 text-[12px] px-2 about-new-text lg:text-xl font-normal Inter lg:leading-[34px] tracking-wide">
-          The Legacy Place at Omole offers two exquisite units of 4 & 5 Bedroom
+          The Legacy Place at Omole Phase 1 offers two exquisite units of 4 & 5 Bedroom
           luxury duplexes, meticulously designed to cater to the most discerning
           tastes. These smart duplexes feature cutting-edge architecture and a
           remarkable sense of space. Each unit boasts spacious living areas,

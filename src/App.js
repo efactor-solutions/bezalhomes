@@ -14,6 +14,7 @@ import RehobothDetails from "./pages/page-details/rehoboth";
 import LegacyPlaceDetails from "./pages/page-details/legacy-place";
 import BoardOfDirectors from "./pages/board-of-directors";
 import ManagementTeam from "./pages/management-team";
+import OperationTeam from "./pages/operation-team";
 import OurStory from "./pages/our-story";
 import ContactUs from "./pages/contact-us";
 import ContactUsSuccess from "./pages/contact-us/ContactUsSuccess";
@@ -44,6 +45,8 @@ function App() {
         <Route path="board-of-directors/:directorId" element={<BoardOfDirectors />} />
         <Route path="management-team" element={<ManagementTeam />} />
         <Route path="management-team/:managerId" element={<ManagementTeam />} />
+        <Route path="operation-team" element={<OperationTeam />} />
+        <Route path="operation-team/:memberId" element={<OperationTeam />} />
         <Route path="our-story" element={<OurStory />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="contact-us-success" element={<ContactUsSuccess />} />
