@@ -52,28 +52,6 @@ const OperationTeam = () => {
       ThumbName: "TEMITOPE OMOYELE",
     },
     {
-      id: "2",
-      name: "FAITH",
-      surname: "AUSTINE",
-      position: "Accountant & Compliance Lead, Bezal Homes and Investment Ltd.",
-      details: (
-        <>
-          <p className="mb-4">
-            Faith Austine is a Chartered Accountant and distinguished graduate of Economics from the University of Lagos, with strong expertise in financial management, regulatory compliance, and internal control systems. Her professional background spans financial reporting, management accounting, statutory audits, and fiscal governance.
-          </p>
-          <p className="mb-4">
-            In her role as Accountant and Compliance Lead at Bezal Homes and Investment Ltd., Faith plays a key role in maintaining sound financial structures that support operational efficiency and regulatory compliance. She ensures transparency, adherence to financial regulations, and proper financial documentation through disciplined oversight and structured reporting systems.
-          </p>
-          <p>
-            Her analytical approach and attention to detail support the company's financial accountability and help maintain clear, reliable financial records across the organization.
-          </p>
-        </>
-      ),
-      image: ops2,
-      Thumbnail: manager4Thumb,
-      ThumbName: "FAITH AUSTINE",
-    },
-    {
       id: "3",
       name: "FRANCIS",
       surname: "ADEBARE",
@@ -94,28 +72,6 @@ const OperationTeam = () => {
       image: ops3,
       Thumbnail: manager2Thumb,
       ThumbName: "FRANCIS ADEBARE",
-    },
-    {
-      id: "4",
-      name: "DR. IYKE",
-      surname: "OTUGO",
-      position: "Director & Chief Operating Officer, Bezal Homes and Investment Ltd.",
-      details: (
-        <>
-          <p className="mb-4">
-            Dr. Iyke Otugo, AICA, FEIPA, serves as Director and Chief Operating Officer at Bezal Homes and Investment Ltd., bringing extensive experience in financial management, corporate governance, and enterprise development. In his dual role, he provides strategic oversight at the board level while guiding the company's operational execution and organizational performance. His disciplined approach to leadership and decision-making supports the company's commitment to structured growth and institutional stability.
-          </p>
-          <p className="mb-4">
-            With a professional focus on financial strategy, risk management, and organizational structuring, Dr. Otugo plays an important role in strengthening internal systems and governance practices within the organization. His experience supports effective coordination across the company's operational functions, ensuring that strategic objectives are translated into consistent operational performance across development activities.
-          </p>
-          <p>
-            Dr. Otugo holds respected professional designations as AICA and FEIPA and has received an honorary Doctor of Philosophy (PhD) in Financial Management from Prowess University, Delaware, USA. His professional and academic background contributes to the company's focus on sound governance, operational discipline, and long-term organizational development.
-          </p>
-        </>
-      ),
-      image: ops4,
-      Thumbnail: manager3Thumb,
-      ThumbName: "DR. IYKE OTUGO",
     },
   ];
 
@@ -172,8 +128,11 @@ const OperationTeam = () => {
           </div>
         </div>
 
-        <div className="director-thumbnails hidden md:mb-20 mt-[5%]  md:w-full  md:flex gap-1  mx-auto  md:gap-6 ">
-          {members.map((member) => (
+       {/*<div className="  director-thumbnails hidden md:mb-20 mt-[5%]  md:w-full  md:flex gap-1  mx-auto  md:gap-6 ">
+          */} 
+         <div className="md:grid hidden grid-cols-4 gap-2 px-5  mt-10">
+
+        {members.map((member) => (
             <div
               key={member.id}
               className={`thumb cursor-pointer w-full flex flex-col ${
