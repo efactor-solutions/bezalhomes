@@ -276,7 +276,7 @@ const BoardOfDirectors = () => {
                   src={director.Thumbnail}
                   alt={director.ThumbName}
                 />
-                <div className="absolute bottom-[5%] left-[20%]">
+                <div className="absolute bottom-[5%] left-[10%] right-[10%]">
                   {(hoveredDirector === director.id ||
                     activeDirector === director.id) && (
                     <p className="text-[8px] text-white md:text-xl flex flex-col items-center text-center">

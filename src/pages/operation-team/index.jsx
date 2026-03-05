@@ -192,7 +192,7 @@ const OperationTeam = () => {
                   src={member.Thumbnail}
                   alt={member.ThumbName}
                 />
-                <div className="absolute bottom-[5%] left-[10%]">
+                <div className="absolute bottom-[5%] left-[10%] right-[10%]">
                   {" "}
                   {(hoveredMember === member.id ||
                     activeMember === member.id) && (
