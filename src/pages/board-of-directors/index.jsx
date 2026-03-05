@@ -68,50 +68,24 @@ const BoardOfDirectors = () => {
       id: "2",
       name: "AKINYEMI",
       surname: "ADEMOLA",
-      position: "CEO, Bezal Homes and Investment Ltd.",
+      position: "Chief Executive Officer, Bezal Homes and Investment Ltd.",
       details: (
         <>
-          Ademola, the visionary leader at Bezal Homes and Investment Ltd,
-          brings more than a decade of expertise to the forefront of the real
-          estate industry. His remarkable leadership skills and strategic acumen
-          have played a pivotal role in propelling the company's growth and
-          achieving success. With a profound understanding of market trends and
-          customer preferences, Ademola ensures that our projects not only meet
-          but exceed expectations, consistently upholding the highest standards
-          of quality and innovation.
-          <br />
-          <br />
-          Ademola Akinyemi boasts over 10 years of experience specializing in
-          Sustainable Development Issues and financing for development. He holds
-          a degree in Banking and Finance, with a background in core banking
-          operations, pension funds administration, and asset management.
-          Ademola is a trained Global Custodian, aligning with the standards and
-          procedures established by the Securities and Investment Institute in
-          London, United Kingdom.
-          <br />
-          <br />
-          A former United Nations Climate Change Ambassador and Nigeria Field
-          Coordinator with Sustainable Market Foundation-350.org (New York),
-          Ademola has represented Nigeria at numerous United Nations (UNFCCC)
-          meetings on sustainable development. His credentials include being an
-          accredited delegate for Climate Change Talks in Bonn, Germany (2009),
-          COP15 Mexico (2010), COP17 South Africa (2011), the Australian Youth
-          Climate Coalition Power Shift summit in Brisbane and Perth, Australia
-          (2011), and the 3rd Earth Charter International – Costa Rica (Global
-          Learning Opportunities) training on sustainable leadership.
-          <br />
-          <br />
-          Ademola Akinyemi was handpicked by the World Bank Group to partake in
-          the Financing for Development Specialist Course. During this course,
-          he gained insights into the main sources and trends in development
-          finance, emphasizing the need for innovative solutions to generate
-          resources essential for implementing the new global development
-          agenda.
-          <br />
-          <br />
-          Notably, Ademola has effectively managed real estate investments and
-          portfolios exceeding $4 million in value over the last two years,
-          showcasing his expertise and proven track record in the industry.
+          <p className="mb-4">
+            Akinyemi Ademola is the Founder, Chief Executive Officer, and a member of the Board of Directors at Bezal Homes and Investment Ltd. As CEO and a member of the company's management team, he provides strategic leadership and overall direction for the organization, guiding the execution of its vision and long-term growth strategy. With over a decade of experience in the real estate sector, his leadership has been instrumental in shaping the company's development approach and strengthening its market position.
+          </p>
+          <p className="mb-4">
+            Certified in Real Estate Economics and Finance from The London School of Economics and Political Science (LSE), Ademola brings strong knowledge of real estate markets, property valuation, investment structures, and sustainable development systems. His professional background includes experience in core banking operations, pension funds administration, and asset management. He also holds a degree in Business Administration and is a trained Global Custodian aligned with the standards of the Securities and Investment Institute in London, United Kingdom.
+          </p>
+          <p className="mb-4">
+            Beyond his corporate leadership, Ademola has actively contributed to global conversations on sustainable development. As a former United Nations Climate Change Ambassador and Nigeria Field Coordinator with Sustainable Market Foundation – 350.org (New York), he represented Nigeria at several United Nations (UNFCCC) engagements, including Climate Change Talks in Bonn (2009), COP15 Mexico (2010), COP17 South Africa (2011), the Australian Youth Climate Coalition Power Shift Summit in Brisbane and Perth (2011), and the 3rd Earth Charter International training on sustainable leadership in Costa Rica.
+          </p>
+          <p className="mb-4">
+            Ademola was also selected by the World Bank Group to participate in the Financing for Development Specialist Course, where he gained insight into emerging trends in development finance and innovative mechanisms for mobilizing resources for the global development agenda.
+          </p>
+          <p>
+            Through his expertise and continued commitment to industry knowledge and responsible development practices, he continues to lead Bezal Homes and Investment Ltd. toward sustainable growth and long-term impact within the real estate industry.
+          </p>
         </>
       ),
       image: director2,
