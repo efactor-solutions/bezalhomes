@@ -71,21 +71,50 @@ const BoardOfDirectors = () => {
       position: "Chief Executive Officer, Bezal Homes and Investment Ltd.",
       details: (
         <>
-          <p className="mb-4">
-            Akinyemi Ademola is the Founder, Chief Executive Officer, and a member of the Board of Directors at Bezal Homes and Investment Ltd. As CEO and a member of the company's management team, he provides strategic leadership and overall direction for the organization, guiding the execution of its vision and long-term growth strategy. With over a decade of experience in the real estate sector, his leadership has been instrumental in shaping the company's development approach and strengthening its market position.
-          </p>
-          <p className="mb-4">
-            Certified in Real Estate Economics and Finance from The London School of Economics and Political Science (LSE), Ademola brings strong knowledge of real estate markets, property valuation, investment structures, and sustainable development systems. His professional background includes experience in core banking operations, pension funds administration, and asset management. He also holds a degree in Business Administration and is a trained Global Custodian aligned with the standards of the Securities and Investment Institute in London, United Kingdom.
-          </p>
-          <p className="mb-4">
-            Beyond his corporate leadership, Ademola has actively contributed to global conversations on sustainable development. As a former United Nations Climate Change Ambassador and Nigeria Field Coordinator with Sustainable Market Foundation – 350.org (New York), he represented Nigeria at several United Nations (UNFCCC) engagements, including Climate Change Talks in Bonn (2009), COP15 Mexico (2010), COP17 South Africa (2011), the Australian Youth Climate Coalition Power Shift Summit in Brisbane and Perth (2011), and the 3rd Earth Charter International training on sustainable leadership in Costa Rica.
-          </p>
-          <p className="mb-4">
-            Ademola was also selected by the World Bank Group to participate in the Financing for Development Specialist Course, where he gained insight into emerging trends in development finance and innovative mechanisms for mobilizing resources for the global development agenda.
-          </p>
-          <p>
-            Through his expertise and continued commitment to industry knowledge and responsible development practices, he continues to lead Bezal Homes and Investment Ltd. toward sustainable growth and long-term impact within the real estate industry.
-          </p>
+         Ademola Akinyemi is the Founder, Chief Executive Officer,
+           and a member of the Board of Directors at Bezal Homes and Investment Ltd.
+            As CEO and a member of the company’s management team, he provides
+             strategic leadership and overall direction for the organization,
+              guiding the execution of its vision and long-term growth strategy. 
+              With over a decade of experience in the real estate sector,
+               his leadership has been instrumental in shaping the company’s 
+               development approach and strengthening its market position.
+          <br />
+          <br />
+    Certified in Real Estate Economics and Finance from The London School of
+     Economics and Political Science (LSE), Ademola brings strong knowledge of 
+     real estate markets, property valuation, investment structures,
+      and sustainable development systems. His professional background 
+      includes experience in core banking operations, pension funds 
+      administration, and asset management. He also holds a degree in
+       Business Administration and is a trained Global Custodian aligned
+        with the standards of the Securities and Investment Institute in London,
+         United Kingdom.
+
+          <br />
+          <br />
+
+          Beyond his corporate leadership, Ademola has actively contributed to
+           global conversations on sustainable development. As a former United Nations
+            Climate Change Ambassador and Nigeria Field Coordinator with Sustainable
+             Market Foundation – 350.org (New York), he represented Nigeria at several
+              United Nations (UNFCCC) engagements, including Climate Change Talks 
+              in Bonn (2009), COP15 Mexico (2010), COP17 South Africa (2011), 
+          the Australian Youth Climate Coalition Power Shift Summit in Brisbane 
+          and Perth (2011), and the 3rd Earth Charter International training on
+           sustainable leadership in Costa Rica.
+         <br />
+          <br />
+
+          Ademola was also selected by the World Bank Group to participate in 
+          the Financing for Development Specialist Course, where he gained insight 
+          into emerging trends in development finance and innovative mechanisms for 
+          mobilizing resources for the global development agenda. Through his expertise
+           and continued commitment to industry knowledge and responsible development
+            practices, he continues to lead Bezal Homes and Investment Ltd. toward 
+            sustainable growth and long-term impact within the real estate industry.
+         
+        
         </>
       ),
       image: director2,
@@ -137,27 +166,15 @@ const BoardOfDirectors = () => {
       id: "4",
       name: "IYKE",
       surname: "OTUGO",
-      position: "Director, Bezal Homes and Investment Ltd.",
+      position: "Director & Chief Operating Officer, Bezal Homes and Investment Ltd.",
       details: (
         <>
-          Highly accomplished and results-driven executive with a diverse
-          background in leadership roles across multiple industries. Currently
-          serving as the Executive Director at The Loans Capital in Lagos,
-          Nigeria, where I am actively involved in driving financial strategy
-          and ensuring profitability.
+Dr. Iyke Otugo, AICA, FEIPA, serves as Director and Chief Operating Officer at Bezal Homes and Investment Ltd., bringing extensive experience in financial management, corporate governance, and enterprise development. In his dual role, he provides strategic oversight at the board level while guiding the company’s operational execution and organizational performance. His disciplined approach to leadership and decision-making supports the company’s commitment to structured growth and institutional stability.
           <br />
           <br />
-          In my previous role, I excelled as the General Manager at Osifo Samson
-          & Co, a reputable consultancy firm specializing in Financial Advisory
-          and Debt Recovery. During my tenure, I effectively managed operations,
-          provided expert financial advice, and led successful debt recovery
-          initiatives.
+         With a professional focus on financial strategy, risk management, and organizational structuring, Dr. Otugo plays an important role in strengthening internal systems and governance practices within the organization. His experience supports effective coordination across the company’s operational functions, ensuring that strategic objectives are translated into consistent operational performance across development activities.
           <br />
-          <br />I am recognized as a visionary leader with expertise in
-          financial management, risk assessment, and project execution. My
-          skills extend to building and leading high-performing teams, fostering
-          a culture of innovation, and driving sustainable growth in dynamic
-          business environments.
+          <br />Dr. Otugo holds respected professional designations as AICA and FEIPA and has received an honorary Doctor of Philosophy (PhD) in Financial Management from Prowess University, Delaware, USA. His professional and academic background contributes to the company’s focus on sound governance, operational discipline, and long-term organizational development.
         </>
       ),
       image: director4,
